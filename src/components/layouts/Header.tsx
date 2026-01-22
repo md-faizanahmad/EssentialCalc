@@ -7,13 +7,20 @@ import {
   FileText,
   IndianRupee,
   HelpCircle,
+  Download,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
+interface BeforeInstallPromptEvent extends Event {
+  prompt(): Promise<void>;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
+}
 export default function Header() {
   const pathname = usePathname();
-
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
   const navLinks = [
     { name: "Home", href: "/", icon: <Home size={20} /> },
     {
@@ -30,7 +37,20 @@ export default function Header() {
     },
     { name: "Blog", href: "/blog", icon: <Newspaper size={20} /> },
   ];
-
+  useEffect(() => {
+    const handler = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener("beforeinstallprompt", handler);
+    return () => window.removeEventListener("beforeinstallprompt", handler);
+  }, []);
+  const handleInstallClick = async () => {
+    if (!deferredPrompt) return;
+    await deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === "accepted") setDeferredPrompt(null);
+  };
   return (
     <>
       {/* --- MOBILE TOP BAR --- */}
@@ -39,13 +59,27 @@ export default function Header() {
           <span className="font-bold">Essential</span>
           <span className="font-light text-gray-500">Calc</span>
         </Link>
-        <Link
-          href="/about"
-          className={`p-2 transition-colors ${pathname === "/about" ? "text-blue-600" : "text-gray-400"}`}
-          aria-label="About"
-        >
-          <HelpCircle size={22} />
-        </Link>
+
+        <div className="flex items-center gap-2">
+          {/* PWA INSTALL BUTTON - Only shows if supported/available */}
+          {deferredPrompt && (
+            <button
+              onClick={handleInstallClick}
+              className="p-2 text-blue-600 animate-pulse active:scale-90 transition-transform"
+              aria-label="Install App"
+            >
+              <Download size={22} strokeWidth={2.5} />
+            </button>
+          )}
+
+          <Link
+            href="/about"
+            className={`p-2 transition-colors ${pathname === "/about" ? "text-blue-600" : "text-gray-400"}`}
+            aria-label="About"
+          >
+            <HelpCircle size={22} />
+          </Link>
+        </div>
       </div>
 
       {/* --- DESKTOP TOP HEADER --- */}
