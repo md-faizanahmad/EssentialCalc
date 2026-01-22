@@ -1,55 +1,65 @@
-import type { Metadata, Viewport } from "next"; // Added Viewport
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import Breadcrumbs from "@/components/layouts/Breadcrumbs";
-// import Script from "next/script";
 import ScrollToTop from "@/components/layouts/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Theme color and mobile viewport settings
 export const viewport: Viewport = {
   themeColor: "#2563eb",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1, // Prevents auto-zoom on inputs in mobile
+  maximumScale: 1, // Crucial: Prevents annoying auto-zoom on mobile forms
+  viewportFit: "cover", // Ensures app content uses the full screen on notched iPhones
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://essentialcalc.com"),
   other: {
     "google-adsense-account": "ca-pub-5188894530340921",
   },
   title: {
-    default: "EssentialCalc — Financial Calculators & Smart Online PDF Tools",
+    default: "EssentialCalc — Private Financial & Smart PDF Tools",
     template: "%s | EssentialCalc",
   },
   description:
-    "Free, high-accuracy financial tools. Calculate Home Loan EMI, Car Loan, Salary take-home, and use our PDF/Image utilities. 100% Secure and Mobile-Friendly.",
+    "100% Private, browser-based tools. Calculate Home Loan EMI, Salary breakup, or Merge/Compress PDFs locally. No data leaves your device.",
   keywords: [
-    "EMI Calculator",
-    "Home Loan Calculator",
-    "Car Loan Calculator",
-    "Salary Calculator India",
-    "CTC to In-hand",
-    "Personal Loan EMI",
-    "PDF Merger",
-    "Image Compressor",
-    "Online Utility Tools",
-    "GST Calculator",
+    "EMI Calculator India",
+    "Home Loan EMI",
+    "Salary Calculator Bihar",
+    "PDF Merger Offline",
+    "Image Compressor 50KB",
+    "Privacy First Tools",
   ],
+  manifest: "/manifest.json", // Links your manifest.ts
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "EssentialCalc",
+    // Added Apple Touch Icon for iOS home screen
+    startupImage: ["/apple-touch-icon.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png", // Ensure this 180x180px icon exists in /public
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://essentialcalc.com",
     siteName: "EssentialCalc",
-    images: [{ url: "/og-image.png" }], // Essential for social media sharing
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "EssentialCalc - Smart Private Tools",
+      },
+    ],
   },
 };
 
@@ -59,26 +69,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        {/* AdSense Script */}
-        {/* <Script
-          async
-          strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5188894530340921"
-          crossOrigin="anonymous"
-        />{" "}
-        <Script id="adsense-init" strategy="afterInteractive">
-          {`
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          `}
-        </Script> */}
-      </head>
+    <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
         <div className="flex flex-col min-h-screen relative bg-grid">
           <Header />
           <Breadcrumbs />
-          <main className="grow container mx-auto px-4 py-8 pb-24 md:pb-8">
+          {/* Added pb-20 to main to ensure bottom-nav doesn't overlap content on mobile */}
+          <main className="grow container mx-auto px-4 py-8 pb-20 md:pb-8">
             {children}
           </main>
           <ScrollToTop />

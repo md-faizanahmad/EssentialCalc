@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function ImageToPdfPage() {
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12 md:py-20 flex flex-col items-center">
+    <main className="max-w-6xl mx-auto px-4 py-1 md:py-2 flex flex-col items-center">
       {/* Tool Header Section */}
       <section className="max-w-4xl mx-auto text-center mb-12">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[10px] font-black uppercase tracking-widest mb-6 text-blue-600">
