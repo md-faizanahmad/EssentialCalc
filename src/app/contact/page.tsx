@@ -15,10 +15,10 @@ export default function Contact() {
           For general inquiries and feedback, reach out to us at:
         </p>
         <a
-          href="mailto:support@essentialcalc.com"
+          href="mailto:mdfaizan7563@gmail.com"
           className="text-blue-600 font-medium hover:underline text-lg"
         >
-          support@essentialcalc.com
+          mdfaizan7563@gmail.com
         </a>
       </div>
 
