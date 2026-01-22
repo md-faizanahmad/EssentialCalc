@@ -53,6 +53,11 @@ export default function Footer() {
                   Image Tools
                 </Link>
               </li>
+              <li>
+                <Link href="/how-it-work" className="hover:text-blue-600">
+                  How it Work
+                </Link>
+              </li>
             </ul>
           </div>
 

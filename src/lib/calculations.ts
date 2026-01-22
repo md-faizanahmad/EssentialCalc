@@ -34,3 +34,32 @@ export const formatCurrency = (amount: number) => {
     maximumFractionDigits: 0,
   }).format(amount);
 };
+
+export const calculateProductEMI = (
+  productPrice: number,
+  downPayment: number,
+  annualRate: number,
+  months: number,
+  processingFee: number,
+) => {
+  const principal = productPrice - downPayment;
+  const monthlyRate = annualRate / 12 / 100;
+
+  // Standard EMI formula
+  const emi =
+    (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) /
+    (Math.pow(1 + monthlyRate, months) - 1);
+
+  const totalInterest = emi * months - principal;
+  const totalAmountPaidToBank = emi * months + processingFee;
+  const totalCostOfProduct = totalAmountPaidToBank + downPayment;
+  const extraPaid = totalCostOfProduct - productPrice;
+
+  return {
+    emi: Math.round(emi),
+    totalInterest: Math.round(totalInterest),
+    processingFee: Math.round(processingFee),
+    totalCost: Math.round(totalCostOfProduct),
+    extraPaid: Math.round(extraPaid), // This is the "Truth" - hidden cost
+  };
+};

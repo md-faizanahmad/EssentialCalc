@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import Breadcrumbs from "@/components/layouts/Breadcrumbs";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         className={`${inter.className} bg-gray-50 text-gray-900 antialiased`}
       >
