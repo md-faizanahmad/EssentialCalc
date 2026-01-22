@@ -21,7 +21,7 @@ export default function Header() {
       href: "/emi-calculator",
       icon: <Calculator size={20} />,
     },
-    { name: "PDF Tool", href: "/pdf/merge", icon: <FileText size={20} /> },
+    { name: "PDF Tool", href: "/pdf-tools", icon: <FileText size={20} /> },
     {
       name: "Salary",
       href: "/salary-calculator",

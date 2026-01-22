@@ -6,6 +6,7 @@ import {
   FileOutput,
   Info,
   ShieldCheck,
+  ScanText,
 } from "lucide-react";
 import Link from "next/link";
 import AdSlot from "@/components/layouts/AdSlot";
@@ -51,10 +52,10 @@ export default function PdfToolsPage() {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         <ToolCard
-          title="Compress Pdf"
-          desc="Shrink PDFs to 25KB/50KB using local optimization. Perfect for Indian government portals."
+          title="Compress Pdf and Img"
+          desc="Shrink PDFs and Images to 25KB/50KB using local optimization. Perfect for Indian government portals."
           icon={<Shrink size={24} />}
-          href="/pdf-tools/compress-pdf"
+          href="/compress-file"
           accent="blue"
         />
         <ToolCard
@@ -69,6 +70,13 @@ export default function PdfToolsPage() {
           desc="Turn your JPG/PNG photos into professional PDF documents without any data loss."
           icon={<FileOutput size={24} />}
           href="/pdf-tools/image-to-pdf"
+          accent="blue"
+        />{" "}
+        <ToolCard
+          title="OCR"
+          desc="Extract text from images locally using on-device machine learning."
+          icon={<ScanText size={24} />}
+          href="/pdf-tools/ocr"
           accent="blue"
         />
       </section>

@@ -31,7 +31,7 @@ const tools: Tool[] = [
     name: "PDF Merger",
     description:
       "Combine multiple PDF documents into a single file quickly and securely.",
-    href: "/pdf/merge",
+    href: "/pdf-tools",
     category: "Utility",
     icon: <PdfIcon />,
   },

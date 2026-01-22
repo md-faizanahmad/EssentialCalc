@@ -4,6 +4,7 @@ import ToolGrid from "@/components/layouts/ToolGrid";
 import AdSlot from "@/components/layouts/AdSlot"; // Placeholder for Ads
 import LatestNews from "@/components/layouts/LatestNews";
 import HomeStory from "@/components/layouts/HomeStory";
+import PdfToolLinks from "@/components/tools/PdfToolLinks";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
 
       {/* 4. TOOL LINKS: Categorized links for better SEO crawling and navigation */}
       <ToolLinks />
+      <PdfToolLinks />
       <LatestNews />
       <HomeStory />
       {/* 5. HOMEPAGE SEO ARTICLE (CRITICAL FOR ADSENSE)
