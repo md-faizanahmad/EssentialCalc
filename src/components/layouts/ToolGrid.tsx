@@ -13,7 +13,7 @@ const tools: Tool[] = [
   {
     name: "EMI Calculator",
     description:
-      "Calculate monthly installments for Home, Car, or Personal loans with detailed breakup.",
+      "Calculate loan EMI, total interest, and repayment schedule for home, car, or personal loans.",
     href: "/emi-calculator",
     category: "Financial",
     isNew: true,
@@ -22,24 +22,24 @@ const tools: Tool[] = [
   {
     name: "Salary Calculator",
     description:
-      "Convert annual CTC to monthly take-home pay and see tax deductions.",
+      "Estimate monthly in-hand salary from CTC after tax, PF, and other deductions.",
     href: "/salary-calculator",
     category: "Career",
     icon: <SalaryIcon />,
   },
   {
-    name: "PDF Merger",
+    name: "PDF Tools",
     description:
-      "Combine multiple PDF documents into a single file quickly and securely.",
+      "Compress, merge, and manage PDF files online without installing any software.",
     href: "/pdf-tools",
     category: "Utility",
     icon: <PdfIcon />,
   },
   {
-    name: "Image Optimizer",
+    name: "Image Tools",
     description:
-      "Compress and resize images without losing quality for faster websites.",
-    href: "/image-tool",
+      "Compress, resize, and optimize images online for faster loading and better quality.",
+    href: "/image-tools",
     category: "Utility",
     icon: <ImageIcon />,
   },

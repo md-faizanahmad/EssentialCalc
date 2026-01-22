@@ -22,6 +22,7 @@ export default function Header() {
       icon: <Calculator size={20} />,
     },
     { name: "PDF Tool", href: "/pdf-tools", icon: <FileText size={20} /> },
+    { name: "Image Tool", href: "/image-tools", icon: <FileText size={20} /> },
     {
       name: "Salary",
       href: "/salary-calculator",
@@ -81,7 +82,7 @@ export default function Header() {
 
       {/* --- MOBILE BOTTOM NAVIGATION --- */}
       <nav className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white/90 backdrop-blur-lg border-t border-gray-100 md:hidden pb-safe">
-        <div className="grid h-full grid-cols-5 mx-auto">
+        <div className="grid h-full grid-cols-6 mx-auto">
           {" "}
           {/* Changed to grid-cols-5 */}
           {navLinks.map((link) => {

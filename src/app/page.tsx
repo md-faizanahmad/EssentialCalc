@@ -5,6 +5,7 @@ import AdSlot from "@/components/layouts/AdSlot"; // Placeholder for Ads
 import LatestNews from "@/components/layouts/LatestNews";
 import HomeStory from "@/components/layouts/HomeStory";
 import PdfToolLinks from "@/components/tools/PdfToolLinks";
+import ImageToolLinks from "@/components/tools/ImageToolLinks";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       {/* 4. TOOL LINKS: Categorized links for better SEO crawling and navigation */}
       <ToolLinks />
       <PdfToolLinks />
+      <ImageToolLinks />
       <LatestNews />
       <HomeStory />
       {/* 5. HOMEPAGE SEO ARTICLE (CRITICAL FOR ADSENSE)

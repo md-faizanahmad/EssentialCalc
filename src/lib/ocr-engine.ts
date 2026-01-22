@@ -1,12 +1,14 @@
-import { createWorker } from "tesseract.js";
-import * as pdfjs from "pdfjs-dist";
-
-pdfjs.GlobalWorkerOptions.workerSrc = "/workers/pdf.worker.min.mjs";
-
 export async function performOCR(
   file: File,
   onProgress?: (progress: number) => void,
 ): Promise<string> {
+  // ⬇️ Dynamic imports (CRITICAL)
+  const { createWorker } = await import("tesseract.js");
+  const pdfjs = await import("pdfjs-dist");
+
+  // ⬇️ Configure worker ONLY in browser
+  pdfjs.GlobalWorkerOptions.workerSrc = "/workers/pdf.worker.min.mjs";
+
   let fullText = "";
 
   if (file.type === "application/pdf") {
@@ -14,49 +16,39 @@ export async function performOCR(
     const pdf = await pdfjs.getDocument({ data: arrayBuffer }).promise;
     const totalPages = pdf.numPages;
 
-    const worker = await createWorker("eng", 1, {
-      logger: (m) => {
-        if (m.status === "recognizing text" && onProgress) {
-          // This prevents the 1-100 loop by calculating global progress
-          // We don't have the current page index here easily,
-          // so we handle the specific page progress inside the loop below
-        }
-      },
-    });
+    const worker = await createWorker("eng", 1);
 
-    for (let i = 1; i <= pdf.numPages; i++) {
+    for (let i = 1; i <= totalPages; i++) {
       const page = await pdf.getPage(i);
       const viewport = page.getViewport({ scale: 1.5 });
+
       const canvas = document.createElement("canvas");
       const context = canvas.getContext("2d");
 
-      if (context) {
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        await page.render({ canvasContext: context, viewport, canvas }).promise;
+      if (!context) continue;
 
-        // Manual progress calculation for the loop
-        const {
-          data: { text },
-        } = await worker.recognize(
-          canvas,
-          {},
-          {
-            // We use the jobId or just manual updates to avoid the logger jump
-          },
-        );
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
 
-        fullText += `--- Page ${i} ---\n${text}\n\n`;
+      await page.render({
+        canvasContext: context,
+        viewport,
+        canvas,
+      }).promise;
 
-        // Update UI: (Finished Pages / Total) * 100
-        if (onProgress) {
-          onProgress(Math.round((i / totalPages) * 100));
-        }
+      const {
+        data: { text },
+      } = await worker.recognize(canvas);
+
+      fullText += `--- Page ${i} ---\n${text}\n\n`;
+
+      if (onProgress) {
+        onProgress(Math.round((i / totalPages) * 100));
       }
     }
+
     await worker.terminate();
   } else {
-    // For single images, the standard 1-100 is fine
     const worker = await createWorker("eng", 1, {
       logger: (m) => {
         if (m.status === "recognizing text" && onProgress) {
@@ -64,11 +56,14 @@ export async function performOCR(
         }
       },
     });
+
     const imageUrl = URL.createObjectURL(file);
     const {
       data: { text },
     } = await worker.recognize(imageUrl);
+
     fullText = text;
+
     URL.revokeObjectURL(imageUrl);
     await worker.terminate();
   }

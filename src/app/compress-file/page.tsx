@@ -1,13 +1,11 @@
+"use client";
 import { Zap, ShieldCheck } from "lucide-react";
 import AdSlot from "@/components/layouts/AdSlot";
-import CompressPdf from "@/components/pdf/CompressPdf";
+import dynamic from "next/dynamic";
 
-export const metadata = {
-  title: "Compress PDF to 100KB/50KB - 100% Private | EssentialCalc",
-  description:
-    "Reduce PDF and image size locally in your browser. Perfect for government portal uploads that require strict file size limits like 50KB or 100KB.",
-};
-
+const CompressPdf = dynamic(() => import("@/components/pdf/CompressPdf"), {
+  ssr: false,
+});
 export default function CompressPdfPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 md:py-20">

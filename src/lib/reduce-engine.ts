@@ -1,13 +1,26 @@
 import { PDFDocument } from "pdf-lib";
 import * as pdfjsLib from "pdfjs-dist";
 
-// Use a reliable CDN for the worker to avoid local pathing errors in Next.js
-pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
+/**
+ * FIXED: Move worker initialization into a guarded function
+ * that only runs in the browser.
+ */
+const initWorker = () => {
+  if (
+    typeof window !== "undefined" &&
+    !pdfjsLib.GlobalWorkerOptions.workerSrc
+  ) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
+  }
+};
 
 async function compressImage(
   file: File | Blob,
   targetKB: number,
 ): Promise<Blob> {
+  // Ensure we are in browser
+  if (typeof window === "undefined") return file as Blob;
+
   const bitmap = await createImageBitmap(file);
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
@@ -18,7 +31,6 @@ async function compressImage(
   let scale = 1.0;
   let resultBlob: Blob | null = null;
 
-  // Binary search-like approach to hit target
   for (let i = 0; i < 5; i++) {
     canvas.width = bitmap.width * scale;
     canvas.height = bitmap.height * scale;
@@ -41,17 +53,20 @@ async function compressImage(
 }
 
 async function compressPDF(file: File, targetKB: number): Promise<Blob> {
+  // Guard for Build Environment
+  if (typeof window === "undefined") return file as Blob;
+
+  initWorker();
+
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
   const finalDoc = await PDFDocument.create();
 
-  // Distribute KB budget across pages
   const targetBytesPerPage = (targetKB * 1024) / pdf.numPages;
 
   for (let i = 1; i <= pdf.numPages; i++) {
     const page = await pdf.getPage(i);
 
-    // Scale down resolution if target is very low
     const scale = targetKB < 60 ? 1.0 : 1.5;
     const viewport = page.getViewport({ scale });
 
@@ -66,11 +81,9 @@ async function compressPDF(file: File, targetKB: number): Promise<Blob> {
 
     await page.render({ canvasContext: ctx, viewport, canvas }).promise;
 
-    // Start with low quality to hit aggressive targets
     let quality = 0.4;
     let pageImageBlob: Blob | null = null;
 
-    // Internal loop to ensure the page image hits its portion of the KB budget
     for (let attempt = 0; attempt < 3; attempt++) {
       pageImageBlob = await new Promise<Blob | null>((res) =>
         canvas.toBlob(res, "image/jpeg", quality),
@@ -100,6 +113,9 @@ export async function runReduction(
   file: File,
   targetKB: number,
 ): Promise<Blob> {
+  // Global Browser Guard
+  if (typeof window === "undefined") return file;
+
   if (file.type.startsWith("image/")) {
     return compressImage(file, targetKB);
   }
