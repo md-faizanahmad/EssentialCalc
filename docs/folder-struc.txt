@@ -1,0 +1,21 @@
+essential-calc/
+├── src/
+│   ├── app/
+│   │   ├── (tools)/
+│   │   │   ├── emi-calculator/page.tsx
+│   │   │   └── salary-calculator/page.tsx
+│   │   ├── about/page.tsx
+│   │   ├── contact/page.tsx
+│   │   ├── privacy-policy/page.tsx
+│   │   ├── terms/page.tsx
+│   │   ├── layout.tsx (Main Layout)
+│   │   └── page.tsx (Home)
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   └── AdSlot.tsx
+│   │   ├── ui/ (Small reusable components)
+│   │   └── tools/ (Calculator logic)
+│   ├── lib/ (Math logic & utils)
+│   └── styles/
