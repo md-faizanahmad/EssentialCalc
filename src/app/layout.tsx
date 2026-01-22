@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import Breadcrumbs from "@/components/layouts/Breadcrumbs";
-import Script from "next/script";
+// import Script from "next/script";
 import ScrollToTop from "@/components/layouts/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +18,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  other: {
+    "google-adsense-account": "ca-pub-5188894530340921",
+  },
   title: {
     default: "EssentialCalc — Financial Calculators & Smart Online PDF Tools",
     template: "%s | EssentialCalc",
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     url: "https://essentialcalc.com",
     siteName: "EssentialCalc",
     images: [{ url: "/og-image.png" }], // Essential for social media sharing
@@ -59,7 +62,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* AdSense Script */}
-        <Script
+        {/* <Script
           async
           strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5188894530340921"
@@ -69,7 +72,7 @@ export default function RootLayout({
           {`
             (adsbygoogle = window.adsbygoogle || []).push({});
           `}
-        </Script>
+        </Script> */}
       </head>
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
         <div className="flex flex-col min-h-screen relative bg-grid">
