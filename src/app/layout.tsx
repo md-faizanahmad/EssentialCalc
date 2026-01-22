@@ -1,31 +1,52 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next"; // Added Viewport
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import Breadcrumbs from "@/components/layouts/Breadcrumbs";
 import Script from "next/script";
+import ScrollToTop from "@/components/layouts/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Theme color and mobile viewport settings
+export const viewport: Viewport = {
+  themeColor: "#2563eb",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1, // Prevents auto-zoom on inputs in mobile
+};
+
 export const metadata: Metadata = {
   title: {
-    default: "EssentialCalc — Calculators & Smart Online Tools",
+    default: "EssentialCalc — Financial Calculators & Smart Online PDF Tools",
     template: "%s | EssentialCalc",
   },
   description:
-    "Free, accurate online calculators for EMI, Salary, Loans, and more. Simple, fast, and mobile-friendly utility tools.",
+    "Free, high-accuracy financial tools. Calculate Home Loan EMI, Car Loan, Salary take-home, and use our PDF/Image utilities. 100% Secure and Mobile-Friendly.",
   keywords: [
     "EMI Calculator",
-    "Salary Calculator",
-    "Loan Calculator",
-    "Online Tools",
+    "Home Loan Calculator",
+    "Car Loan Calculator",
+    "Salary Calculator India",
+    "CTC to In-hand",
+    "Personal Loan EMI",
+    "PDF Merger",
+    "Image Compressor",
+    "Online Utility Tools",
+    "GST Calculator",
   ],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "EssentialCalc",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://essentialcalc.com", // Replace with your domain
+    url: "https://essentialcalc.com",
     siteName: "EssentialCalc",
+    images: [{ url: "/og-image.png" }], // Essential for social media sharing
   },
 };
 
@@ -37,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* AdSense Script */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
@@ -44,13 +66,14 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body
-        className={`${inter.className} bg-gray-50 text-gray-900 antialiased`}
-      >
-        <div className="flex flex-col min-h-screen">
+      <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
+        <div className="flex flex-col min-h-screen relative bg-grid">
           <Header />
           <Breadcrumbs />
-          <main className="grow container mx-auto px-4 py-8">{children}</main>
+          <main className="grow container mx-auto px-4 py-8 pb-24 md:pb-8">
+            {children}
+          </main>
+          <ScrollToTop />
           <Footer />
         </div>
       </body>

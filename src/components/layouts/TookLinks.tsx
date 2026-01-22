@@ -57,9 +57,7 @@ export default function ToolLinks() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600">
                   {tool.title}
                 </h3>
-                <p className="text-sm text-gray-500 mb-6 flex-grow">
-                  {tool.desc}
-                </p>
+                <p className="text-sm text-gray-500 mb-6 grow">{tool.desc}</p>
                 <div className="inline-flex items-center text-sm font-semibold text-blue-600">
                   Calculate Now
                   <svg

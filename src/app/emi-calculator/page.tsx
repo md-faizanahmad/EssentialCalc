@@ -29,20 +29,6 @@ const emiTools = [
     icon: "🛒",
     color: "bg-green-50 text-green-600",
   },
-  {
-    title: "Salary Break-Up",
-    desc: "Calculate your in-hand salary your CTC, deductions, and others detailed breakup .",
-    href: "/emi-calculator/salary-calculator",
-    icon: "🏠",
-    color: "bg-blue-50 text-blue-600",
-  },
-  {
-    title: "Salary-Based Loan",
-    desc: "See how much loan you can afford based on your monthly take-home pay.",
-    href: "/emi-calculator/salary-based",
-    icon: "💼",
-    color: "bg-purple-50 text-purple-600",
-  },
 ];
 
 export default function EMICategoryPage() {
