@@ -61,9 +61,15 @@ export default function RootLayout({
         {/* AdSense Script */}
         <Script
           async
+          strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5188894530340921"
           crossOrigin="anonymous"
-        />
+        />{" "}
+        <Script id="adsense-init" strategy="afterInteractive">
+          {`
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          `}
+        </Script>
       </head>
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
         <div className="flex flex-col min-h-screen relative bg-grid">
