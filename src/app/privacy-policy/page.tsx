@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Privacy Policy | EssentialCalc - Indian DPDPA Compliant",
+  title: "Privacy Policy | EssentialCalc",
   description:
-    "Privacy Policy for EssentialCalc. We follow Indian Digital Personal Data Protection Act (DPDPA) guidelines. Learn how we handle your data with zero server storage.",
+    "Privacy Policy for EssentialCalc. Learn how we handle user information, cookies, and third-party advertising such as Google AdSense.",
 };
 
 export default function PrivacyPolicy() {
@@ -9,67 +9,66 @@ export default function PrivacyPolicy() {
 
   return (
     <article className="max-w-4xl mx-auto py-12 px-4">
-      <h1 className="text-4xl font-black text-gray-900 mb-2">Privacy Policy</h1>
-      <p className="text-sm text-gray-500 mb-10 uppercase tracking-widest">
-        Last updated: {lastUpdated}
-      </p>
+      <h1 className="text-4xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
+      <p className="text-sm text-gray-500 mb-10">Last updated: {lastUpdated}</p>
 
       <div className="prose prose-slate max-w-none text-gray-700 leading-relaxed">
-        <section className="mb-10 p-6 bg-blue-50 rounded-2xl border border-blue-100">
-          <h2 className="text-xl font-bold text-blue-900 mt-0">
-            Compliance Statement
-          </h2>
-          <p className="text-blue-800 text-sm mb-0">
-            This Privacy Policy is prepared in accordance with the **Digital
-            Personal Data Protection Act (DPDPA), 2023 (India)**, the
-            Information Technology Act, 2000, and global standards like GDPR.
-            EssentialCalc is committed to protecting the privacy of its users in
-            Bihar and across India.
+        <section className="mb-10 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+          <h2 className="text-xl font-semibold text-gray-900 mt-0">Overview</h2>
+          <p className="text-sm mb-0">
+            This Privacy Policy explains how EssentialCalc collects, uses, and
+            protects information when you use our website. By accessing or using
+            EssentialCalc, you agree to the terms described in this policy.
           </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900">
-            1. Data Minimization & Collection
+          <h2 className="text-2xl font-semibold text-gray-900">
+            1. Information We Collect
           </h2>
           <p>
-            At EssentialCalc, we follow the principle of{" "}
-            <strong>Data Minimization</strong>. We do not require users to
-            create accounts, provide phone numbers, or share Aadhaar/PAN
+            EssentialCalc follows a principle of data minimization. We do not
+            require users to create accounts or submit personal identification
             details.
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li>
-              <strong>Calculation Data:</strong> All inputs for EMI, Salary, and
-              Loan calculators are processed <strong>client-side</strong>{" "}
-              (within your browser). This data never reaches our servers.
+              <strong>Calculator & Tool Inputs:</strong> All inputs for EMI,
+              Salary, Loan, PDF, and Image tools are processed entirely within
+              your browser. This information is not transmitted to or stored on
+              our servers.
             </li>
             <li>
-              <strong>Contact Information:</strong> If you email us, we only use
-              your email address to respond to your query.
+              <strong>Contact Information:</strong> If you contact us via email,
+              we use your email address solely to respond to your inquiry.
             </li>
           </ul>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-semibold text-gray-900">
             2. Cookies & Third-Party Advertising
           </h2>
           <p>
-            We use <strong>Google AdSense</strong> to support our &quot;Service
-            to Nation&quot; mission. Google, as a third-party vendor, uses
-            cookies to serve ads based on a user&quot;s prior visits to our
-            website or other websites.
+            EssentialCalc uses <strong>Google AdSense</strong>, a third-party
+            advertising service, to display ads. Google may use cookies or web
+            beacons to show advertisements based on a user’s visit to this and
+            other websites.
           </p>
-          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 my-4">
-            <h3 className="text-lg font-bold mb-2">Google’s DART Cookie</h3>
+
+          <div className="bg-white p-6 rounded-xl border border-gray-200 my-4">
+            <h3 className="text-lg font-semibold mb-2">
+              Google Advertising Cookies
+            </h3>
             <p className="text-sm">
-              Google&quot;s use of advertising cookies enables it and its
-              partners to serve ads based on your visit to EssentialCalc. You
-              may opt-out of personalized advertising by visiting{" "}
+              Google’s use of advertising cookies enables it and its partners to
+              serve ads based on your visit to EssentialCalc and/or other sites
+              on the internet. Users may opt out of personalized advertising by
+              visiting{" "}
               <a
                 href="https://www.google.com/settings/ads"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-600 underline"
               >
                 Google Ads Settings
@@ -80,58 +79,57 @@ export default function PrivacyPolicy() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-semibold text-gray-900">
             3. Log Files & Analytics
           </h2>
           <p>
-            Like most websites, we use log files. This includes internet
-            protocol (IP) addresses, browser type, Internet Service Provider
-            (ISP), date/time stamp, and referring/exit pages. This information
-            is used solely to analyze trends and administer the site, and is{" "}
-            <strong>not linked</strong> to any personally identifiable
-            information.
+            Like many websites, EssentialCalc may collect non-personal
+            information through standard log files. This may include IP
+            addresses, browser type, Internet Service Provider (ISP), date and
+            time stamps, referring pages, and exit pages.
+          </p>
+          <p>
+            This information is used solely for understanding site usage trends,
+            administering the website, and improving user experience. It is not
+            linked to personally identifiable information.
           </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900">
-            4. Rights of the &quot;Data Principal&quot; (Your Rights)
+          <h2 className="text-2xl font-semibold text-gray-900">
+            4. Data Retention & User Rights
           </h2>
-          <p>Under the Indian DPDPA 2023, you have the following rights:</p>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>
-              <strong>Right to Erasure:</strong> Since we do not store your
-              data, your data is &quot;erased&quot; the moment you close your
-              browser tab.
-            </li>
-            <li>
-              <strong>Right to Redressal:</strong> If you have concerns about
-              how the site functions, you can contact our Grievance Officer.
-            </li>
-          </ul>
+          <p>
+            EssentialCalc does not store calculation data on its servers. Any
+            information processed through our tools is automatically discarded
+            when you close your browser session.
+          </p>
+          <p>
+            Users may contact us if they have questions or concerns about how
+            the website functions or how information is handled.
+          </p>
         </section>
 
         <section className="mb-8 border-t border-gray-100 pt-8">
-          <h2 className="text-2xl font-bold text-gray-900">
-            5. Grievance Officer
+          <h2 className="text-2xl font-semibold text-gray-900">
+            5. Contact Information
           </h2>
           <p>
-            In accordance with the Information Technology Act and DPDPA, the
-            name and contact details of the Grievance Officer are provided
-            below:
+            If you have any questions about this Privacy Policy or our
+            practices, you may contact us at:
           </p>
           <p className="bg-gray-50 p-4 rounded-xl font-medium">
             <strong>Name:</strong> Md Faizan Ahmad
             <br />
-            <strong>Location:</strong> Bihar, India
+            <strong>Location:</strong> India
             <br />
             <strong>Email:</strong> mdfaizan7563@gmail.com
           </p>
         </section>
 
         <footer className="mt-12 text-sm text-gray-500 italic">
-          By using EssentialCalc, you hereby consent to our Privacy Policy and
-          agree to its Terms and Conditions.
+          By using EssentialCalc, you acknowledge that you have read and
+          understood this Privacy Policy.
         </footer>
       </div>
     </article>

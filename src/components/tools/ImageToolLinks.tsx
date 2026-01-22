@@ -36,7 +36,7 @@ const imageTools = [
   {
     title: "Optimizer",
     desc: "Compress & convert formats without data loss.",
-    href: "/image-tools/optimize",
+    href: "/image-tools/image-optimize",
     icon: <Layers size={24} />,
     color: "bg-cyan-50 text-cyan-600",
   },

@@ -1,36 +1,47 @@
 import Hero from "@/components/layouts/Hero";
-import ToolLinks from "@/components/layouts/TookLinks";
 import ToolGrid from "@/components/layouts/ToolGrid";
-import AdSlot from "@/components/layouts/AdSlot"; // Placeholder for Ads
-import LatestNews from "@/components/layouts/LatestNews";
-import HomeStory from "@/components/layouts/HomeStory";
 import PdfToolLinks from "@/components/tools/PdfToolLinks";
 import ImageToolLinks from "@/components/tools/ImageToolLinks";
+import LatestNews from "@/components/layouts/LatestNews";
+import HomeStory from "@/components/layouts/HomeStory";
+import AdSlot from "@/components/layouts/AdSlot";
+import ToolLinks from "@/components/layouts/TookLinks";
 
 export default function Home() {
   return (
-    <div className="space-y-12">
-      {/* 1. HERO: Grabs attention & defines primary CTA */}
+    <main className="space-y-16">
+      {/* 1. HERO: Clear purpose & trust */}
       <Hero />
 
-      {/* 2. TOOL GRID: Direct access to the most popular tools */}
+      {/* 2. CORE TOOLS: Immediate user value */}
       <ToolGrid />
 
-      {/* 3. AD SLOT: High-visibility placement below initial tools */}
-      <AdSlot id="home-top" />
+      {/* 3. HOMEPAGE INTRO CONTENT (CRITICAL FOR SEO & ADSENSE) */}
+      <section aria-labelledby="about-essentialcalc">
+        <HomeStory />
+      </section>
 
-      {/* 4. TOOL LINKS: Categorized links for better SEO crawling and navigation */}
-      <ToolLinks />
-      <PdfToolLinks />
-      <ImageToolLinks />
+      {/* 4. FIRST AD (AFTER CONTENT — SAFE PLACEMENT) */}
+      <AdSlot id="home-mid" />
+
+      {/* 5. INTERNAL LINKING FOR SEO */}
+      <section aria-labelledby="calculator-links">
+        <ToolLinks />
+      </section>
+
+      <section aria-labelledby="pdf-tools">
+        <PdfToolLinks />
+      </section>
+
+      <section aria-labelledby="image-tools">
+        <ImageToolLinks />
+      </section>
+
+      {/* 6. FRESH CONTENT SIGNAL */}
       <LatestNews />
-      <HomeStory />
-      {/* 5. HOMEPAGE SEO ARTICLE (CRITICAL FOR ADSENSE)
-          Purpose: Provides long-form text content that tells Google what the site is about.
-          Reviewers hate empty sites; this provides 'Value-Add' content. */}
 
-      {/* 6. AD SLOT: Footer ad for additional revenue */}
+      {/* 7. FOOTER AD (LOW RISK) */}
       <AdSlot id="home-footer" />
-    </div>
+    </main>
   );
 }

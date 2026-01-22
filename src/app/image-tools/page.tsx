@@ -49,7 +49,7 @@ const IMAGE_TOOLS = [
     title: "Optimizer",
     fullTitle: "Image Optimizer",
     desc: "Compress & convert formats.",
-    href: "/image-tools/optimize",
+    href: "/image-tools/image-optimize",
     icon: <Layers size={24} />,
     color: "bg-cyan-50 text-cyan-600",
   },

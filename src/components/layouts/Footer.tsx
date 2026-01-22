@@ -30,7 +30,7 @@ const FOOTER_LINKS: Record<string, FooterSection> = {
     href: "/pdf-tools",
     links: [
       { name: "QuickMerge PDF", href: "/pdf/pdf-merge" },
-      { name: "Compress PDF", href: "/pdf/compress-pdf" },
+      { name: "Compress PDF", href: "/compress-file" },
       { name: "PDF to Image", href: "/pdf/to-image" },
       { name: "OCR Text Extractor", href: "/pdf/ocr" },
     ],
@@ -51,6 +51,7 @@ const FOOTER_LINKS: Record<string, FooterSection> = {
       { name: "Financial Blog", href: "/blog", highlight: true },
       { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Terms of Service", href: "/terms" },
+      { name: "Faq", href: "/faq" },
       { name: "Contact Us", href: "/contact" },
     ],
   },
