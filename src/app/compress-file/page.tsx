@@ -8,14 +8,15 @@ const CompressPdf = dynamic(() => import("@/components/pdf/CompressPdf"), {
 });
 export default function CompressPdfPage() {
   return (
+    // Guaranteed Privacy
     <main className="max-w-4xl mx-auto px-4 py-1 md:py-1">
       <section className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest mb-6">
-          <Zap size={12} fill="currentColor" /> Guaranteed Privacy
+          <Zap size={12} fill="currentColor" /> For Now Only Images
         </div>
 
         <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-6 tracking-tighter leading-tight uppercase">
-          COMPRESS <span className="text-blue-600">PDF.</span>
+          COMPRESS <span className="text-blue-600">IMG.</span>
         </h1>
 
         <p className="text-gray-600 max-w-xl mx-auto font-medium text-lg leading-relaxed">
