@@ -12,12 +12,13 @@ export default function Hero() {
       <div className="container mx-auto px-4 text-center">
         {/* Main H1 - High SEO Value */}
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-          Simple, Accurate <span className="text-blue-600">Calculators</span>
+          Simple, Accurate{" "}
+          <span className="text-blue-900 fasthand-regular">Calculators</span>
           <br className="hidden md:block" /> for Everyday Decisions
         </h1>
 
         {/* Subtitle / Tagline */}
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-lg md:text-xl font-serif text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
           Get instant results with <strong>EssentialCalc</strong>. From planning
           your home loan EMI to understanding your take-home salary, we provide
           tools that are fast, secure, and free.

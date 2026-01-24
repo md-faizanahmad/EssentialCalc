@@ -77,7 +77,7 @@ export default function ToolGrid() {
                   {tool.name}
                 </h3>
 
-                <p className="text-sm text-gray-500 leading-relaxed mb-4 grow">
+                <p className="text-sm font-serif text-gray-500 leading-relaxed mb-4 grow">
                   {tool.description}
                 </p>
 

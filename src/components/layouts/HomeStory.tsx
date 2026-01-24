@@ -17,7 +17,7 @@ export default function HomeStory() {
           </header>
 
           {/* Main Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid grid-cols-1 font-serif md:grid-cols-2 gap-12 items-center mb-20">
             <div className="prose prose-slate prose-lg">
               <p>
                 <strong>EssentialCalc</strong> is a free online platform
