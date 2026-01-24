@@ -50,7 +50,8 @@ export default function ImageToolLinks() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-2xl font-black text-gray-900 tracking-tight uppercase">
-              Image <span className="text-rose-600">AI</span> Utilities
+              Image <span className="text-rose-600">AI</span> Utilities{" "}
+              <span className="text-sm text-red-500">(Coming Soon)</span>
             </h2>
             <p className="text-xs text-gray-500 font-medium mt-1 uppercase tracking-widest">
               100% Client-Side &middot; No Uploads
