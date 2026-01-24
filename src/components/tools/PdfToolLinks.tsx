@@ -11,8 +11,8 @@ const pdfToolCards = [
     badge: "Most Popular",
   },
   {
-    title: "Compress PDF & Img",
-    desc: "Reduce Pdf and Img size to 100KB or 50KB for government portal uploads.",
+    title: "Compress Img",
+    desc: "Reduce  and Img size to 100KB or 50KB for government portal uploads.",
     href: "/compress-file",
     icon: <Maximize size={24} />,
     color: "bg-purple-50 text-purple-600",
