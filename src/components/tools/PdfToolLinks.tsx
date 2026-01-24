@@ -68,7 +68,7 @@ export default function PdfToolLinks() {
                   {tool.title}
                 </h3>
 
-                <p className="text-sm text-gray-500 mb-6 grow leading-relaxed">
+                <p className="text-sm text-gray-500 mb-6 grow leading-relaxed font-serif">
                   {tool.desc}
                 </p>
 
