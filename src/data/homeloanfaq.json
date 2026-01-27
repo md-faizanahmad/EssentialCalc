@@ -1,0 +1,22 @@
+const homeLoanFaqs = [
+  {
+    q: "What is Home Loan EMI?",
+    a: "Home Loan EMI (Equated Monthly Installment) is the fixed amount you pay every month to repay your housing loan. It includes both the principal amount and interest charged by the bank or lender."
+  },
+  {
+    q: "How is Home Loan EMI calculated?",
+    a: "Home Loan EMI is calculated using a standard mathematical formula that considers loan amount, interest rate, and tenure. Higher tenure reduces EMI but increases total interest paid."
+  },
+  {
+    q: "Can I reduce my home loan EMI?",
+    a: "Yes. You can reduce EMI by increasing loan tenure, making part prepayments, negotiating a lower interest rate, or choosing a balance transfer to another bank."
+  },
+  {
+    q: "Which is better: lower EMI or shorter tenure?",
+    a: "Lower EMI helps monthly cash flow, but shorter tenure reduces total interest paid. If affordable, shorter tenure is financially better."
+  },
+  {
+    q: "Does interest rate change affect EMI?",
+    a: "Yes. For floating rate home loans, any change in interest rate directly impacts EMI or tenure depending on bank policy."
+  }
+];
