@@ -1,50 +1,56 @@
 [
   {
-    "slug": "tax-regime-2026",
-    "title": "Understanding the New Tax Regime in 2026 (What Changed & Who Benefits)",
-    "category": "Tax News",
-    "date": "Jan 22, 2026",
-    "excerpt": "A simple explanation of the 2026 tax regime, updated slabs, deductions, and who should opt for it.",
-    "content": "The 2026 financial year introduced several changes in India’s income tax structure aimed at simplifying compliance and improving take-home pay. Under the new tax regime, the standard deduction has been increased to ₹75,000, and tax slabs have been widened for middle-income earners.\n\nFor salaried individuals earning between ₹10 lakh and ₹15 lakh annually, the effective tax burden has reduced slightly compared to previous years. However, the new regime still removes popular deductions such as 80C, HRA, and home loan interest benefits.\n\nThis means the new tax regime works best for individuals who prefer simplicity and do not actively invest in tax-saving instruments. Before choosing, it is important to calculate tax under both regimes and compare the final payable amount."
+    "slug": "tax-regime-2026-guide",
+    "title": "Understanding the New Tax Regime 2026: Slabs, Changes & Benefits",
+    "category": "Taxation",
+    "date": "Jan 28, 2026",
+    "seo_keywords": "New Tax Regime 2026, income tax slabs 2026, standard deduction 2026, tax saving tips India",
+    "excerpt": "A deep dive into the 2026 tax changes, the increased standard deduction, and how to choose between old and new regimes.",
+    "content": "The 2026 financial year has brought a shift in India’s tax landscape. With the standard deduction now increased to ₹75,000, middle-income earners are seeing better take-home pay. This guide breaks down the widening of tax slabs and why the New Tax Regime is now the default choice for most salaried professionals. We explore who actually benefits from these changes and how to calculate your liability effectively."
   },
   {
-    "slug": "how-much-emi-is-safe",
-    "title": "How Much EMI Is Safe? Understanding the 50/30/20 Rule",
+    "slug": "how-to-file-itr-2026",
+    "title": "Step-by-Step Guide: How to File ITR Online in 2026",
+    "category": "Tax News",
+    "date": "Jan 28, 2026",
+    "seo_keywords": "how to file ITR online 2026, ITR-1 filing guide, e-filing portal 2026, income tax return steps",
+    "excerpt": "Filing your taxes doesn't have to be stressful. Follow our 2026 checklist for a smooth ITR filing experience.",
+    "content": "Filing ITR for AY 2026-27 is simpler than ever. This post guides you through the e-filing portal, from checking your AIS (Annual Information Statement) to e-verifying your return via Aadhaar OTP. Whether you are filing ITR-1 (Sahaj) or ITR-4 (Sugam), we cover the documents you need and common mistakes to avoid to ensure your refund is processed quickly."
+  },
+  {
+    "slug": "gst-filing-for-beginners",
+    "title": "GST Compliance 101: How to Fill GST Returns in 2026",
+    "category": "Business Finance",
+    "date": "Jan 28, 2026",
+    "seo_keywords": "how to fill GST, GSTR-1 vs GSTR-3B, GST return filing 2026, input tax credit guide",
+    "excerpt": "A simplified guide for small business owners on filing GST returns and managing Input Tax Credit.",
+    "content": "Managing GST is a core part of business growth. We explain the difference between GSTR-1 and GSTR-3B in plain English. Learn how to reconcile your purchases with GSTR-2B to maximize your Input Tax Credit (ITC) and avoid penalties. This post is designed to help small businesses stay compliant without needing a full-time accountant."
+  },
+  {
+    "slug": "how-emi-calculator-works",
+    "title": "The Science of Debt: How Does an EMI Calculator Actually Work?",
+    "category": "Financial Tools",
+    "date": "Jan 28, 2026",
+    "seo_keywords": "how emi calculator works, emi formula, loan interest calculation, reducing balance method",
+    "excerpt": "Ever wondered how banks calculate your monthly payments? We break down the EMI formula and why it matters.",
+    "content": "Before you take a loan, you must understand the math. This post explains the standard EMI formula: $EMI = [P x r x (1+r)^n] / [(1+r)^n - 1]$. We look at how the 'Reducing Balance Method' works, why interest is front-loaded in the early years of a loan, and how small prepayments can save you lakhs in interest over time."
+  },
+  {
+    "slug": "safe-emi-limits-50-30-20",
+    "title": "How Much EMI Is Safe? The 50/30/20 Rule Explained",
     "category": "Financial Advice",
     "date": "Jan 15, 2026",
-    "excerpt": "Learn how much of your salary should ideally go toward EMI without hurting your finances.",
-    "content": "A common financial mistake is overcommitting to EMIs without leaving room for savings and emergencies. A practical guideline followed by many financial planners is the 50/30/20 rule.\n\nAccording to this rule, 50% of your monthly income should go toward essential expenses such as rent, food, and EMIs. 30% can be used for lifestyle spending, while the remaining 20% should be saved or invested.\n\nIf your total EMIs cross 40–45% of your monthly income, you may feel financial pressure during emergencies or job changes. Using an EMI calculator before taking a loan helps you stay within safe limits."
+    "seo_keywords": "safe emi limit, 50-30-20 rule finance, personal loan mistakes, debt management 2026",
+    "excerpt": "Don't let debt drown your savings. Learn how to use the 50/30/20 rule to decide your maximum EMI capacity.",
+    "content": "Over-leveraging is a common financial trap. We explain why your total EMIs should ideally never cross 40-45% of your monthly take-home pay. Using the 50/30/20 rule (50% Needs, 30% Wants, 20% Savings), this blog helps you find the 'sweet spot' for a new car or home loan without sacrificing your financial freedom."
   },
   {
-    "slug": "emi-vs-lump-sum-payment",
-    "title": "EMI vs Lump Sum Payment: Which Option Makes More Sense?",
-    "category": "Loans",
-    "date": "Jan 10, 2026",
-    "excerpt": "Should you pay everything upfront or choose EMI? Here’s a simple comparison.",
-    "content": "When buying high-value items like electronics, vehicles, or appliances, many people face the choice between paying a lump sum or opting for EMI. While EMI spreads the cost over time, it may increase the overall amount paid due to interest.\n\nLump sum payments make sense if you have sufficient savings and want to avoid interest costs. On the other hand, EMI is helpful when you want to preserve cash flow or invest your money elsewhere.\n\nBefore deciding, always compare the interest rate, processing fees, and your monthly budget using an EMI calculator."
-  },
-  {
-    "slug": "salary-calculation-india",
-    "title": "How to Calculate Your In-Hand Salary in India",
-    "category": "Salary & Income",
-    "date": "Jan 8, 2026",
-    "excerpt": "Understand CTC, deductions, and how much salary you actually receive every month.",
-    "content": "Many employees are confused by the difference between CTC and in-hand salary. CTC includes basic pay, allowances, bonuses, employer PF contribution, and other benefits.\n\nYour in-hand salary is what you receive after deductions such as employee PF, professional tax, income tax, and insurance contributions. These deductions vary based on salary structure and tax regime.\n\nUsing a salary calculator helps you estimate your actual monthly take-home pay and plan expenses more accurately."
-  },
-  {
-    "slug": "home-loan-emi-tips",
-    "title": "5 Practical Tips to Reduce Your Home Loan EMI",
+    "slug": "home-loan-emi-reduction-tips",
+    "title": "5 Practical Tips to Reduce Your Home Loan EMI Burden",
     "category": "Home Loans",
     "date": "Jan 5, 2026",
-    "excerpt": "Small changes that can help lower your home loan EMI burden over time.",
-    "content": "Home loans usually run for long tenures, making EMI management critical. One effective way to reduce EMI is choosing a longer tenure, though this increases total interest paid.\n\nMaking part prepayments whenever you receive bonuses or extra income can significantly reduce interest costs. Opting for a lower interest rate lender or switching to a balance transfer option can also help.\n\nRegularly tracking your EMI using a calculator allows you to understand how small adjustments affect long-term repayment."
-  },
-  {
-    "slug": "personal-loan-mistakes",
-    "title": "Common Personal Loan Mistakes You Should Avoid",
-    "category": "Personal Finance",
-    "date": "Jan 2, 2026",
-    "excerpt": "Avoid these mistakes before taking a personal loan to protect your financial health.",
-    "content": "Personal loans are easy to obtain but can become expensive if not managed properly. One common mistake is ignoring the interest rate and focusing only on EMI amount.\n\nBorrowers often take multiple loans simultaneously, leading to high debt obligations. Not reading the loan agreement carefully may result in unexpected charges such as foreclosure or late payment fees.\n\nBefore applying, calculate your EMI, assess repayment capacity, and ensure the loan fits within your long-term financial plan."
+    "seo_keywords": "reduce home loan emi, loan prepayment tips, home loan balance transfer, lower interest rate",
+    "excerpt": "Small adjustments can lead to big savings. Here is how to pay off your home loan faster.",
+    "content": "Home loans are long-term commitments, but you don't have to be stuck with high interest for 20 years. From making annual part-prepayments to considering a balance transfer to a lower-interest lender, we share five actionable strategies to reduce your EMI and shorten your loan tenure significantly."
   }
 ]
