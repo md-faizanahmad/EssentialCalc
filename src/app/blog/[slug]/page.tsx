@@ -1,4 +1,4 @@
--import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import blogData from "@/data/blog.json";
 import AdSlot from "@/components/layouts/AdSlot";
 
