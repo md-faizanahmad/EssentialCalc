@@ -1,235 +1,50 @@
-{
-  "categories": [
-    {
-      "category": "Income Tax",
-      "description": "Comprehensive income tax compliance and ITR filing guidance for Indian taxpayers.",
-      "seo": {
-        "primary_keywords": ["ITR filing India", "ITR filing AY 2026-27", "New Tax Regime India"],
-        "secondary_keywords": ["ITR-1 salaried", "ITR-4 presumptive", "Section 87A rebate"]
-      },
-      "articles": [
-        {
-          "slug": "itr-filing-guide-ay-2026-27-india",
-          "title": "ITR Filing Guide for AY 2026-27: Forms, Slabs, Deductions & Penalties",
-          "excerpt": "A complete and practical guide to filing Income Tax Returns in India for AY 2026-27, covering salaried, freelancers, and small business taxpayers.",
-          "estimated_word_count": 2000,
-          "last_updated": "2026-04-01",
-          "author": {
-            "name": "Finance Compliance Team",
-            "expertise": "Indian Income Tax & Compliance"
-          },
-          "seo": {
-            "focus_keyword": "ITR filing AY 2026-27",
-            "meta_title": "ITR Filing AY 2026-27: Step-by-Step Guide for India",
-            "meta_description": "Learn how to file ITR in India for AY 2026-27. Understand ITR forms, new tax regime slabs, Section 87A rebate, due dates, and penalties.",
-            "search_intent": "informational"
-          },
-          "content": {
-            "introduction": "Income Tax Return filing is a statutory obligation in India and a critical financial record. For AY 2026-27, the New Tax Regime continues as the default system, making it essential for taxpayers to understand slabs, rebates, and compliance requirements.",
-            "why_it_matters_in_india": "A correctly filed ITR is required for loan approvals, visa processing, carry-forward of losses, and avoiding penalties under the Income Tax Act, 1961.",
-            "who_should_read": "Salaried employees, freelancers, professionals, and small business owners.",
-            "detailed_sections": [
-              {
-                "heading": "Who Must File an ITR in India",
-                "content": "Individuals whose total income exceeds the basic exemption limit, those claiming refunds, foreign asset holders, and certain high-value transaction cases must file an ITR as per income tax rules."
-              },
-              {
-                "heading": "Which ITR Form Should You Use",
-                "content": "ITR-1 is for salaried individuals with simple income. ITR-3 applies to business owners. ITR-4 is used for presumptive taxation under Sections 44AD and 44ADA, subject to eligibility conditions."
-              },
-              {
-                "heading": "New Tax Regime Explained",
-                "content": "Under the current provisions, income tax rebate under Section 87A may effectively reduce tax liability for eligible taxpayers, subject to conditions prescribed in the Finance Act applicable for AY 2026-27."
-              }
-            ],
-            "step_by_step_guides": [
-              "Log in to the Income Tax e-filing portal using PAN.",
-              "Review AIS and Form 26AS for income and TDS details.",
-              "Select the applicable ITR form.",
-              "Verify pre-filled income and deductions.",
-              "Submit and e-verify the return using Aadhaar OTP or net banking."
-            ],
-            "real_indian_examples": [
-              "A salaried employee earning ₹12 lakh annually may have zero tax liability under Section 87A rebate, subject to eligibility and current law."
-            ],
-            "common_mistakes": [
-              "Incorrect ITR form selection.",
-              "Mismatch between AIS and declared income.",
-              "Failure to e-verify the return within prescribed time."
-            ],
-            "faqs": [
-              {
-                "question": "What is the due date for ITR filing?",
-                "answer": "For most individual taxpayers, the due date is 31 July of the assessment year, unless extended by the Income Tax Department."
-              }
-            ],
-            "checklists": [
-              "PAN and Aadhaar",
-              "Form 16 / Form 16A",
-              "Bank interest certificates",
-              "Capital gains statements"
-            ],
-            "penalties_and_deadlines": "Late filing fee under Section 234F may apply, subject to income limits and filing date.",
-            "tools_and_calculators_to_link": ["Income Tax Calculator", "Old vs New Tax Regime Calculator"],
-            "internal_linking_suggestions": ["GST Compliance Guide", "Personal Finance Planning"],
-            "conclusion": "Timely and accurate ITR filing ensures financial credibility and compliance. Always verify data and comply with current tax laws."
-          },
-          "schema": {
-            "types": ["Article", "FAQPage"],
-            "country": "India"
-          }
-        }
-      ]
-    },
-    {
-      "category": "GST",
-      "description": "GST registration, return filing, and compliance guidance for Indian businesses.",
-      "seo": {
-        "primary_keywords": ["GST filing India", "GSTR-1", "GSTR-3B"],
-        "secondary_keywords": ["Input Tax Credit rules", "GST penalties", "GST compliance MSME"]
-      },
-      "articles": [
-        {
-          "slug": "gst-filing-compliance-guide-india",
-          "title": "GST Filing & Compliance Guide: GSTR-1, GSTR-3B and ITC",
-          "excerpt": "A practical GST compliance guide for Indian MSMEs covering registration, returns, ITC rules, and penalties.",
-          "estimated_word_count": 1900,
-          "last_updated": "2026-04-01",
-          "author": {
-            "name": "Finance Compliance Team",
-            "expertise": "GST Law & Business Taxation"
-          },
-          "seo": {
-            "focus_keyword": "GST filing India",
-            "meta_title": "GST Filing Guide 2026: GSTR-1, GSTR-3B & ITC Rules",
-            "meta_description": "Understand GST filing in India. Learn how to file GSTR-1 and GSTR-3B, claim ITC, and avoid GST penalties.",
-            "search_intent": "transactional"
-          },
-          "content": {
-            "introduction": "GST compliance in India is technology-driven and time-sensitive. Regular filing is mandatory to retain GSTIN validity and claim Input Tax Credit.",
-            "why_it_matters_in_india": "Non-compliance can result in late fees, interest, and suspension of GST registration.",
-            "who_should_read": "Traders, service providers, manufacturers, and MSME owners.",
-            "detailed_sections": [
-              {
-                "heading": "GST Registration Applicability",
-                "content": "GST registration is mandatory if turnover exceeds prescribed limits or in special cases such as inter-state supply."
-              },
-              {
-                "heading": "Input Tax Credit Rules",
-                "content": "ITC can be claimed only when invoices reflect in GSTR-2B and conditions under Section 16 of the CGST Act are met."
-              }
-            ],
-            "step_by_step_guides": [
-              "Prepare monthly sales and purchase data.",
-              "Reconcile purchase register with GSTR-2B.",
-              "File GSTR-1 within due date.",
-              "Pay tax and file GSTR-3B."
-            ],
-            "real_indian_examples": [
-              "A small retailer improves cash flow by timely ITC reconciliation with suppliers."
-            ],
-            "common_mistakes": [
-              "Claiming blocked ITC.",
-              "Delayed return filing.",
-              "Incorrect GSTIN details."
-            ],
-            "faqs": [
-              {
-                "question": "What is the late fee for GST returns?",
-                "answer": "Late fees are charged per day, subject to maximum limits as prescribed under GST law."
-              }
-            ],
-            "checklists": [
-              "Sales invoices",
-              "Purchase invoices",
-              "GSTR-2B statement",
-              "DSC or EVC access"
-            ],
-            "penalties_and_deadlines": "Due dates vary by return type. Late fees and interest apply for delays.",
-            "tools_and_calculators_to_link": ["GST Calculator", "ITC Reconciliation Tool"],
-            "internal_linking_suggestions": ["MSME Finance Guide", "Business Cash Flow Management"],
-            "conclusion": "Consistent GST compliance protects business operations and cash flow."
-          },
-          "schema": {
-            "types": ["Article", "FAQPage"],
-            "country": "India"
-          }
-        }
-      ]
-    },
-    {
-      "category": "EMI & Loans",
-      "description": "Loan planning, EMI calculation, and interest management for Indian borrowers.",
-      "seo": {
-        "primary_keywords": ["EMI calculator India", "Home loan EMI", "Personal loan interest"],
-        "secondary_keywords": ["Reducing balance EMI", "Loan prepayment", "CIBIL score"]
-      },
-      "articles": [
-        {
-          "slug": "emi-loan-management-guide-india",
-          "title": "EMI & Loan Management Guide: Reduce Interest and Close Loans Faster",
-          "excerpt": "Learn how EMIs work, how interest is calculated, and strategies to reduce loan burden in India.",
-          "estimated_word_count": 1800,
-          "last_updated": "2026-04-01",
-          "author": {
-            "name": "Finance Compliance Team",
-            "expertise": "Banking & Credit Advisory"
-          },
-          "seo": {
-            "focus_keyword": "EMI calculation India",
-            "meta_title": "EMI Calculator & Loan Planning Guide India",
-            "meta_description": "Understand EMI calculation, reducing balance method, and smart prepayment strategies to save interest.",
-            "search_intent": "informational"
-          },
-          "content": {
-            "introduction": "Loans are long-term financial commitments. Understanding EMI mechanics helps borrowers make cost-effective decisions.",
-            "why_it_matters_in_india": "High interest over long tenures can double repayment amounts if unmanaged.",
-            "who_should_read": "Salaried individuals and loan applicants.",
-            "detailed_sections": [
-              {
-                "heading": "How EMI Is Calculated",
-                "content": "Indian banks use the reducing balance method where interest is calculated on outstanding principal."
-              },
-              {
-                "heading": "Impact of Prepayment",
-                "content": "Partial prepayments reduce principal and total interest, subject to loan terms."
-              }
-            ],
-            "step_by_step_guides": [
-              "Check affordability using EMI calculators.",
-              "Compare interest rates and charges.",
-              "Maintain a healthy credit score.",
-              "Track amortization schedule."
-            ],
-            "real_indian_examples": [
-              "A borrower saves lakhs in interest by making annual lump-sum prepayments."
-            ],
-            "common_mistakes": [
-              "Choosing long tenure to reduce EMI.",
-              "Ignoring loan agreement clauses."
-            ],
-            "faqs": [
-              {
-                "question": "Is prepayment penalty applicable?",
-                "answer": "Floating-rate home loans for individuals generally do not attract prepayment penalties, subject to RBI guidelines."
-              }
-            ],
-            "checklists": [
-              "Loan agreement",
-              "Amortization schedule",
-              "Credit report"
-            ],
-            "penalties_and_deadlines": "EMI bounce charges and credit score impact apply in case of default.",
-            "tools_and_calculators_to_link": ["Home Loan EMI Calculator", "Loan Prepayment Calculator"],
-            "internal_linking_suggestions": ["Personal Finance Planning", "Credit Score Guide"],
-            "conclusion": "Strategic loan management minimizes interest burden and accelerates financial freedom."
-          },
-          "schema": {
-            "types": ["Article", "FAQPage"],
-            "country": "India"
-          }
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "slug": "tax-regime-2026",
+    "title": "Understanding the New Tax Regime in 2026 (What Changed & Who Benefits)",
+    "category": "Tax News",
+    "date": "Jan 22, 2026",
+    "excerpt": "A simple explanation of the 2026 tax regime, updated slabs, deductions, and who should opt for it.",
+    "content": "The 2026 financial year introduced several changes in India’s income tax structure aimed at simplifying compliance and improving take-home pay. Under the new tax regime, the standard deduction has been increased to ₹75,000, and tax slabs have been widened for middle-income earners.\n\nFor salaried individuals earning between ₹10 lakh and ₹15 lakh annually, the effective tax burden has reduced slightly compared to previous years. However, the new regime still removes popular deductions such as 80C, HRA, and home loan interest benefits.\n\nThis means the new tax regime works best for individuals who prefer simplicity and do not actively invest in tax-saving instruments. Before choosing, it is important to calculate tax under both regimes and compare the final payable amount."
+  },
+  {
+    "slug": "how-much-emi-is-safe",
+    "title": "How Much EMI Is Safe? Understanding the 50/30/20 Rule",
+    "category": "Financial Advice",
+    "date": "Jan 15, 2026",
+    "excerpt": "Learn how much of your salary should ideally go toward EMI without hurting your finances.",
+    "content": "A common financial mistake is overcommitting to EMIs without leaving room for savings and emergencies. A practical guideline followed by many financial planners is the 50/30/20 rule.\n\nAccording to this rule, 50% of your monthly income should go toward essential expenses such as rent, food, and EMIs. 30% can be used for lifestyle spending, while the remaining 20% should be saved or invested.\n\nIf your total EMIs cross 40–45% of your monthly income, you may feel financial pressure during emergencies or job changes. Using an EMI calculator before taking a loan helps you stay within safe limits."
+  },
+  {
+    "slug": "emi-vs-lump-sum-payment",
+    "title": "EMI vs Lump Sum Payment: Which Option Makes More Sense?",
+    "category": "Loans",
+    "date": "Jan 10, 2026",
+    "excerpt": "Should you pay everything upfront or choose EMI? Here’s a simple comparison.",
+    "content": "When buying high-value items like electronics, vehicles, or appliances, many people face the choice between paying a lump sum or opting for EMI. While EMI spreads the cost over time, it may increase the overall amount paid due to interest.\n\nLump sum payments make sense if you have sufficient savings and want to avoid interest costs. On the other hand, EMI is helpful when you want to preserve cash flow or invest your money elsewhere.\n\nBefore deciding, always compare the interest rate, processing fees, and your monthly budget using an EMI calculator."
+  },
+  {
+    "slug": "salary-calculation-india",
+    "title": "How to Calculate Your In-Hand Salary in India",
+    "category": "Salary & Income",
+    "date": "Jan 8, 2026",
+    "excerpt": "Understand CTC, deductions, and how much salary you actually receive every month.",
+    "content": "Many employees are confused by the difference between CTC and in-hand salary. CTC includes basic pay, allowances, bonuses, employer PF contribution, and other benefits.\n\nYour in-hand salary is what you receive after deductions such as employee PF, professional tax, income tax, and insurance contributions. These deductions vary based on salary structure and tax regime.\n\nUsing a salary calculator helps you estimate your actual monthly take-home pay and plan expenses more accurately."
+  },
+  {
+    "slug": "home-loan-emi-tips",
+    "title": "5 Practical Tips to Reduce Your Home Loan EMI",
+    "category": "Home Loans",
+    "date": "Jan 5, 2026",
+    "excerpt": "Small changes that can help lower your home loan EMI burden over time.",
+    "content": "Home loans usually run for long tenures, making EMI management critical. One effective way to reduce EMI is choosing a longer tenure, though this increases total interest paid.\n\nMaking part prepayments whenever you receive bonuses or extra income can significantly reduce interest costs. Opting for a lower interest rate lender or switching to a balance transfer option can also help.\n\nRegularly tracking your EMI using a calculator allows you to understand how small adjustments affect long-term repayment."
+  },
+  {
+    "slug": "personal-loan-mistakes",
+    "title": "Common Personal Loan Mistakes You Should Avoid",
+    "category": "Personal Finance",
+    "date": "Jan 2, 2026",
+    "excerpt": "Avoid these mistakes before taking a personal loan to protect your financial health.",
+    "content": "Personal loans are easy to obtain but can become expensive if not managed properly. One common mistake is ignoring the interest rate and focusing only on EMI amount.\n\nBorrowers often take multiple loans simultaneously, leading to high debt obligations. Not reading the loan agreement carefully may result in unexpected charges such as foreclosure or late payment fees.\n\nBefore applying, calculate your EMI, assess repayment capacity, and ensure the loan fits within your long-term financial plan."
+  }
+]
