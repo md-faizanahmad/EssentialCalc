@@ -4,47 +4,63 @@
     "title": "Understanding the New Tax Regime in 2026 (What Changed & Who Benefits)",
     "category": "Tax News",
     "date": "Jan 22, 2026",
-    "excerpt": "A simple explanation of the 2026 tax regime, updated slabs, deductions, and who should opt for it.",
-    "content": "The 2026 financial year introduced several changes in India’s income tax structure aimed at simplifying compliance and improving take-home pay. Under the new tax regime, the standard deduction has been increased to ₹75,000, and tax slabs have been widened for middle-income earners.\n\nFor salaried individuals earning between ₹10 lakh and ₹15 lakh annually, the effective tax burden has reduced slightly compared to previous years. However, the new regime still removes popular deductions such as 80C, HRA, and home loan interest benefits.\n\nThis means the new tax regime works best for individuals who prefer simplicity and do not actively invest in tax-saving instruments. Before choosing, it is important to calculate tax under both regimes and compare the final payable amount."
+    "excerpt": "A clear and practical explanation of the 2026 tax regime, updated slabs, deductions removed, and who should opt for it.",
+    "content": "The Financial Year 2026 introduced further refinements to India’s New Tax Regime with the objective of simplifying income tax compliance and increasing take-home pay for salaried individuals. The most notable change is the increase in the standard deduction to ₹75,000 for salaried taxpayers, which directly reduces taxable income without requiring any investment proofs.\n\nTax slabs under the new regime have been widened, particularly benefiting middle-income earners. For individuals earning between ₹10 lakh and ₹15 lakh annually, the effective tax burden has reduced compared to earlier years, provided they do not heavily rely on deductions. Additionally, the rebate under Section 87A continues to play a crucial role in lowering tax liability for eligible taxpayers, subject to conditions prescribed in the Finance Act.\n\nHowever, the new regime still removes popular deductions such as Section 80C investments, House Rent Allowance (HRA), and home loan interest benefits under Section 24(b). This makes it less attractive for individuals who actively invest in tax-saving instruments or have significant housing loans.\n\nIn summary, the new tax regime works best for taxpayers who prefer simplicity, have fewer deductions, and want predictable tax outgo. Before opting in, it is strongly advised to calculate tax liability under both the old and new regimes and choose the option that results in lower overall tax."
+  },
+  {
+    "slug": "how-to-file-itr-india",
+    "title": "How to File ITR in India: Step-by-Step Guide for Salaried & Self-Employed",
+    "category": "Income Tax",
+    "date": "Jan 20, 2026",
+    "excerpt": "A beginner-friendly step-by-step guide on how to file Income Tax Return (ITR) online in India without mistakes.",
+    "content": "Filing an Income Tax Return (ITR) is a mandatory compliance for many individuals in India and an important financial record. Even if your income is below the taxable limit, filing ITR helps in loan approvals, visa processing, and carrying forward losses.\n\nStep 1: Gather required documents such as PAN, Aadhaar, Form 16 (for salaried individuals), bank interest certificates, capital gains statements, and details of deductions.\n\nStep 2: Log in to the Income Tax e-filing portal using your PAN as user ID. Ensure your Aadhaar is linked and mobile number is active for OTP verification.\n\nStep 3: Select the correct ITR form. ITR-1 is for salaried individuals with simple income, ITR-2 for individuals with capital gains, ITR-3 for business owners, and ITR-4 for presumptive income.\n\nStep 4: Verify pre-filled details using AIS and Form 26AS. Correct any mismatches before submission.\n\nStep 5: Compute tax payable, pay any pending tax, submit the return, and e-verify it using Aadhaar OTP, net banking, or bank account verification.\n\nFiling ITR accurately and on time avoids penalties and strengthens your financial credibility."
+  },
+  {
+    "slug": "how-to-file-gst-return-india",
+    "title": "How to File GST Returns in India: Complete GSTR-1 & GSTR-3B Guide",
+    "category": "GST",
+    "date": "Jan 18, 2026",
+    "excerpt": "Learn how to file GST returns step by step, including GSTR-1 and GSTR-3B, with practical compliance tips.",
+    "content": "GST filing is a critical compliance requirement for registered businesses in India. Regular filing ensures uninterrupted GSTIN status and smooth Input Tax Credit (ITC) claims.\n\nStep 1: Collect all sales and purchase invoices for the relevant period. Ensure invoices are GST-compliant with correct GSTIN and tax breakup.\n\nStep 2: Log in to the GST portal using GSTIN credentials. Prepare and file GSTR-1 to report outward supplies (sales).\n\nStep 3: Reconcile purchase invoices with GSTR-2B to confirm eligible Input Tax Credit.\n\nStep 4: Calculate tax liability, generate challan, and make payment using net banking or UPI.\n\nStep 5: File GSTR-3B to declare tax payable and claim ITC.\n\nTimely GST filing avoids late fees, interest, and suspension of GST registration. Maintaining proper records and monthly reconciliation simplifies long-term compliance."
   },
   {
     "slug": "how-much-emi-is-safe",
     "title": "How Much EMI Is Safe? Understanding the 50/30/20 Rule",
     "category": "Financial Advice",
     "date": "Jan 15, 2026",
-    "excerpt": "Learn how much of your salary should ideally go toward EMI without hurting your finances.",
-    "content": "A common financial mistake is overcommitting to EMIs without leaving room for savings and emergencies. A practical guideline followed by many financial planners is the 50/30/20 rule.\n\nAccording to this rule, 50% of your monthly income should go toward essential expenses such as rent, food, and EMIs. 30% can be used for lifestyle spending, while the remaining 20% should be saved or invested.\n\nIf your total EMIs cross 40–45% of your monthly income, you may feel financial pressure during emergencies or job changes. Using an EMI calculator before taking a loan helps you stay within safe limits."
+    "excerpt": "Learn how much of your salary should ideally go toward EMIs without putting pressure on savings or lifestyle.",
+    "content": "One of the most common financial mistakes is committing to high EMIs without considering long-term sustainability. A widely accepted framework for managing income is the 50/30/20 rule.\n\nAccording to this rule, 50% of your monthly income should be allocated to essential expenses such as rent, groceries, utilities, and EMIs. The next 30% can be spent on lifestyle choices like travel and entertainment, while the remaining 20% should be reserved for savings and investments.\n\nFinancial planners generally advise keeping total EMIs below 40–45% of monthly income. Crossing this limit increases financial stress during emergencies or job changes.\n\nUsing an EMI calculator before taking any loan helps you stay within safe limits and maintain long-term financial stability."
   },
   {
     "slug": "emi-vs-lump-sum-payment",
     "title": "EMI vs Lump Sum Payment: Which Option Makes More Sense?",
     "category": "Loans",
     "date": "Jan 10, 2026",
-    "excerpt": "Should you pay everything upfront or choose EMI? Here’s a simple comparison.",
-    "content": "When buying high-value items like electronics, vehicles, or appliances, many people face the choice between paying a lump sum or opting for EMI. While EMI spreads the cost over time, it may increase the overall amount paid due to interest.\n\nLump sum payments make sense if you have sufficient savings and want to avoid interest costs. On the other hand, EMI is helpful when you want to preserve cash flow or invest your money elsewhere.\n\nBefore deciding, always compare the interest rate, processing fees, and your monthly budget using an EMI calculator."
+    "excerpt": "A simple comparison to help you decide between paying upfront or choosing EMI for big purchases.",
+    "content": "When purchasing high-value items, buyers often face the choice between paying a lump sum or opting for EMI. Lump sum payments avoid interest costs but reduce liquidity.\n\nEMIs help preserve cash flow and may allow funds to be invested elsewhere, but they increase the total cost due to interest and processing fees.\n\nBefore deciding, compare interest rates, hidden charges, and your monthly budget using an EMI calculator."
   },
   {
     "slug": "salary-calculation-india",
     "title": "How to Calculate Your In-Hand Salary in India",
     "category": "Salary & Income",
     "date": "Jan 8, 2026",
-    "excerpt": "Understand CTC, deductions, and how much salary you actually receive every month.",
-    "content": "Many employees are confused by the difference between CTC and in-hand salary. CTC includes basic pay, allowances, bonuses, employer PF contribution, and other benefits.\n\nYour in-hand salary is what you receive after deductions such as employee PF, professional tax, income tax, and insurance contributions. These deductions vary based on salary structure and tax regime.\n\nUsing a salary calculator helps you estimate your actual monthly take-home pay and plan expenses more accurately."
+    "excerpt": "Understand the difference between CTC and in-hand salary and how monthly deductions affect your take-home pay.",
+    "content": "CTC includes basic salary, allowances, bonuses, employer PF contributions, and benefits. In-hand salary is the amount credited after deductions such as employee PF, professional tax, and income tax.\n\nUnderstanding payslip components helps in accurate financial planning. Salary calculators allow employees to estimate real take-home pay and compare job offers effectively."
   },
   {
     "slug": "home-loan-emi-tips",
     "title": "5 Practical Tips to Reduce Your Home Loan EMI",
     "category": "Home Loans",
     "date": "Jan 5, 2026",
-    "excerpt": "Small changes that can help lower your home loan EMI burden over time.",
-    "content": "Home loans usually run for long tenures, making EMI management critical. One effective way to reduce EMI is choosing a longer tenure, though this increases total interest paid.\n\nMaking part prepayments whenever you receive bonuses or extra income can significantly reduce interest costs. Opting for a lower interest rate lender or switching to a balance transfer option can also help.\n\nRegularly tracking your EMI using a calculator allows you to understand how small adjustments affect long-term repayment."
+    "excerpt": "Actionable tips that can help reduce your home loan EMI and total interest burden.",
+    "content": "Home loans are long-term commitments. Making part-prepayments, negotiating interest rates, and reviewing tenure periodically can significantly reduce interest burden.\n\nTracking your loan using an EMI calculator helps evaluate the impact of prepayments and tenure changes."
   },
   {
     "slug": "personal-loan-mistakes",
     "title": "Common Personal Loan Mistakes You Should Avoid",
     "category": "Personal Finance",
     "date": "Jan 2, 2026",
-    "excerpt": "Avoid these mistakes before taking a personal loan to protect your financial health.",
-    "content": "Personal loans are easy to obtain but can become expensive if not managed properly. One common mistake is ignoring the interest rate and focusing only on EMI amount.\n\nBorrowers often take multiple loans simultaneously, leading to high debt obligations. Not reading the loan agreement carefully may result in unexpected charges such as foreclosure or late payment fees.\n\nBefore applying, calculate your EMI, assess repayment capacity, and ensure the loan fits within your long-term financial plan."
+    "excerpt": "Avoid these costly mistakes before taking a personal loan to protect your financial health.",
+    "content": "Personal loans carry high interest rates. Common mistakes include ignoring total repayment value, taking multiple loans, and not reading loan agreements carefully.\n\nAlways assess repayment capacity, compare lenders, and ensure the loan aligns with your long-term financial plan."
   }
 ]
