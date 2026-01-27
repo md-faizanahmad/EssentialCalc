@@ -26,7 +26,7 @@ export default function HomeLoanPage() {
       {/* Calculator */}
       <HomeLoanCalc />
 
-      {/* Push ads AFTER value */}
+      {/* Ads AFTER value */}
       <AdSlot id="below-home-loan-content" />
 
       {/* SEO Content */}
@@ -34,8 +34,8 @@ export default function HomeLoanPage() {
         <h2>Understanding Home Loan EMI</h2>
         <p>
           A home loan is a long-term financial commitment, often lasting up to
-          30 years. EMI calculators help borrowers plan their finances by showing
-          how interest rate and tenure affect monthly payments.
+          30 years. An EMI calculator helps borrowers understand how interest
+          rate and tenure affect monthly payments and overall loan cost.
         </p>
 
         <h2>Home Loan EMI Formula</h2>
@@ -43,52 +43,127 @@ export default function HomeLoanPage() {
 EMI = P × r × (1+r)^n / ((1+r)^n − 1)
         </pre>
         <p>
-          Where P is loan amount, r is monthly interest rate, and n is tenure in months.
+          Where P is the loan amount, r is the monthly interest rate, and n is
+          the loan tenure in months.
         </p>
 
         <h2>Example Home Loan EMI Calculation</h2>
         <p>
-          For a ₹50 lakh home loan at 8.5% interest for 20 years, the monthly EMI
-          is approximately ₹43,391.
+          For a ₹50 lakh home loan at an interest rate of 8.5% for 20 years,
+          the monthly EMI comes to approximately ₹43,391.
         </p>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section – STATIC */}
       <section className="mt-16">
         <h2 className="text-2xl font-bold mb-6">
           Frequently Asked Questions (FAQs)
         </h2>
 
-        <div className="space-y-4">
-          {homeLoanFaqs.map((faq, index) => (
-            <details
-              key={index}
-              className="rounded-xl border border-gray-200 p-4 open:bg-gray-50"
-            >
-              <summary className="cursor-pointer font-semibold text-gray-900">
-                {faq.q}
-              </summary>
-              <p className="mt-3 text-gray-600">{faq.a}</p>
-            </details>
-          ))}
-        </div>
+        <details className="rounded-xl border border-gray-200 p-4 open:bg-gray-50">
+          <summary className="cursor-pointer font-semibold text-gray-900">
+            What is Home Loan EMI?
+          </summary>
+          <p className="mt-3 text-gray-600">
+            Home Loan EMI (Equated Monthly Installment) is the fixed monthly
+            amount paid by a borrower to repay a housing loan. It includes
+            both principal repayment and interest charged by the lender.
+          </p>
+        </details>
+
+        <details className="rounded-xl border border-gray-200 p-4 open:bg-gray-50 mt-4">
+          <summary className="cursor-pointer font-semibold text-gray-900">
+            How is Home Loan EMI calculated?
+          </summary>
+          <p className="mt-3 text-gray-600">
+            Home Loan EMI is calculated using a standard formula that takes
+            into account the loan amount, interest rate, and loan tenure.
+            Longer tenure lowers EMI but increases total interest paid.
+          </p>
+        </details>
+
+        <details className="rounded-xl border border-gray-200 p-4 open:bg-gray-50 mt-4">
+          <summary className="cursor-pointer font-semibold text-gray-900">
+            Can I reduce my home loan EMI?
+          </summary>
+          <p className="mt-3 text-gray-600">
+            Yes. EMI can be reduced by increasing loan tenure, making part
+            prepayments, negotiating interest rates, or opting for a balance
+            transfer to another bank.
+          </p>
+        </details>
+
+        <details className="rounded-xl border border-gray-200 p-4 open:bg-gray-50 mt-4">
+          <summary className="cursor-pointer font-semibold text-gray-900">
+            Is lower EMI or shorter tenure better?
+          </summary>
+          <p className="mt-3 text-gray-600">
+            Lower EMI helps with monthly cash flow, while shorter tenure
+            significantly reduces total interest outflow. Shorter tenure
+            is financially better if affordable.
+          </p>
+        </details>
+
+        <details className="rounded-xl border border-gray-200 p-4 open:bg-gray-50 mt-4">
+          <summary className="cursor-pointer font-semibold text-gray-900">
+            Does interest rate change affect EMI?
+          </summary>
+          <p className="mt-3 text-gray-600">
+            Yes. For floating-rate home loans, any change in interest rate
+            directly impacts EMI or loan tenure depending on the lender’s policy.
+          </p>
+        </details>
       </section>
 
-      {/* FAQ Schema */}
+      {/* STATIC FAQ SCHEMA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: homeLoanFaqs.map(faq => ({
-              "@type": "Question",
-              name: faq.q,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.a,
+            mainEntity: [
+              {
+                "@type": "Question",
+                "name": "What is Home Loan EMI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": homeLoanFaqs[0].a,
+                },
               },
-            })),
+              {
+                "@type": "Question",
+                "name": "How is Home Loan EMI calculated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": homeLoanFaqs[1].a,
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Can I reduce my home loan EMI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": homeLoanFaqs[2].a,
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Is lower EMI or shorter tenure better?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": homeLoanFaqs[3].a,
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Does interest rate change affect EMI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": homeLoanFaqs[4].a,
+                },
+              },
+            ],
           }),
         }}
       />
