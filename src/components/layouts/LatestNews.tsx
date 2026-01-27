@@ -1,7 +1,7 @@
 import Link from "next/link";
 import blogData from "@/data/blog.json";
 
-/* ---------------------------------------------
+/* -------------------------------------------
    Flatten + sort posts by latest date
 ---------------------------------------------- */
 const latestPosts = blogData.categories
