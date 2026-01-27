@@ -1,6 +1,6 @@
 import AdSlot from "@/components/layouts/AdSlot";
 import HomeLoanCalc from "@/components/tools/HomeLoanCalc";
-import homeLoanFaqs from "@/data/homeLoanFaqs";
+
 
 export const metadata = {
   title: "Home Loan EMI Calculator (2026) – Monthly EMI, Interest & Cost | EssentialCalc",
@@ -116,57 +116,9 @@ EMI = P × r × (1+r)^n / ((1+r)^n − 1)
       </section>
 
       {/* STATIC FAQ SCHEMA */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                "name": "What is Home Loan EMI?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": homeLoanFaqs[0].a,
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "How is Home Loan EMI calculated?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": homeLoanFaqs[1].a,
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "Can I reduce my home loan EMI?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": homeLoanFaqs[2].a,
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "Is lower EMI or shorter tenure better?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": homeLoanFaqs[3].a,
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "Does interest rate change affect EMI?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": homeLoanFaqs[4].a,
-                },
-              },
-            ],
-          }),
-        }}
-      />
+    
+  
+       
     </article>
   );
 }
