@@ -12,7 +12,7 @@ export const viewport: Viewport = {
   themeColor: "#2563eb",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1, // Crucial: Prevents annoying auto-zoom on mobile forms
+  // maximumScale: 1, // Crucial: Prevents annoying auto-zoom on mobile forms
   viewportFit: "cover", // Ensures app content uses the full screen on notched iPhones
 };
 
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "100% Private, browser-based tools. Calculate Home Loan EMI, Salary breakup, or Merge/Compress PDFs locally. No data leaves your device.",
   keywords: [
     "EMI Calculator India",
+    "pdf compressor",
     "Home Loan EMI",
     "Salary Calculator Bihar",
     "PDF Merger Offline",
@@ -80,9 +81,7 @@ export default function RootLayout({
           <Header />
           <Breadcrumbs />
           {/* Added pb-20 to main to ensure bottom-nav doesn't overlap content on mobile */}
-          <main className="grow container mx-auto px-4 py-8 pb-20 md:pb-8">
-            {children}
-          </main>
+          <main className=" mx-auto px-4 py-8 pb-20 md:pb-8">{children}</main>
           <ScrollToTop />
           <Footer />
         </div>

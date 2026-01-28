@@ -115,7 +115,7 @@ export default function Header() {
       </header>
 
       {/* --- MOBILE BOTTOM NAVIGATION --- */}
-      <nav className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white/90 backdrop-blur-lg border-t border-gray-100 md:hidden pb-safe">
+      <nav className="fixed bottom-0 left-0 z-50 w-full h-17 bg-white/90 backdrop-blur-lg border-t border-gray-100 md:hidden pb-safe">
         <div className="grid h-full grid-cols-6 mx-auto">
           {" "}
           {/* Changed to grid-cols-5 */}
