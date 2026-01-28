@@ -234,7 +234,7 @@ export default function HowMuchEMIIsSafe() {
       </article>
 
       {/* Mobile Sticky CTA */}
-      <div className="md:hidden sticky bottom-16 w-full bg-black text-white py-3 px-6 flex justify-between items-center z-50">
+      <div className="md:hidden sticky bottom-16 mt-10 w-full bg-black text-white py-3 px-6 flex justify-between items-center z-50">
         <span className="text-[10px] font-bold uppercase tracking-widest leading-none">
           Calculate <br />
           Your Safety

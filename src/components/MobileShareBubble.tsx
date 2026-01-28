@@ -25,7 +25,7 @@ export default function MobileShareBubble({ title, slug }: MobileShareProps) {
   };
 
   return (
-    <div className="fixed bottom-26 left-6 z-100 md:hidden">
+    <div className="fixed bottom-30 left-6 z-100 md:hidden">
       {/* Expanded Menu */}
       {isOpen && (
         <div className="flex flex-col gap-3 mb-4 items-end animate-in fade-in slide-in-from-bottom-4 duration-300">
@@ -38,7 +38,7 @@ export default function MobileShareBubble({ title, slug }: MobileShareProps) {
           </a>
           <button
             onClick={copyLink}
-            className="w-12 h-12 bg-white border-2 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
+            className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
           >
             <span className="text-[10px] font-black uppercase">
               {copied ? "OK" : "Link"}
@@ -50,7 +50,7 @@ export default function MobileShareBubble({ title, slug }: MobileShareProps) {
       {/* Main Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-black text-white border-2 border-black flex flex-col items-center justify-center shadow-[6px_6px_0px_0px_rgba(255,255,255,1),6px_6px_0px_2px_rgba(0,0,0,1)] active:scale-95 transition-all"
+        className="w-10 h-10 bg-black text-white border-2 border-black flex flex-col items-center justify-center shadow-[6px_6px_0px_0px_rgba(255,255,255,1),6px_6px_0px_2px_rgba(0,0,0,1)] active:scale-95 transition-all"
       >
         {isOpen ? (
           <span className="text-xl font-black">×</span>

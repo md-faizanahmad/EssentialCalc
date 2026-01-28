@@ -244,7 +244,7 @@ export default function HowToFileITRIndia() {
       </article>
 
       {/* Mobile Sticky Bar */}
-      <div className="md:hidden sticky bottom-16 w-full bg-black text-white p-4 flex justify-between items-center z-50">
+      <div className="md:hidden sticky bottom-16 mt-10 w-full bg-black text-white p-4 flex justify-between items-center z-50">
         <span className="text-xs font-bold uppercase tracking-tighter">
           File Your ITR Now
         </span>

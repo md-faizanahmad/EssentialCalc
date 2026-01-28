@@ -188,7 +188,7 @@ export default function PersonalLoanEmiMistakes() {
       </article>
 
       {/* Mobile Sticky Tip */}
-      <div className="md:hidden sticky bottom-16 w-full bg-red-600 text-white p-3 text-center text-[10px] font-black uppercase tracking-widest z-50">
+      <div className="md:hidden sticky bottom-16 mt-10 w-full bg-red-600 text-white p-3 text-center text-[10px] font-black uppercase tracking-widest z-50">
         Warning: Missed EMIs can drop your Credit Score by 50+ points
       </div>
     </div>

@@ -227,7 +227,7 @@ export default function TaxRegime2026() {
       </article>
 
       {/* GSC Mobile Conversion Bar */}
-      <div className="md:hidden sticky bottom-16 w-full bg-black text-white p-4 text-center z-50">
+      <div className="md:hidden sticky bottom-16 mt-10 w-full bg-black text-white p-4 text-center z-50">
         <p className="text-[10px] font-bold uppercase tracking-[0.2em]">
           Save more on taxes this year
         </p>
