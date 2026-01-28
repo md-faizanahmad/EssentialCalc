@@ -14,6 +14,7 @@ export default function robots(): MetadataRoute.Robots {
           "/pdf-tools/",
           "/image-tools/",
           "/salary-calculator/",
+          "/analyzer-container",
         ],
         disallow: [
           "/private/",

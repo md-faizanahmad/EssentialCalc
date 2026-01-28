@@ -34,6 +34,11 @@ export const metadata: Metadata = {
     "PDF Merger Offline",
     "Image Compressor 50KB",
     "Privacy First Tools",
+    "Self Attest",
+    "Time Management",
+    "Image remove BG free",
+    "Free Tool",
+    "image crop",
   ],
   manifest: "/manifest.json", // Links your manifest.ts
   appleWebApp: {

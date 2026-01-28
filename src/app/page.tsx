@@ -16,15 +16,10 @@ export default function Home() {
       {/* 2. CORE TOOLS: Immediate user value */}
       <ToolGrid />
 
-      {/* 3. HOMEPAGE INTRO CONTENT (CRITICAL FOR SEO & ADSENSE) */}
-      <section aria-labelledby="about-essentialcalc">
-        <HomeStory />
-      </section>
-
       {/* 4. FIRST AD (AFTER CONTENT — SAFE PLACEMENT) */}
       <AdSlot id="home-mid" />
 
-      {/* 5. INTERNAL LINKING FOR SEO */}
+      {/* 5. INTERNAL LINKING FOR SEO Financial & Planning Tools*/}
       <section aria-labelledby="calculator-links">
         <ToolLinks />
       </section>
@@ -39,7 +34,10 @@ export default function Home() {
 
       {/* 6. FRESH CONTENT SIGNAL */}
       <LatestNews />
-
+      {/* 3. HOMEPAGE INTRO CONTENT (CRITICAL FOR SEO & ADSENSE) */}
+      <section aria-labelledby="about-essentialcalc">
+        <HomeStory />
+      </section>
       {/* 7. FOOTER AD (LOW RISK) */}
       <AdSlot id="home-footer" />
     </main>

@@ -28,6 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Main Hubs
     { path: "", priority: 1.0, changeFreq: "daily" as ChangeFrequency },
     {
+      path: "/analyzer-container",
+      priority: 0.9,
+      changeFreq: "weekly" as ChangeFrequency,
+    },
+    {
       path: "/emi-calculator",
       priority: 0.9,
       changeFreq: "weekly" as ChangeFrequency,

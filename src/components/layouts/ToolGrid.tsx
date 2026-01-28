@@ -1,3 +1,4 @@
+import { Timer } from "lucide-react";
 import Link from "next/link";
 
 interface Tool {
@@ -42,6 +43,14 @@ const tools: Tool[] = [
     href: "/image-tools",
     category: "Utility",
     icon: <ImageIcon />,
+  },
+  {
+    name: "Time Management",
+    description:
+      "Daily Time Allocation Analyzer.Analyze your 24-hour distribution. Balance work, worship, and rest with real-time feedback.",
+    href: "/analyzer-container",
+    category: "Utility",
+    icon: <Timer />,
   },
 ];
 
