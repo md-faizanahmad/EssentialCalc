@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   Upload,
@@ -17,7 +17,16 @@ export default function BgRemove() {
   const [preview, setPreview] = useState<string | null>(null);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
   const [status, setStatus] = useState<string>("");
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [progress, setProgress] = useState<number>(0);
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
+
+  // Clean up Object URLs to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (preview) URL.revokeObjectURL(preview);
+      if (resultUrl) URL.revokeObjectURL(resultUrl);
+    };
+  }, [preview, resultUrl]);
 
   const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selected = e.target.files?.[0];
@@ -26,19 +35,35 @@ export default function BgRemove() {
       setFile(selected);
       setPreview(URL.createObjectURL(selected));
       setResultUrl(null);
+      setProgress(0);
     }
   };
 
   const processImage = async () => {
     if (!file) return;
     setIsProcessing(true);
+    setProgress(10); // Initial start
+
     try {
-      const blob = await removeImageBackground(file, (msg) => setStatus(msg));
+      // Logic assumes removeImageBackground accepts a progress callback
+      // modifying the callback to detect numerical progress if your engine supports it
+      const blob = await removeImageBackground(file, (msg) => {
+        setStatus(msg);
+        // Basic logic: if message contains "downloading", simulate progress
+        if (
+          msg.toLowerCase().includes("loading") ||
+          msg.toLowerCase().includes("download")
+        ) {
+          setProgress((prev) => (prev < 90 ? prev + 5 : prev));
+        }
+      });
+
       setResultUrl(URL.createObjectURL(blob));
+      setProgress(100);
     } catch (err) {
       console.error(err);
       alert(
-        "AI Engine failed. Ensure you have a stable connection for the initial model download.",
+        "AI Engine failed. Ensure you have a stable connection for the model download.",
       );
     } finally {
       setIsProcessing(false);
@@ -52,98 +77,129 @@ export default function BgRemove() {
     setFile(null);
     setPreview(null);
     setResultUrl(null);
+    setProgress(0);
   };
 
   return (
-    <div className="max-w-xl mx-auto space-y-6">
+    <div className="w-full max-w-xl mx-auto px-4 space-y-6">
       {!preview ? (
-        <div className="relative border-2 border-dashed border-rose-200 rounded-[2.5rem] p-12 text-center bg-rose-50/30 hover:bg-rose-50 transition-all group">
+        <div className="relative border-4 border-dashed border-black p-8 md:p-16 text-center bg-white hover:bg-red-50 transition-all group cursor-pointer shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
           <input
             type="file"
             accept="image/*"
             onChange={handleUpload}
             className="absolute inset-0 opacity-0 cursor-pointer z-10"
           />
-          <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-rose-600">
-            <Upload size={32} />
+          <div className="w-20 h-20 bg-black text-white flex items-center justify-center mx-auto mb-6 border-2 border-black group-hover:bg-red-600 transition-colors">
+            <Upload size={32} strokeWidth={3} />
           </div>
-          <h3 className="font-bold text-gray-900 uppercase tracking-tight">
-            Select Photo
+          <h3 className="text-xl font-black text-black uppercase tracking-tight">
+            Drop Photo Here
           </h3>
-          <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">
-            Local AI Processing
+          <p className="text-[10px] text-gray-400 font-bold uppercase mt-2 tracking-[0.2em]">
+            100% Client-Side Processing
           </p>
         </div>
       ) : (
-        <div className="space-y-4">
-          {/* Next.js Image Preview Container */}
-          <div className="relative aspect-square w-full max-w-sm mx-auto rounded-4xl overflow-hidden border border-gray-100 bg-white shadow-2xl">
-            <Image
-              src={resultUrl || preview}
-              alt="Background removal preview"
-              fill
-              unoptimized // Required for Blob URLs
-              sizes="(max-width: 768px) 100vw, 400px"
-              className={`object-contain transition-opacity duration-500 ${
-                resultUrl
-                  ? "bg-[url('/checkerboard.png')] bg-repeat bg-size-[20px_20px]"
-                  : ""
-              }`}
+        <div className="space-y-6 animate-in fade-in zoom-in duration-300">
+          {/* Main Workspace Frame */}
+          <div className="relative aspect-square w-full rounded-none border-4 border-black bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+            {/* Checkerboard background for transparent results */}
+            <div
+              className={`absolute inset-0 ${resultUrl ? "bg-checkerboard" : ""}`}
             />
 
+            <Image
+              src={resultUrl || preview}
+              alt="Background removal result"
+              fill
+              unoptimized
+              sizes="(max-width: 768px) 100vw, 512px"
+              className="object-contain relative z-10 p-4"
+            />
+
+            {/* Loading Overlay */}
             {isProcessing && (
-              <div className="absolute inset-0 bg-white/90 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center z-20">
+              <div className="absolute inset-0 bg-white z-20 flex flex-col items-center justify-center p-8 text-center">
                 <Loader2
-                  className="animate-spin text-rose-600 mb-4"
-                  size={40}
+                  className="animate-spin text-red-600 mb-6"
+                  size={48}
+                  strokeWidth={3}
                 />
-                <p className="text-xs font-black uppercase tracking-widest text-gray-900">
-                  {status}
+                <h4 className="text-sm font-black uppercase tracking-widest text-black mb-2">
+                  AI Computing...
+                </h4>
+                <p className="text-[10px] font-bold text-gray-500 uppercase max-w-50">
+                  {status || "Warming up local AI engine..."}
                 </p>
-                <div className="mt-4 w-full bg-gray-100 h-1 rounded-full overflow-hidden">
+
+                {/* Visual Progress Bar */}
+                <div className="mt-8 w-full max-w-xs border-2 border-black h-4 bg-white overflow-hidden relative">
                   <div
-                    className="bg-rose-600 h-full animate-pulse"
-                    style={{ width: "60%" }}
-                  ></div>
+                    className="bg-red-600 h-full transition-all duration-500 ease-out border-r-2 border-black"
+                    style={{ width: `${progress}%` }}
+                  />
+                  <span className="absolute inset-0 flex items-center justify-center text-[8px] font-black mix-blend-difference text-white">
+                    {progress}%
+                  </span>
                 </div>
               </div>
             )}
           </div>
 
-          <div className="flex flex-col gap-3">
+          {/* Action Controls */}
+          <div className="flex flex-col gap-4">
             {!resultUrl ? (
               <button
                 onClick={processImage}
                 disabled={isProcessing}
-                className="w-full py-4 bg-rose-600 text-white font-black rounded-2xl shadow-xl shadow-rose-100 flex items-center justify-center gap-2 active:scale-95 transition-all disabled:opacity-50"
+                className="w-full py-5 bg-red-600 text-white font-black uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all disabled:opacity-50 flex items-center justify-center gap-3"
               >
-                <Zap size={20} fill="currentColor" /> REMOVE BACKGROUND
+                <Zap size={20} fill="currentColor" /> Remove Background
               </button>
             ) : (
               <a
                 href={resultUrl}
                 download="essentialcalc_no_bg.png"
-                className="w-full py-4 bg-green-600 text-white font-black rounded-2xl shadow-xl shadow-green-100 flex items-center justify-center gap-2 transition-all active:scale-95"
+                className="w-full py-5 bg-black text-white font-black uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_0px_rgba(239,68,68,1)] flex items-center justify-center gap-3 transition-all hover:bg-gray-900"
               >
-                <Download size={20} /> DOWNLOAD PNG
+                <Download size={20} strokeWidth={3} /> Save PNG
               </a>
             )}
+
             <button
               onClick={reset}
-              className="py-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest flex items-center justify-center gap-2 hover:text-red-500 transition-colors"
+              className="group flex items-center justify-center gap-2 text-[10px] font-black uppercase text-gray-400 hover:text-black transition-colors"
             >
-              <Trash2 size={14} /> Remove and Start Again
+              <Trash2 size={14} className="group-hover:text-red-600" /> Start
+              Over
             </button>
           </div>
         </div>
       )}
 
-      <div className="flex items-center justify-center gap-2 py-4 border-t border-gray-50">
-        <ShieldCheck size={16} className="text-green-500" />
-        <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-          No Server Upload &middot; Data Sovereignty
-        </span>
+      {/* Trust Badge */}
+      <div className="flex items-center justify-center gap-3 py-6 border-t-2 border-black">
+        <ShieldCheck size={18} className="text-black" />
+        <p className="text-[9px] font-black uppercase tracking-[0.2em] text-black">
+          Security: Privacy-First &middot; No Data Leaves Device
+        </p>
       </div>
+
+      {/* Global CSS for Checkerboard (Add to global.css or use a style tag) */}
+      <style jsx>{`
+        .bg-checkerboard {
+          background-color: #ffffff;
+          background-image:
+            radial-gradient(#000 10%, transparent 10%),
+            radial-gradient(#000 10%, transparent 10%);
+          background-size: 15px 15px;
+          background-position:
+            0 0,
+            7.5px 7.5px;
+          opacity: 0.05;
+        }
+      `}</style>
     </div>
   );
 }
