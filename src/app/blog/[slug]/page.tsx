@@ -1,55 +1,62 @@
 import { notFound } from "next/navigation";
-import blogData from "@/data/blog.json";
-import AdSlot from "@/components/layouts/AdSlot";
+import BlogLayout from "../components/BlogLayout";
 
-// Update 1: Metadata must await params
-export async function generateMetadata({
-params,
-}: {
-params: Promise<{ slug: string }>;
-}) {
-const { slug } = await params;
-const post = blogData.find((p) => p.slug === slug);
+import HowToFileITRIndia from "../posts/how-to-file-itr-india";
+import HowToFileGSTReturnIndia from "../posts/how-to-file-gst-return-india";
+import TaxRegime2026 from "../posts/tax-regime-2026";
 
-if (!post) return { title: "Post Not Found" };
-return { title: post.title, description: post.excerpt };
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+  return [
+    { slug: "how-to-file-itr-india" },
+    { slug: "how-to-file-gst-return-india" },
+    { slug: "tax-regime-2026" },
+  ];
 }
 
-// Update 2: Component must be async and await params
 export default async function BlogPost({
-params,
+  params,
 }: {
-params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-const { slug } = await params;
-const post = blogData.find((p) => p.slug === slug);
+  const { slug } = await params;
 
-if (!post) {
-notFound();
-}
+  switch (slug) {
+    case "how-to-file-itr-india":
+      return (
+        <BlogLayout
+          title="How to File Income Tax Return (ITR) in India"
+          author="EssentialCalc Team"
+          publishedDate="2026-01-10"
+        >
+          <HowToFileITRIndia />
+        </BlogLayout>
+      );
 
-return (
-<article className="max-w-3xl mx-auto py-12 px-4">
-<header className="mb-10">
-<div className="text-sm font-bold text-blue-600 uppercase mb-4">
-{post.category}
-</div>
-<h1 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-{post.title}
-</h1>
-<div className="text-gray-400 text-sm font-medium">
-Published on {post.date}
-</div>
-</header>
+    case "how-to-file-gst-return-india":
+      return (
+        <BlogLayout
+          title="How to File GST Return in India"
+          author="EssentialCalc Team"
+          publishedDate="2026-01-12"
+        >
+          <HowToFileGSTReturnIndia />
+        </BlogLayout>
+      );
 
-<AdSlot id="blog-top" />  
+    case "tax-regime-2026":
+      return (
+        <BlogLayout
+          title="New Tax Regime 2026 Explained"
+          author="EssentialCalc Team"
+          publishedDate="2026-01-15"
+        >
+          <TaxRegime2026 />
+        </BlogLayout>
+      );
 
-  <div className="prose prose-slate prose-lg max-w-none text-gray-700 leading-8">  
-    <p className="whitespace-pre-line">{post.content}</p>  
-  </div>  
-
-  <AdSlot id="blog-bottom" className="mt-12" />  
-</article>
-
-);
+    default:
+      notFound();
+  }
 }
