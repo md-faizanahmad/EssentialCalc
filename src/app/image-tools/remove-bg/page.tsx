@@ -1,6 +1,7 @@
 import { ShieldCheck, Cpu } from "lucide-react";
 import AdSlot from "@/components/layouts/AdSlot";
 import BgRemove from "@/components/tools/RemoveBg";
+import ImageToolLinks from "@/components/tools/ImageToolLinks";
 
 // Client-side only import for AI engine
 
@@ -12,7 +13,7 @@ export const metadata = {
 
 export default function BgRemovePage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <main className="max-w-4xl mx-auto px-4 py-8 md:py-2">
       <section className="text-center mb-10">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-100 text-rose-600 text-[10px] font-black uppercase tracking-widest mb-4">
           <Cpu size={12} /> Edge AI Neural Engine
@@ -45,6 +46,7 @@ export default function BgRemovePage() {
           with 100% privacy.
         </p>
       </section>
+      <ImageToolLinks />
     </main>
   );
 }

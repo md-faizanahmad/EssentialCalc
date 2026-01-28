@@ -1,6 +1,7 @@
 import { PenTool } from "lucide-react";
 import AdSlot from "@/components/layouts/AdSlot";
 import SelfAttest from "@/components/tools/SelfAttest";
+import ImageToolLinks from "@/components/tools/ImageToolLinks";
 
 export const metadata = {
   title:
@@ -74,6 +75,7 @@ export default function SelfAttestPage() {
           100% Private — No files are ever stored on our servers.
         </p>
       </footer>
+      <ImageToolLinks />
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import ImageProcessor from "@/components/tools/ImageProcessor";
+import ImageToolLinks from "@/components/tools/ImageToolLinks";
 import { Cpu } from "lucide-react";
 
 export const metadata = {
@@ -23,6 +24,7 @@ export default function ImageOptimizePage() {
       </header>
 
       <ImageProcessor />
+      <ImageToolLinks />
     </main>
   );
 }

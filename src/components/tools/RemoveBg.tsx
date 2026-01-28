@@ -1,205 +1,227 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
+import Cropper, { Point, Area } from "react-easy-crop";
 import {
   Upload,
-  Trash2,
   Download,
-  Loader2,
-  ShieldCheck,
+  Scissors,
+  Crop as CropIcon,
   Zap,
+  Loader2,
 } from "lucide-react";
-import { removeImageBackground } from "@/lib/bg-remove-engine";
+import { removeBgExternal, toBase64 } from "@/lib/ai-services";
 
-export default function BgRemove() {
+export default function RemoveBgAI() {
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
-  const [resultUrl, setResultUrl] = useState<string | null>(null);
-  const [status, setStatus] = useState<string>("");
-  const [progress, setProgress] = useState<number>(0);
-  const [isProcessing, setIsProcessing] = useState<boolean>(false);
+  const [result, setResult] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  // Clean up Object URLs to prevent memory leaks
-  useEffect(() => {
-    return () => {
-      if (preview) URL.revokeObjectURL(preview);
-      if (resultUrl) URL.revokeObjectURL(resultUrl);
-    };
-  }, [preview, resultUrl]);
+  // Cropper States
+  const [isCropping, setIsCropping] = useState(false);
+  const [crop, setCrop] = useState<Point>({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState(1);
+  const [croppedAreaPixels, setCroppedAreaPixels] = useState<Area | null>(null);
+
+  const onCropComplete = useCallback((_: Area, pixels: Area) => {
+    setCroppedAreaPixels(pixels);
+  }, []);
 
   const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selected = e.target.files?.[0];
     if (selected) {
-      if (preview) URL.revokeObjectURL(preview);
       setFile(selected);
       setPreview(URL.createObjectURL(selected));
-      setResultUrl(null);
-      setProgress(0);
+      setResult(null);
     }
+  };
+
+  const applyCrop = async () => {
+    if (!preview || !croppedAreaPixels) return;
+    const img = new window.Image();
+    img.src = preview;
+    await new Promise((r) => (img.onload = r));
+
+    const canvas = document.createElement("canvas");
+    canvas.width = croppedAreaPixels.width;
+    canvas.height = croppedAreaPixels.height;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    ctx.drawImage(
+      img,
+      croppedAreaPixels.x,
+      croppedAreaPixels.y,
+      croppedAreaPixels.width,
+      croppedAreaPixels.height,
+      0,
+      0,
+      croppedAreaPixels.width,
+      croppedAreaPixels.height,
+    );
+
+    setPreview(canvas.toDataURL("image/png"));
+    setIsCropping(false);
   };
 
   const processImage = async () => {
-    if (!file) return;
-    setIsProcessing(true);
-    setProgress(10); // Initial start
-
+    if (!preview) return;
+    setLoading(true);
     try {
-      // Logic assumes removeImageBackground accepts a progress callback
-      // modifying the callback to detect numerical progress if your engine supports it
-      const blob = await removeImageBackground(file, (msg) => {
-        setStatus(msg);
-        // Basic logic: if message contains "downloading", simulate progress
-        if (
-          msg.toLowerCase().includes("loading") ||
-          msg.toLowerCase().includes("download")
-        ) {
-          setProgress((prev) => (prev < 90 ? prev + 5 : prev));
-        }
-      });
+      let b64: string;
+      if (preview.startsWith("data:image")) {
+        const res = await fetch(preview);
+        const blob = await res.blob();
+        b64 = await toBase64(blob);
+      } else {
+        b64 = await toBase64(file!);
+      }
 
-      setResultUrl(URL.createObjectURL(blob));
-      setProgress(100);
+      const processedBase64 = await removeBgExternal(b64);
+      setResult(processedBase64);
     } catch (err) {
       console.error(err);
-      alert(
-        "AI Engine failed. Ensure you have a stable connection for the model download.",
-      );
+      alert("AI Processing Failed. Check API status.");
     } finally {
-      setIsProcessing(false);
-      setStatus("");
+      setLoading(false);
     }
   };
 
-  const reset = () => {
-    if (preview) URL.revokeObjectURL(preview);
-    if (resultUrl) URL.revokeObjectURL(resultUrl);
-    setFile(null);
-    setPreview(null);
-    setResultUrl(null);
-    setProgress(0);
-  };
-
   return (
-    <div className="w-full max-w-xl mx-auto px-4 space-y-6">
-      {!preview ? (
-        <div className="relative border-4 border-dashed border-black p-8 md:p-16 text-center bg-white hover:bg-red-50 transition-all group cursor-pointer shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleUpload}
-            className="absolute inset-0 opacity-0 cursor-pointer z-10"
-          />
-          <div className="w-20 h-20 bg-black text-white flex items-center justify-center mx-auto mb-6 border-2 border-black group-hover:bg-red-600 transition-colors">
-            <Upload size={32} strokeWidth={3} />
-          </div>
-          <h3 className="text-xl font-black text-black uppercase tracking-tight">
-            Drop Photo Here
-          </h3>
-          <p className="text-[10px] text-gray-400 font-bold uppercase mt-2 tracking-[0.2em]">
-            100% Client-Side Processing
+    <div className="max-w-2xl mx-auto p-6 space-y-6 bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+      <header className="flex items-center justify-between border-b-4 border-black pb-4">
+        <div>
+          <h2 className="text-3xl font-black uppercase italic tracking-tighter">
+            AI REMOVER
+          </h2>
+          <p className="text-[10px] font-bold text-red-600 uppercase tracking-widest">
+            Secured Proxy Engine
           </p>
         </div>
-      ) : (
-        <div className="space-y-6 animate-in fade-in zoom-in duration-300">
-          {/* Main Workspace Frame */}
-          <div className="relative aspect-square w-full rounded-none border-4 border-black bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
-            {/* Checkerboard background for transparent results */}
-            <div
-              className={`absolute inset-0 ${resultUrl ? "bg-checkerboard" : ""}`}
-            />
+        <Scissors size={32} strokeWidth={3} className="-rotate-12" />
+      </header>
 
-            <Image
-              src={resultUrl || preview}
-              alt="Background removal result"
-              fill
-              unoptimized
-              sizes="(max-width: 768px) 100vw, 512px"
-              className="object-contain relative z-10 p-4"
-            />
-
-            {/* Loading Overlay */}
-            {isProcessing && (
-              <div className="absolute inset-0 bg-white z-20 flex flex-col items-center justify-center p-8 text-center">
-                <Loader2
-                  className="animate-spin text-red-600 mb-6"
-                  size={48}
-                  strokeWidth={3}
-                />
-                <h4 className="text-sm font-black uppercase tracking-widest text-black mb-2">
-                  AI Computing...
-                </h4>
-                <p className="text-[10px] font-bold text-gray-500 uppercase max-w-50">
-                  {status || "Warming up local AI engine..."}
-                </p>
-
-                {/* Visual Progress Bar */}
-                <div className="mt-8 w-full max-w-xs border-2 border-black h-4 bg-white overflow-hidden relative">
-                  <div
-                    className="bg-red-600 h-full transition-all duration-500 ease-out border-r-2 border-black"
-                    style={{ width: `${progress}%` }}
-                  />
-                  <span className="absolute inset-0 flex items-center justify-center text-[8px] font-black mix-blend-difference text-white">
-                    {progress}%
-                  </span>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Action Controls */}
-          <div className="flex flex-col gap-4">
-            {!resultUrl ? (
+      <div className="grid md:grid-cols-2 gap-4">
+        {/* Input Box */}
+        <div className="relative aspect-square border-4 border-black bg-gray-50 overflow-hidden group">
+          {preview ? (
+            <>
+              <Image
+                src={preview}
+                alt="Original"
+                fill
+                sizes="(max-width: 768px) 100vw, 320px"
+                className="object-contain p-2"
+                unoptimized
+              />
               <button
-                onClick={processImage}
-                disabled={isProcessing}
-                className="w-full py-5 bg-red-600 text-white font-black uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all disabled:opacity-50 flex items-center justify-center gap-3"
+                onClick={() => setIsCropping(true)}
+                className="absolute top-2 right-2 bg-black text-white p-2 border-2 border-black hover:bg-red-600 z-10"
               >
-                <Zap size={20} fill="currentColor" /> Remove Background
+                <CropIcon size={18} />
               </button>
-            ) : (
-              <a
-                href={resultUrl}
-                download="essentialcalc_no_bg.png"
-                className="w-full py-5 bg-black text-white font-black uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_0px_rgba(239,68,68,1)] flex items-center justify-center gap-3 transition-all hover:bg-gray-900"
-              >
-                <Download size={20} strokeWidth={3} /> Save PNG
-              </a>
-            )}
+            </>
+          ) : (
+            <div className="flex flex-col items-center justify-center h-full text-gray-400 opacity-20">
+              <Upload size={48} />
+            </div>
+          )}
+        </div>
 
-            <button
-              onClick={reset}
-              className="group flex items-center justify-center gap-2 text-[10px] font-black uppercase text-gray-400 hover:text-black transition-colors"
-            >
-              <Trash2 size={14} className="group-hover:text-red-600" /> Start
-              Over
-            </button>
+        {/* Output Box */}
+        <div className="relative aspect-square border-4 border-black bg-white overflow-hidden">
+          {/* Transparent Grid Pattern */}
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] bg-size-[10px_10px]" />
+
+          {loading && (
+            <div className="absolute inset-0 z-20 bg-white/90 flex flex-col items-center justify-center">
+              <Loader2
+                className="animate-spin text-red-600 mb-2"
+                size={40}
+                strokeWidth={3}
+              />
+              <span className="text-[10px] font-black uppercase animate-pulse">
+                Processing...
+              </span>
+            </div>
+          )}
+          {result && (
+            <Image
+              src={result}
+              alt="Result"
+              fill
+              sizes="(max-width: 768px) 100vw, 320px"
+              className="object-contain p-2 relative z-10"
+              unoptimized
+            />
+          )}
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <label className="flex items-center justify-center w-full py-4 border-4 border-black bg-white hover:bg-black hover:text-white cursor-pointer shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1">
+          <input type="file" hidden accept="image/*" onChange={handleUpload} />
+          <Upload size={20} className="mr-2" strokeWidth={3} />
+          <span className="text-sm font-black uppercase">Select Image</span>
+        </label>
+
+        <div className="grid grid-cols-2 gap-4">
+          <button
+            disabled={!preview || loading}
+            onClick={processImage}
+            className="py-4 bg-red-600 text-white font-black uppercase border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] disabled:opacity-20 flex items-center justify-center gap-2"
+          >
+            <Zap size={18} fill="currentColor" /> Remove BG
+          </button>
+
+          <button
+            disabled={!result}
+            onClick={() => {
+              const a = document.createElement("a");
+              a.href = result!;
+              a.download = "no-bg.png";
+              a.click();
+            }}
+            className="py-4 bg-black text-white font-black uppercase border-4 border-black shadow-[4px_4px_0px_0px_rgba(239,68,68,1)] disabled:opacity-20 flex items-center justify-center gap-2"
+          >
+            <Download size={18} strokeWidth={3} /> Save PNG
+          </button>
+        </div>
+      </div>
+
+      {isCropping && (
+        <div className="fixed inset-0 bg-black/80 z-100 flex items-center justify-center p-4">
+          <div className="w-full max-w-lg bg-white border-4 border-black p-4 space-y-4">
+            <div className="relative h-80 bg-black">
+              <Cropper
+                image={preview!}
+                crop={crop}
+                zoom={zoom}
+                aspect={1}
+                onCropChange={setCrop}
+                onZoomChange={setZoom}
+                onCropComplete={onCropComplete}
+              />
+            </div>
+            <div className="flex gap-4">
+              <button
+                onClick={() => setIsCropping(false)}
+                className="flex-1 py-2 border-4 border-black font-black text-xs uppercase"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={applyCrop}
+                className="flex-1 py-2 bg-red-600 text-white border-4 border-black font-black text-xs uppercase"
+              >
+                Apply
+              </button>
+            </div>
           </div>
         </div>
       )}
-
-      {/* Trust Badge */}
-      <div className="flex items-center justify-center gap-3 py-6 border-t-2 border-black">
-        <ShieldCheck size={18} className="text-black" />
-        <p className="text-[9px] font-black uppercase tracking-[0.2em] text-black">
-          Security: Privacy-First &middot; No Data Leaves Device
-        </p>
-      </div>
-
-      {/* Global CSS for Checkerboard (Add to global.css or use a style tag) */}
-      <style jsx>{`
-        .bg-checkerboard {
-          background-color: #ffffff;
-          background-image:
-            radial-gradient(#000 10%, transparent 10%),
-            radial-gradient(#000 10%, transparent 10%);
-          background-size: 15px 15px;
-          background-position:
-            0 0,
-            7.5px 7.5px;
-          opacity: 0.05;
-        }
-      `}</style>
     </div>
   );
 }
