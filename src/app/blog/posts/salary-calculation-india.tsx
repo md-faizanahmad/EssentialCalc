@@ -197,7 +197,7 @@ export default function SalaryCalculationIndia() {
       </article>
 
       {/* Mobile Sticky CTA */}
-      <div className="md:hidden fixed bottom-0 w-full bg-black text-white p-4 text-center z-50">
+      <div className="md:hidden sticky bottom-16 w-full bg-black text-white p-4 text-center z-50">
         <p className="text-[10px] font-bold uppercase tracking-widest leading-none underline underline-offset-4 decoration-white/30">
           Check Your Net Take-Home Now
         </p>

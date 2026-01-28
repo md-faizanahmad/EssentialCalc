@@ -172,7 +172,7 @@ export default function HomeLoanEmiTips() {
       </article>
 
       {/* Mobile Sticky Action Bar */}
-      <div className="md:hidden fixed bottom-0 w-full bg-white border-t-2 border-black p-4 flex justify-between items-center z-50">
+      <div className="md:hidden sticky bottom-16 w-full bg-white border-t-2 border-black p-4 flex justify-between items-center z-50">
         <span className="text-xs font-black uppercase">
           Interest Saver Tool
         </span>
