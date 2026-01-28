@@ -4,6 +4,8 @@ import BlogLayout from "../components/BlogLayout";
 import HowToFileITRIndia from "../posts/how-to-file-itr-india";
 import HowToFileGSTReturnIndia from "../posts/how-to-file-gst-return-india";
 import TaxRegime2026 from "../posts/tax-regime-2026";
+import HowMuchEMIIsSafe from "../posts/how-much-emi-is-safe";
+import EmiVsLumpSum from "../posts/emi-vs-lump-sum-payment";
 
 export const dynamic = "force-static";
 
@@ -56,6 +58,26 @@ export default async function BlogPost({
         </BlogLayout>
       );
 
+    case "how-much-emi-is-safe":
+      return (
+        <BlogLayout
+          title="how-much-emi-is-safe"
+          author="EssentialCalc Team"
+          publishedDate="2026-01-15"
+        >
+          <HowMuchEMIIsSafe />
+        </BlogLayout>
+      );
+    case "emi-vs-lump-sum-payment":
+      return (
+        <BlogLayout
+          title="emi-vs-lump-sum-payment"
+          author="EssentialCalc Team"
+          publishedDate="2026-01-15"
+        >
+          <EmiVsLumpSum />
+        </BlogLayout>
+      );
     default:
       notFound();
   }
