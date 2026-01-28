@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import SuggestedBlogs from "../SuggestedBlogs";
 
 interface BlogLayoutProps {
   title: string;
@@ -35,6 +36,7 @@ export default function BlogLayout({
           purposes only and does not constitute financial or legal advice.
         </p>
       </footer>
+      <SuggestedBlogs />
     </main>
   );
 }

@@ -6,6 +6,9 @@ import HowToFileGSTReturnIndia from "../posts/how-to-file-gst-return-india";
 import TaxRegime2026 from "../posts/tax-regime-2026";
 import HowMuchEMIIsSafe from "../posts/how-much-emi-is-safe";
 import EmiVsLumpSum from "../posts/emi-vs-lump-sum-payment";
+import SalaryCalculationIndia from "../posts/salary-calculation-india";
+import HomeLoanEmiTips from "../posts/home-loan-emi-tips";
+import PersonalLoanEmiMistakes from "../posts/personal-loan-mistakes";
 
 export const dynamic = "force-static";
 
@@ -61,7 +64,7 @@ export default async function BlogPost({
     case "how-much-emi-is-safe":
       return (
         <BlogLayout
-          title="how-much-emi-is-safe"
+          title="How-Much-Emi-is-Safe"
           author="EssentialCalc Team"
           publishedDate="2026-01-15"
         >
@@ -71,11 +74,44 @@ export default async function BlogPost({
     case "emi-vs-lump-sum-payment":
       return (
         <BlogLayout
-          title="emi-vs-lump-sum-payment"
+          title="Emi-vs-Lump-Sum-Payment"
           author="EssentialCalc Team"
           publishedDate="2026-01-15"
         >
           <EmiVsLumpSum />
+        </BlogLayout>
+      );
+
+    case "salary-calculation-india":
+      return (
+        <BlogLayout
+          title="Salary-Calculation-India"
+          author="EssentialCalc Team"
+          publishedDate="2026-01-15"
+        >
+          <SalaryCalculationIndia />
+        </BlogLayout>
+      );
+
+    case "home-loan-emi-tips":
+      return (
+        <BlogLayout
+          title="Home-Loan-Emi-Tips"
+          author="EssentialCalc Team"
+          publishedDate="2026-01-15"
+        >
+          <HomeLoanEmiTips />
+        </BlogLayout>
+      );
+
+    case "personal-loan-mistakes":
+      return (
+        <BlogLayout
+          title="Personal-Loan-Mistakes"
+          author="EssentialCalc Team"
+          publishedDate="2026-01-15"
+        >
+          <PersonalLoanEmiMistakes />
         </BlogLayout>
       );
     default:
