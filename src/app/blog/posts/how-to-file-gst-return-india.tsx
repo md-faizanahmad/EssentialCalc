@@ -1,132 +1,125 @@
-// GST Return Filing Guide - 2026 SEO Optimized Edition
+// GST Return Guide - High-Contrast Editorial Layout
 export default function HowToFileGSTReturnIndia() {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-indigo-100">
-      {/* Mobile-first Container */}
-      <article className="mx-auto max-w-200 bg-white sm:shadow-xl sm:my-8 overflow-hidden">
-        {/* Ad Placement: Top Leaderboard Placeholder */}
-        <div className="hidden sm:flex w-full h-24 bg-gray-100 items-center justify-center text-gray-400 text-xs uppercase tracking-widest border-b">
-          - Advertisement -
-        </div>
+    <div className="min-h-screen bg-white font-sans text-black antialiased">
+      {/* WEB CRAWLER OPTIMIZATION: 
+          Strict H1-H2-H3 hierarchy for Googlebot 
+      */}
 
-        {/* Hero Section */}
-        <header className="px-6 py-12 border-b border-gray-100 bg-linear-to-b from-indigo-50/50 to-white">
-          <div className="mb-4 inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold tracking-wide uppercase">
-            Updated Jan 2026
+      <article className="mx-auto max-w-187.5 px-4 py-8 md:py-16">
+        {/* Header Section */}
+        <header className="border-b-2 border-black pb-8 mb-12">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="bg-black text-white text-xs font-bold px-2 py-1 uppercase tracking-widest">
+              Compliance 2026
+            </span>
+            <span className="text-gray-500 text-sm">8 Min Read</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-slate-900">
-            How to File GST Return in India:{" "}
-            <span className="text-indigo-600">Step-by-Step Guide</span>
+
+          <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.1] mb-6">
+            How to File GST Return in India: The Definitive Guide.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl">
-            Staying GST compliant in 2026 is critical. With new system-driven
-            restrictions, missing a filing can lead to immediate registration
-            suspension. Here is everything you need to know.
+
+          <p className="text-xl text-gray-700 leading-relaxed font-medium">
+            A comprehensive breakdown of GST filing procedures, updated for the
+            2026 fiscal year regulations.
           </p>
         </header>
 
-        <div className="p-6 sm:p-12 space-y-12">
-          {/* Section: Quick Links / Table of Contents */}
-          <nav className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-            <p className="font-bold text-slate-800 mb-3">In this guide:</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-indigo-600 font-medium">
-              <li>
-                <a href="#eligibility" className="hover:underline">
-                  1. Eligibility Criteria
-                </a>
-              </li>
-              <li>
-                <a href="#types" className="hover:underline">
-                  2. GSTR Forms & Due Dates
-                </a>
-              </li>
-              <li>
-                <a href="#steps" className="hover:underline">
-                  3. 5-Step Filing Process
-                </a>
-              </li>
-              <li>
-                <a href="#penalties" className="hover:underline">
-                  4. 2026 Penalty Rules
-                </a>
-              </li>
-            </ul>
-          </nav>
+        {/* Ad Placement: Top of Page */}
+        <div className="my-8 w-full py-4 border-y border-gray-100 flex justify-center">
+          <span className="text-[10px] text-gray-400 uppercase tracking-widest">
+            Sponsored Content
+          </span>
+        </div>
 
-          {/* Ad Placement: Content Mid-Section */}
-          <div className="w-full min-h-62.5 bg-gray-50 border-2 border-dashed border-gray-200 flex items-center justify-center text-gray-400 text-xs">
-            - AdSense In-Article Ad Unit -
-          </div>
-
-          {/* Content: Eligibility */}
-          <section id="eligibility">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center">
-              Who is Required to File GST Returns?
-            </h2>
-            <p className="mb-6 text-slate-600 italic border-l-4 border-indigo-500 pl-4">
-              <strong>Crucial 2026 Update:</strong> GST registration is now
-              automatically suspended if bank account details are not furnished
-              within 30 days of registration.
+        <div className="space-y-16">
+          {/* Section 1: Introduction */}
+          <section id="introduction">
+            <p className="text-lg leading-relaxed mb-6">
+              GST (Goods and Services Tax) return filing is the process by which
+              a registered taxpayer reports their income to the authorities.
+              Under the 2026 guidelines, compliance has become automated, making
+              timely filing more critical than ever to maintain a high{" "}
+              <strong>Compliance Rating</strong>.
             </p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="p-5 border border-slate-200 rounded-xl hover:border-indigo-300 transition-colors">
-                <h3 className="font-bold text-indigo-600 mb-1">
-                  Regular Taxpayers
-                </h3>
-                <p className="text-sm text-slate-500">
-                  Businesses with turnover {`>`} ₹40L (Goods) or ₹20L
-                  (Services).
+          </section>
+
+          {/* Section 2: Eligibility */}
+          <section id="eligibility">
+            <h2 className="text-2xl font-bold uppercase tracking-tight border-l-4 border-black pl-4 mb-8">
+              01. Who Must File?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border border-black p-6">
+                <h3 className="font-bold text-lg mb-2">Standard Taxpayers</h3>
+                <p className="text-sm text-gray-600">
+                  Businesses exceeding the threshold limit of ₹40 Lakhs (Goods)
+                  or ₹20 Lakhs (Services).
                 </p>
               </div>
-              <div className="p-5 border border-slate-200 rounded-xl hover:border-indigo-300 transition-colors">
-                <h3 className="font-bold text-indigo-600 mb-1">NIL Filers</h3>
-                <p className="text-sm text-slate-500">
-                  Mandatory even with zero sales to avoid daily late fees.
+              <div className="border border-black p-6">
+                <h3 className="font-bold text-lg mb-2">Compulsory Filers</h3>
+                <p className="text-sm text-gray-600">
+                  E-commerce sellers, Non-resident taxpayers, and Casual taxable
+                  persons regardless of turnover.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Content: Types of Returns */}
-          <section id="types">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-              Key GSTR Forms & Deadlines
+          {/* Section 3: The Forms */}
+          <section id="forms">
+            <h2 className="text-2xl font-bold uppercase tracking-tight border-l-4 border-black pl-4 mb-8">
+              02. GSTR Forms & Deadlines
             </h2>
-            <div className="overflow-x-auto rounded-xl border border-slate-200">
-              <table className="w-full text-left text-sm border-collapse">
-                <thead className="bg-slate-900 text-white">
-                  <tr>
-                    <th className="p-4 font-semibold uppercase tracking-wider">
-                      Return Type
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse border border-black">
+                <thead>
+                  <tr className="bg-black text-white">
+                    <th className="p-4 border border-black text-xs uppercase">
+                      Form
                     </th>
-                    <th className="p-4 font-semibold uppercase tracking-wider">
+                    <th className="p-4 border border-black text-xs uppercase">
                       Purpose
                     </th>
-                    <th className="p-4 font-semibold uppercase tracking-wider">
+                    <th className="p-4 border border-black text-xs uppercase">
                       Due Date
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-200">
-                  <tr className="hover:bg-indigo-50/50">
-                    <td className="p-4 font-bold text-indigo-700">GSTR-1</td>
-                    <td className="p-4">Outward Sales Details</td>
-                    <td className="p-4 text-slate-600 font-medium">
-                      11th of Next Month
+                <tbody className="text-sm">
+                  <tr>
+                    <td className="p-4 border border-black font-bold text-lg">
+                      GSTR-1
+                    </td>
+                    <td className="p-4 border border-black">
+                      Report of Outward Supplies
+                    </td>
+                    <td className="p-4 border border-black font-medium">
+                      11th / Month
                     </td>
                   </tr>
-                  <tr className="hover:bg-indigo-50/50">
-                    <td className="p-4 font-bold text-indigo-700">GSTR-3B</td>
-                    <td className="p-4">Summary & Tax Payment</td>
-                    <td className="p-4 text-slate-600 font-medium">
-                      20th of Next Month
+                  <tr className="bg-gray-50">
+                    <td className="p-4 border border-black font-bold text-lg">
+                      GSTR-3B
+                    </td>
+                    <td className="p-4 border border-black">
+                      Self-Assessed Summary Return
+                    </td>
+                    <td className="p-4 border border-black font-medium">
+                      20th / Month
                     </td>
                   </tr>
-                  <tr className="hover:bg-indigo-50/50">
-                    <td className="p-4 font-bold text-indigo-700">GSTR-9</td>
-                    <td className="p-4">Annual Return</td>
-                    <td className="p-4 text-slate-600 font-medium">
-                      31st Dec (Annual)
+                  <tr>
+                    <td className="p-4 border border-black font-bold text-lg">
+                      GSTR-4
+                    </td>
+                    <td className="p-4 border border-black">
+                      Composition Scheme Return
+                    </td>
+                    <td className="p-4 border border-black font-medium">
+                      Annual
                     </td>
                   </tr>
                 </tbody>
@@ -134,140 +127,127 @@ export default function HowToFileGSTReturnIndia() {
             </div>
           </section>
 
-          {/* Content: Step-by-Step Filing */}
-          <section
-            id="steps"
-            className="bg-indigo-900 text-white p-8 sm:p-12 rounded-4xl"
-          >
-            <h2 className="text-3xl font-bold mb-8">
-              How to File GST Return Online (2026 Process)
-            </h2>
-            <ol className="space-y-8">
-              {[
-                {
-                  title: "Portal Login",
-                  desc: "Access the official GST Common Portal using your secure credentials.",
-                },
-                {
-                  title: "Select Return Period",
-                  desc: "Choose the Financial Year and Tax Period (Month/Quarter) from the dashboard.",
-                },
-                {
-                  title: "Prepare Online",
-                  desc: "Input B2B, B2C sales and verify auto-populated ITC from GSTR-2B.",
-                },
-                {
-                  title: "Offset Liability",
-                  desc: "Utilize available Cash/Credit ledger balances to pay the tax due.",
-                },
-                {
-                  title: "Final E-Filing",
-                  desc: "File using EVC (OTP) or Digital Signature (DSC) to generate an ARN.",
-                },
-              ].map((step, idx) => (
-                <li key={idx} className="flex gap-6 group">
-                  <div className="flex-none w-10 h-10 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold border-2 border-indigo-400 group-hover:bg-white group-hover:text-indigo-900 transition-colors">
-                    {idx + 1}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-xl mb-1">{step.title}</h4>
-                    <p className="text-indigo-200">{step.desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </section>
+          {/* Ad Placement: Mid-Article */}
+          <div className="my-12 w-full h-62.5 bg-gray-50 flex items-center justify-center border border-gray-200">
+            <span className="text-[10px] text-gray-400 uppercase tracking-widest">
+              Advertisement
+            </span>
+          </div>
 
-          {/* Content: Penalties */}
-          <section
-            id="penalties"
-            className="bg-red-50 p-8 rounded-2xl border border-red-100"
-          >
-            <h2 className="text-2xl font-bold text-red-900 mb-4 tracking-tight">
-              Late Filing & Non-Compliance
+          {/* Section 4: Process Flow */}
+          <section id="process">
+            <h2 className="text-2xl font-bold uppercase tracking-tight border-l-4 border-black pl-4 mb-8">
+              03. Step-by-Step Filing Process
             </h2>
             <div className="space-y-4">
-              <p className="text-red-800">
-                Delayed filings trigger automatic system-calculated fees:
-              </p>
-              <ul className="space-y-2">
-                <li className="flex justify-between font-medium border-b border-red-200 pb-2">
-                  <span>Daily Late Fee (Regular)</span>
-                  <span className="text-red-700 font-bold">₹50 / day</span>
-                </li>
-                <li className="flex justify-between font-medium border-b border-red-200 pb-2">
-                  <span>Daily Late Fee (NIL)</span>
-                  <span className="text-red-700 font-bold">₹20 / day</span>
-                </li>
-                <li className="bg-white p-4 rounded-lg text-sm text-red-600 font-semibold border border-red-200">
-                  ⚠️ NEW RULE: Returns older than 3 years are now
-                  &quot;Time-Barred&quot; and cannot be filed. Any unclaimed ITC
-                  in these returns is permanently lost.
-                </li>
-              </ul>
+              {[
+                {
+                  step: "Authentication",
+                  detail:
+                    "Login to the GST Portal (gst.gov.in) using your 15-digit GSTIN.",
+                },
+                {
+                  step: "Return Dashboard",
+                  detail: "Navigate to Services > Returns > Returns Dashboard.",
+                },
+                {
+                  step: "Data Entry",
+                  detail:
+                    "Add B2B and B2C invoices. Ensure your data matches GSTR-2B for ITC.",
+                },
+                {
+                  step: "Tax Settlement",
+                  detail:
+                    "Check balance in Electronic Cash & Credit Ledgers. Pay via Net Banking/UPI if needed.",
+                },
+                {
+                  step: "Final Verification",
+                  detail:
+                    "Submit using DSC (for companies) or EVC-OTP (for individuals).",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex gap-4 p-4 border-b border-gray-100"
+                >
+                  <span className="font-mono text-gray-400">0{index + 1}</span>
+                  <div>
+                    <h4 className="font-bold uppercase text-sm">{item.step}</h4>
+                    <p className="text-gray-600">{item.detail}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
 
-          {/* Content: FAQs (SEO Rich Snippets) */}
-          <section className="border-t border-slate-100 pt-10">
-            <h2 className="text-2xl font-bold mb-8">
+          {/* Section 5: Penalties */}
+          <section id="penalties" className="bg-black text-white p-8">
+            <h2 className="text-2xl font-bold mb-6">The Cost of Delay</h2>
+            <ul className="space-y-4 font-mono text-sm">
+              <li className="flex justify-between border-b border-gray-800 pb-2">
+                <span>Standard Late Fee</span>
+                <span>₹50 / Day</span>
+              </li>
+              <li className="flex justify-between border-b border-gray-800 pb-2">
+                <span>NIL Return Late Fee</span>
+                <span>₹20 / Day</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Interest Rate</span>
+                <span>18% Per Annum</span>
+              </li>
+            </ul>
+            <p className="mt-8 text-xs text-gray-400 leading-tight">
+              *Penalties are capped at a maximum of ₹5,000 per return under
+              specific conditions.
+            </p>
+          </section>
+
+          {/* Section 6: FAQs (AdSense/GSC Value Add) */}
+          <section id="faq">
+            <h2 className="text-2xl font-bold uppercase mb-8">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "Is it mandatory to file GSTR-1 every month?",
-                  a: "Yes, unless you have opted for the QRMP scheme, in which case you file GSTR-1 quarterly but may use the IFF (Invoice Furnishing Facility) monthly.",
-                },
-                {
-                  q: "Can I revise a filed GST return?",
-                  a: "GSTR-3B cannot be revised. However, any omissions or errors can be rectified in the subsequent month's return filing.",
-                },
-                {
-                  q: "What happens if I don't file for 6 months?",
-                  a: "The GST department can initiate 'Suo Moto' cancellation of your GST registration, effectively banning you from doing business.",
-                },
-              ].map((faq, i) => (
-                <details
-                  key={i}
-                  className="group border border-slate-200 rounded-xl overflow-hidden"
-                >
-                  <summary className="p-5 font-bold cursor-pointer list-none bg-white flex justify-between items-center group-open:bg-slate-50 transition-colors">
-                    {faq.q}
-                    <span className="text-indigo-500 group-open:rotate-180 transition-transform">
-                      ↓
-                    </span>
-                  </summary>
-                  <div className="p-5 bg-white text-slate-600 leading-relaxed border-t border-slate-100">
-                    {faq.a}
-                  </div>
-                </details>
-              ))}
+            <div className="space-y-6">
+              <div className="border-t border-black pt-4">
+                <h4 className="font-bold mb-2 uppercase text-xs tracking-wider">
+                  Can I file if I have zero sales?
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  Yes. A &quot;NIL Return&quot; is mandatory to keep your GSTIN
+                  active. Failure to file for 6 consecutive months results in
+                  registration cancellation.
+                </p>
+              </div>
+              <div className="border-t border-black pt-4">
+                <h4 className="font-bold mb-2 uppercase text-xs tracking-wider">
+                  How do I claim ITC?
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  Input Tax Credit (ITC) can only be claimed if your supplier
+                  has uploaded the invoices in their GSTR-1 and it reflects in
+                  your GSTR-2B.
+                </p>
+              </div>
             </div>
           </section>
         </div>
 
-        {/* Footer: Credibility & Social Share */}
-        <footer className="bg-slate-900 p-8 sm:p-12 text-center text-slate-400">
-          <p className="text-sm mb-4">
-            © 2026 GST Compliance Guide. This article is for informational
-            purposes only. Consult a Tax Professional for specific advice.
+        {/* Footer Content */}
+        <footer className="mt-20 pt-8 border-t-4 border-black">
+          <p className="text-xs text-gray-500 mb-8 uppercase tracking-widest font-bold">
+            End of Guide — GST Compliance Series
           </p>
-          <div className="flex justify-center gap-4 text-xs font-bold text-white uppercase tracking-widest">
-            <span className="px-3 py-1 bg-slate-800 rounded">Tax Guide</span>
-            <span className="px-3 py-1 bg-slate-800 rounded">Compliance</span>
-            <span className="px-3 py-1 bg-slate-800 rounded">India</span>
+          <div className="flex flex-wrap gap-4">
+            <button className="flex-1 bg-black text-white py-4 px-6 font-bold uppercase text-xs hover:bg-gray-800 transition-colors">
+              Download Filing Checklist
+            </button>
+            <button className="flex-1 border-2 border-black py-4 px-6 font-bold uppercase text-xs hover:bg-gray-100 transition-colors">
+              Contact Tax Expert
+            </button>
           </div>
         </footer>
       </article>
-
-      {/* GSC Tip: Bottom Sticky CTA for internal linking */}
-      <div className="fixed bottom-0 left-0 w-full bg-white border-t p-4 sm:hidden flex justify-between items-center shadow-2xl">
-        <span className="text-sm font-bold">Need a GST Checklist?</span>
-        <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-bold">
-          Download PDF
-        </button>
-      </div>
     </div>
   );
 }
