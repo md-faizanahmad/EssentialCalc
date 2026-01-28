@@ -6,7 +6,7 @@ export default function HowToFileGSTReturnIndia() {
           Strict H1-H2-H3 hierarchy for Googlebot 
       */}
 
-      <article className="mx-auto max-w-187.5 px-4 py-8 md:py-16">
+      <article className="mx-auto max-w-187.5 px-4 py-2 md:py-16">
         {/* Header Section */}
         <header className="border-b-2 border-black pb-8 mb-12">
           <div className="flex items-center gap-2 mb-6">

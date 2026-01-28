@@ -2,7 +2,7 @@
 export default function HomeLoanEmiTips() {
   return (
     <div className="min-h-screen bg-white font-sans text-black antialiased">
-      <article className="mx-auto max-w-187.5 px-4 py-8 md:py-16">
+      <article className="mx-auto max-w-187.5 px-4 py-2 md:py-16">
         {/* Header Section */}
         <header className="border-b-4 border-black pb-8 mb-12">
           <div className="flex items-center gap-2 mb-6 text-xs font-bold uppercase tracking-[0.2em]">

@@ -15,7 +15,7 @@ export default function BlogLayout({
   children,
 }: BlogLayoutProps) {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-10">
+    <main className="max-w-3xl mx-auto px-4 py-2">
       <header className="mb-8 border-b border-gray-200 pb-6">
         <h1 className="text-3xl md:text-4xl font-black text-gray-900 mb-3">
           {title}
@@ -32,8 +32,9 @@ export default function BlogLayout({
 
       <footer className="mt-12 border-t border-gray-200 pt-6 text-sm text-gray-500">
         <p>
-          <strong>Disclaimer:</strong> This article is for informational
-          purposes only and does not constitute financial or legal advice.
+          <strong>Disclaimer:</strong> These guides are for informational
+          purposes. Tax and loan rules in India can change; always verify with a
+          certified professional before making financial decisions.
         </p>
       </footer>
       <SuggestedBlogs />

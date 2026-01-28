@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import BlogLayout from "../components/BlogLayout";
+import BlogSchema from "@/components/BlogSchema"; // Import the Schema component
 
+// Post Components
 import HowToFileITRIndia from "../posts/how-to-file-itr-india";
 import HowToFileGSTReturnIndia from "../posts/how-to-file-gst-return-india";
 import TaxRegime2026 from "../posts/tax-regime-2026";
@@ -9,17 +11,102 @@ import EmiVsLumpSum from "../posts/emi-vs-lump-sum-payment";
 import SalaryCalculationIndia from "../posts/salary-calculation-india";
 import HomeLoanEmiTips from "../posts/home-loan-emi-tips";
 import PersonalLoanEmiMistakes from "../posts/personal-loan-mistakes";
+import { Metadata } from "next";
+import ShareBar from "@/components/ShareBar";
+import MobileShareBubble from "@/components/MobileShareBubble";
 
 export const dynamic = "force-static";
 
+// Updated to include all 8 routes for static generation
 export async function generateStaticParams() {
   return [
     { slug: "how-to-file-itr-india" },
     { slug: "how-to-file-gst-return-india" },
     { slug: "tax-regime-2026" },
+    { slug: "how-much-emi-is-safe" },
+    { slug: "emi-vs-lump-sum-payment" },
+    { slug: "salary-calculation-india" },
+    { slug: "home-loan-emi-tips" },
+    { slug: "personal-loan-mistakes" },
   ];
 }
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const baseUrl = "https://essentialcalc.com";
 
+  // Map slugs to SEO titles and descriptions (Keep these synced with your switch logic)
+  const seoData: Record<string, { title: string; desc: string }> = {
+    "how-to-file-itr-india": {
+      title: "How to File ITR Online (2026) - Step-by-Step Guide",
+      desc: "Complete 2026 guide for filing Income Tax Returns (ITR) in India. Learn about AY 2026-27 forms, documents, and e-verification.",
+    },
+    "how-to-file-gst-return-india": {
+      title: "How to File GST Return in India (2026) | GSTR Filing Guide",
+      desc: "A simplified guide to filing GST returns online. Understand GSTR-1, GSTR-3B, due dates, and 2026 compliance rules.",
+    },
+    "tax-regime-2026": {
+      title: "New Tax Regime 2026 Explained: Slabs, Benefits & Comparison",
+      desc: "Compare New vs Old tax regimes for FY 2025-26. Detailed breakdown of income tax slabs and prohibited deductions.",
+    },
+    "how-much-emi-is-safe": {
+      title: "How Much EMI is Safe for Your Salary? (2026 Safe Debt Rule)",
+      desc: "Avoid the debt trap. Learn the 40% rule for safe EMI calculation and how to manage your debt-to-income ratio effectively.",
+    },
+    "emi-vs-lump-sum-payment": {
+      title: "EMI vs. Lump Sum: Which Payment Method is Better in 2026?",
+      desc: "The math of opportunity cost. Find out if you should pay upfront or choose EMIs based on interest rates and inflation.",
+    },
+    "salary-calculation-india": {
+      title: "Salary Calculation India: Calculate Your Net Take-Home Pay",
+      desc: "Decode your CTC. Learn how to calculate monthly take-home salary after PF, HRA, and Professional Tax deductions in India.",
+    },
+    "home-loan-emi-tips": {
+      title: "5 Home Loan EMI Tips to Save Lakhs in Interest (2026)",
+      desc: "Master your mortgage. Pro-tips on home loan prepayments, step-up EMIs, and refinancing to reduce your loan tenure.",
+    },
+    "personal-loan-mistakes": {
+      title: "7 Critical Personal Loan EMI Mistakes to Avoid | Debt Guide",
+      desc: "Stay safe from hidden bank charges. Discover the common personal loan mistakes and the truth about 'flat' vs 'reducing' interest.",
+    },
+  };
+
+  const current = seoData[slug] || {
+    title: "Financial Guide | EssentialCalc",
+    desc: "Expert financial calculators and guides for India.",
+  };
+
+  return {
+    title: current.title,
+    description: current.desc,
+    openGraph: {
+      title: current.title,
+      description: current.desc,
+      url: `${baseUrl}/blog/${slug}`,
+      siteName: "EssentialCalc",
+      locale: "en_IN",
+      type: "article",
+      // Reference a dynamic OG image or a static one
+      images: [
+        {
+          url: `${baseUrl}/og-images/${slug}.png`,
+          width: 1200,
+          height: 630,
+          alt: current.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: current.title,
+      description: current.desc,
+      images: [`${baseUrl}/og-images/${slug}.png`],
+    },
+  };
+}
 export default async function BlogPost({
   params,
 }: {
@@ -27,94 +114,129 @@ export default async function BlogPost({
 }) {
   const { slug } = await params;
 
+  // Configuration for Schema and Layout
+  let postData = {
+    title: "",
+    description: "",
+    date: "2026-01-15",
+    category: "Finance",
+    component: <></>,
+  };
+
   switch (slug) {
     case "how-to-file-itr-india":
-      return (
-        <BlogLayout
-          title="How to File Income Tax Return (ITR) in India"
-          author="EssentialCalc Team"
-          publishedDate="2026-01-10"
-        >
-          <HowToFileITRIndia />
-        </BlogLayout>
-      );
+      postData = {
+        title: "How to File Income Tax Return (ITR) in India",
+        description:
+          "Complete 2026 guide to filing ITR online, documents required, and deadlines.",
+        date: "2026-01-10",
+        category: "Income Tax",
+        component: <HowToFileITRIndia />,
+      };
+      break;
 
     case "how-to-file-gst-return-india":
-      return (
-        <BlogLayout
-          title="How to File GST Return in India"
-          author="EssentialCalc Team"
-          publishedDate="2026-01-12"
-        >
-          <HowToFileGSTReturnIndia />
-        </BlogLayout>
-      );
+      postData = {
+        title: "How to File GST Return in India - Complete GSTR Guide",
+        description:
+          "Learn how to file GSTR-1 and GSTR-3B online with the latest 2026 rules.",
+        date: "2026-01-12",
+        category: "GST",
+        component: <HowToFileGSTReturnIndia />,
+      };
+      break;
 
     case "tax-regime-2026":
-      return (
-        <BlogLayout
-          title="New Tax Regime 2026 Explained"
-          author="EssentialCalc Team"
-          publishedDate="2026-01-15"
-        >
-          <TaxRegime2026 />
-        </BlogLayout>
-      );
+      postData = {
+        title: "New Tax Regime 2026 Explained: Slabs & Benefits",
+        description:
+          "Compare the new vs old tax regime to find the best savings for your salary.",
+        date: "2026-01-15",
+        category: "Income Tax",
+        component: <TaxRegime2026 />,
+      };
+      break;
 
     case "how-much-emi-is-safe":
-      return (
-        <BlogLayout
-          title="How-Much-Emi-is-Safe"
-          author="EssentialCalc Team"
-          publishedDate="2026-01-15"
-        >
-          <HowMuchEMIIsSafe />
-        </BlogLayout>
-      );
+      postData = {
+        title: "How Much EMI is Safe for Your Salary?",
+        description:
+          "Calculate your debt-to-income ratio and learn the 40% rule for loan safety.",
+        date: "2026-01-15",
+        category: "Loans",
+        component: <HowMuchEMIIsSafe />,
+      };
+      break;
+
     case "emi-vs-lump-sum-payment":
-      return (
-        <BlogLayout
-          title="Emi-vs-Lump-Sum-Payment"
-          author="EssentialCalc Team"
-          publishedDate="2026-01-15"
-        >
-          <EmiVsLumpSum />
-        </BlogLayout>
-      );
+      postData = {
+        title: "EMI vs. Lump Sum Payment: Which is Better?",
+        description:
+          "Understand opportunity cost and interest savings when choosing between EMI and upfront payment.",
+        date: "2026-01-15",
+        category: "Financial Planning",
+        component: <EmiVsLumpSum />,
+      };
+      break;
 
     case "salary-calculation-india":
-      return (
-        <BlogLayout
-          title="Salary-Calculation-India"
-          author="EssentialCalc Team"
-          publishedDate="2026-01-15"
-        >
-          <SalaryCalculationIndia />
-        </BlogLayout>
-      );
+      postData = {
+        title: "Salary Calculation India: Gross vs. Take-Home Pay",
+        description:
+          "Decode your salary breakup including HRA, PF, and Professional Tax in India.",
+        date: "2026-01-15",
+        category: "Salary",
+        component: <SalaryCalculationIndia />,
+      };
+      break;
 
     case "home-loan-emi-tips":
-      return (
-        <BlogLayout
-          title="Home-Loan-Emi-Tips"
-          author="EssentialCalc Team"
-          publishedDate="2026-01-15"
-        >
-          <HomeLoanEmiTips />
-        </BlogLayout>
-      );
+      postData = {
+        title: "5 Home Loan EMI Tips to Save Lakhs in Interest",
+        description:
+          "Proven strategies like step-up EMIs and prepayments to clear your home loan faster.",
+        date: "2026-01-15",
+        category: "Home Loan",
+        component: <HomeLoanEmiTips />,
+      };
+      break;
 
     case "personal-loan-mistakes":
-      return (
-        <BlogLayout
-          title="Personal-Loan-Mistakes"
-          author="EssentialCalc Team"
-          publishedDate="2026-01-15"
-        >
-          <PersonalLoanEmiMistakes />
-        </BlogLayout>
-      );
+      postData = {
+        title: "Critical Personal Loan EMI Mistakes to Avoid",
+        description:
+          "Avoid high-interest traps and hidden charges in personal loan agreements.",
+        date: "2026-01-15",
+        category: "Loans",
+        component: <PersonalLoanEmiMistakes />,
+      };
+      break;
+
     default:
       notFound();
   }
+
+  return (
+    <>
+      <BlogSchema
+        post={{
+          title: postData.title,
+          description: postData.description,
+          slug: slug,
+          date: postData.date,
+          category: postData.category,
+          // You can add unique FAQs here for each case if needed
+        }}
+      />
+      <BlogLayout
+        title={postData.title}
+        author="EssentialCalc Team"
+        publishedDate={postData.date}
+      >
+        {postData.component}
+      </BlogLayout>
+      <ShareBar title={postData.title} slug={slug} />
+      <MobileShareBubble title={postData.title} slug={slug} />
+    </>
+  );
 }
