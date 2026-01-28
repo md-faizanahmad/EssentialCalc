@@ -25,13 +25,13 @@ export default function MobileShareBubble({ title, slug }: MobileShareProps) {
   };
 
   return (
-    <div className="fixed bottom-20 left-6 z-100 md:hidden">
+    <div className="fixed bottom-26 left-6 z-100 md:hidden">
       {/* Expanded Menu */}
       {isOpen && (
         <div className="flex flex-col gap-3 mb-4 items-end animate-in fade-in slide-in-from-bottom-4 duration-300">
           <a
             href={`https://wa.me/?text=${encodedTitle}%20${encodedUrl}`}
-            className="w-12 h-12 bg-white border-2 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
+            className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
             aria-label="Share on WhatsApp"
           >
             <span className="text-[10px] font-black uppercase">WA</span>

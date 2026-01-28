@@ -1,227 +1,166 @@
 "use client";
 
-import React, {
-  useState,
-  useRef,
-  ChangeEvent,
-  MouseEvent,
-  TouchEvent,
-} from "react";
+import React, { useState, useRef, ChangeEvent } from "react";
 import Image from "next/image";
-import {
-  Upload,
-  Trash2,
-  Download,
-  PenTool,
-  Eraser,
-  Loader2,
-  PlusSquare,
-  MinusSquare,
-  Move,
-} from "lucide-react";
-import { removeImageBackground } from "@/lib/bg-remove-engine";
+import { Upload, Download, Trash2, Camera, PenTool } from "lucide-react";
 
-export default function SelfAttestWorkspace() {
-  const [docPreview, setDocPreview] = useState<string | null>(null);
-  const [sigPreview, setSigPreview] = useState<string | null>(null);
-  const [isProcessingSig, setIsProcessingSig] = useState(false);
+export default function PhotoSignatureAttest() {
+  const [photo, setPhoto] = useState<string | null>(null);
+  const [signature, setSignature] = useState<string | null>(null);
+  const [bgColor, setBgColor] = useState("#ffffff");
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Signature Layer Controls
-  const [sigPos, setSigPos] = useState({ x: 50, y: 50 });
-  const [sigSize, setSigSize] = useState(150);
-  const [isDragging, setIsDragging] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const handleDocUpload = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleUpload = (
+    e: ChangeEvent<HTMLInputElement>,
+    type: "photo" | "sig",
+  ) => {
     const file = e.target.files?.[0];
-    if (file) setDocPreview(URL.createObjectURL(file));
-  };
-
-  const handleSigUpload = (e: ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) setSigPreview(URL.createObjectURL(file));
-  };
-
-  const handleRemoveBg = async () => {
-    if (!sigPreview) return;
-    setIsProcessingSig(true);
-    try {
-      const blob = await removeImageBackground(sigPreview, () => {});
-      setSigPreview(URL.createObjectURL(blob));
-    } catch (err) {
-      alert(
-        "AI processing failed. Please ensure your signature is on a plain background.",
-      );
-    } finally {
-      setIsProcessingSig(false);
+    if (file) {
+      const url = URL.createObjectURL(file);
+      type === "photo" ? setPhoto(url) : setSignature(url);
     }
   };
 
-  const moveSignature = (clientX: number, clientY: number) => {
-    const rect = containerRef.current?.getBoundingClientRect();
-    if (!rect) return;
+  const generateFinalImage = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-    // Calculate position relative to container
-    const x = clientX - rect.left - sigSize / 2;
-    const y = clientY - rect.top - (sigSize * 0.5) / 2; // Assuming 2:1 aspect ratio for sig
+    // 1. Draw Background
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, 320, 240);
 
-    // Constrain within bounds
-    const boundedX = Math.max(0, Math.min(x, rect.width - sigSize));
-    const boundedY = Math.max(0, Math.min(y, rect.height - sigSize / 2));
+    // 2. Draw Photo (Top 180px)
+    if (photo) {
+      const img = new window.Image();
+      img.src = photo;
+      img.onload = () => {
+        ctx.drawImage(img, 0, 0, 320, 180);
+        // 3. Draw Signature (Bottom 60px)
+        if (signature) {
+          const sig = new window.Image();
+          sig.src = signature;
+          sig.onload = () => {
+            ctx.fillStyle = "#ffffff"; // Sig area white background
+            ctx.fillRect(0, 180, 320, 60);
+            ctx.drawImage(sig, 40, 185, 240, 50); // Centered sig
 
-    setSigPos({ x: boundedX, y: boundedY });
-  };
-
-  const handleMouseMove = (e: MouseEvent) => {
-    if (isDragging) moveSignature(e.clientX, e.clientY);
-  };
-
-  const handleTouchMove = (e: TouchEvent) => {
-    if (isDragging) moveSignature(e.touches[0].clientX, e.touches[0].clientY);
+            // Download Trigger
+            const link = document.createElement("a");
+            link.download = "attested-photo.png";
+            link.href = canvas.toDataURL();
+            link.click();
+          };
+        }
+      };
+    }
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6 px-4">
-      {/* --- MAIN WORKSPACE --- */}
+    <div className="max-w-md mx-auto p-4 space-y-6">
+      <header className="border-b-4 border-black pb-2">
+        <h2 className="text-xl font-black uppercase italic">
+          Self-Attest Tool
+        </h2>
+        <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+          Standard: 320x240px
+        </p>
+      </header>
+
+      {/* --- PREVIEW BOX (320x240 Ratio) --- */}
       <div
-        ref={containerRef}
-        onMouseMove={handleMouseMove}
-        onTouchMove={handleTouchMove}
-        onMouseUp={() => setIsDragging(false)}
-        onTouchEnd={() => setIsDragging(false)}
-        className="relative w-full aspect-[3/4] md:h-[600px] bg-white border-4 border-black overflow-hidden flex items-center justify-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+        className="relative w-full aspect-[320/240] border-4 border-black overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+        style={{ backgroundColor: bgColor }}
       >
-        {!docPreview ? (
-          <label className="flex flex-col items-center gap-4 cursor-pointer hover:scale-105 transition-transform">
-            <input
-              type="file"
-              hidden
-              accept="image/*"
-              onChange={handleDocUpload}
-            />
-            <div className="w-20 h-20 bg-black text-white flex items-center justify-center border-4 border-black">
-              <Upload size={32} />
-            </div>
-            <div className="text-center">
-              <p className="font-black text-black uppercase tracking-tight">
-                Upload Document
-              </p>
-              <p className="text-[10px] text-gray-500 font-bold uppercase mt-1 tracking-widest">
-                Step 1: Base Layer
-              </p>
-            </div>
-          </label>
-        ) : (
-          <>
+        {photo ? (
+          <div className="relative h-[75%] w-full border-b-2 border-black border-dashed">
             <Image
-              src={docPreview}
-              alt="Document Base"
+              src={photo}
+              alt="Photo"
               fill
-              className="object-contain pointer-events-none"
-              sizes="(max-width: 768px) 100vw, 800px"
-              priority
+              className="object-cover"
               unoptimized
             />
+          </div>
+        ) : (
+          <div className="h-[75%] flex items-center justify-center text-gray-300">
+            <Camera size={48} />
+          </div>
+        )}
 
-            {sigPreview && (
-              <div
-                style={{
-                  left: `${sigPos.x}px`,
-                  top: `${sigPos.y}px`,
-                  width: `${sigSize}px`,
-                }}
-                className={`absolute z-20 select-none group ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
-                onMouseDown={() => setIsDragging(true)}
-                onTouchStart={() => setIsDragging(true)}
-              >
-                <div className="relative border-2 border-transparent group-hover:border-black/20">
-                  {/* Signature UI Controls */}
-                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 flex items-center gap-1 bg-black p-1 shadow-[4px_4px_0px_0px_rgba(255,255,255,1),4px_4px_0px_1px_rgba(0,0,0,1)] opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button
-                      onClick={handleRemoveBg}
-                      className="p-1 text-white hover:text-gray-300 border border-transparent hover:border-white"
-                    >
-                      <Eraser size={14} />
-                    </button>
-                    <button
-                      onClick={() => setSigSize((s) => s + 20)}
-                      className="p-1 text-white hover:text-gray-300"
-                    >
-                      <PlusSquare size={14} />
-                    </button>
-                    <button
-                      onClick={() => setSigSize((s) => s - 20)}
-                      className="p-1 text-white hover:text-gray-300"
-                    >
-                      <MinusSquare size={14} />
-                    </button>
-                  </div>
-
-                  {/* The actual Signature Image */}
-                  <img
-                    src={sigPreview}
-                    alt="Signature Overlay"
-                    className={`w-full h-auto pointer-events-none ${isProcessingSig ? "blur-sm" : ""}`}
-                  />
-
-                  {/* Drag Handle Icon (Visible on mobile for UX) */}
-                  <div className="absolute -right-2 -bottom-2 bg-black text-white p-1 md:hidden">
-                    <Move size={10} />
-                  </div>
-                </div>
-              </div>
-            )}
-          </>
+        {signature ? (
+          <div className="h-[25%] bg-white relative flex items-center justify-center">
+            <img
+              src={signature}
+              alt="Signature"
+              className="h-full object-contain p-2"
+            />
+          </div>
+        ) : (
+          <div className="h-[25%] bg-white flex items-center justify-center text-gray-300">
+            <PenTool size={24} />
+          </div>
         )}
       </div>
 
-      {/* --- CONTROL PANEL --- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Signature Upload */}
-        <div className="bg-white p-4 border-2 border-black flex items-center gap-4">
-          <label className="w-12 h-12 bg-black text-white flex items-center justify-center cursor-pointer hover:bg-gray-800 transition-colors">
-            <input
-              type="file"
-              hidden
-              accept="image/*"
-              onChange={handleSigUpload}
-            />
-            <PenTool size={20} />
-          </label>
-          <div className="flex-1">
-            <p className="text-xs font-black uppercase text-black italic">
-              {sigPreview ? "Change Signature" : "Step 2: Add Signature"}
-            </p>
-            <p className="text-[9px] font-bold text-gray-500 uppercase tracking-tighter">
-              Use blue/black ink on white paper
-            </p>
-          </div>
-          {sigPreview && isProcessingSig && (
-            <Loader2 className="animate-spin text-black" size={16} />
-          )}
-        </div>
+      {/* --- CONTROLS --- */}
+      <div className="grid grid-cols-2 gap-4">
+        <label className="flex flex-col items-center justify-center p-4 border-2 border-black bg-white hover:bg-gray-50 cursor-pointer transition-all">
+          <input
+            type="file"
+            hidden
+            accept="image/*"
+            onChange={(e) => handleUpload(e, "photo")}
+          />
+          <Upload size={20} className="mb-1" />
+          <span className="text-[10px] font-black uppercase">Photo</span>
+        </label>
 
-        {/* Action Button */}
+        <label className="flex flex-col items-center justify-center p-4 border-2 border-black bg-white hover:bg-gray-50 cursor-pointer transition-all">
+          <input
+            type="file"
+            hidden
+            accept="image/*"
+            onChange={(e) => handleUpload(e, "sig")}
+          />
+          <Upload size={20} className="mb-1" />
+          <span className="text-[10px] font-black uppercase">Sign</span>
+        </label>
+      </div>
+
+      {/* --- BG COLOR & ACTIONS --- */}
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 border-2 border-black p-2 grow">
+          <span className="text-[10px] font-black uppercase">BG Color:</span>
+          <input
+            type="color"
+            value={bgColor}
+            onChange={(e) => setBgColor(e.target.value)}
+            className="w-full h-8 cursor-pointer bg-transparent"
+          />
+        </div>
         <button
-          disabled={!docPreview || !sigPreview}
-          className="bg-black text-white font-black uppercase py-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all disabled:opacity-30 flex items-center justify-center gap-2"
+          onClick={() => {
+            setPhoto(null);
+            setSignature(null);
+          }}
+          className="p-3 border-2 border-black hover:bg-red-50"
         >
-          <Download size={18} /> Download Attested
+          <Trash2 size={20} />
         </button>
       </div>
 
-      {/* Reset Tool */}
-      {(docPreview || sigPreview) && (
-        <button
-          onClick={() => {
-            setDocPreview(null);
-            setSigPreview(null);
-          }}
-          className="w-full text-center text-[10px] font-black uppercase text-gray-400 hover:text-red-600 flex items-center justify-center gap-2 transition-colors"
-        >
-          <Trash2 size={12} /> Clear All Layers
-        </button>
-      )}
+      <button
+        disabled={!photo || !signature}
+        onClick={generateFinalImage}
+        className="w-full py-4 bg-black text-white font-black uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] active:translate-x-1 active:translate-y-1 active:shadow-none disabled:opacity-20 transition-all"
+      >
+        Download Attested Image
+      </button>
+
+      {/* Hidden Canvas for Generation */}
+      <canvas ref={canvasRef} width="320" height="240" className="hidden" />
     </div>
   );
 }
