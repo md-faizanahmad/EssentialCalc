@@ -3,7 +3,6 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://essentialcalc.com";
 
-  // Define a type for change frequency to ensure type safety
   type ChangeFrequency =
     | "always"
     | "hourly"
@@ -13,7 +12,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     | "yearly"
     | "never";
 
-  // Define routes with specific priorities for better SEO crawling
+  // New Blog Slugs based on the 2026 Guides we created
+  const blogPosts = [
+    "how-to-file-gst-return-india",
+    "how-to-file-itr-india",
+    "new-tax-regime-2026-explained",
+    "how-much-emi-is-safe",
+    "emi-vs-lump-sum-payment",
+    "salary-calculation-india",
+    "home-loan-emi-tips",
+    "personal-loan-emi-mistakes",
+  ];
+
   const routes = [
     // Main Hubs
     { path: "", priority: 1.0, changeFreq: "daily" as ChangeFrequency },
@@ -104,8 +114,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFreq: "monthly" as ChangeFrequency,
     },
 
+    // Blog Hub
+    { path: "/blog", priority: 0.8, changeFreq: "daily" as ChangeFrequency },
+
+    // Individual Blog Posts (Dynamic SEO Silos)
+    ...blogPosts.map((slug) => ({
+      path: `/blog/${slug}`,
+      priority: 0.7,
+      changeFreq: "weekly" as ChangeFrequency,
+    })),
+
     // Content & Legal
-    { path: "/blog", priority: 0.6, changeFreq: "weekly" as ChangeFrequency },
     { path: "/faq", priority: 0.6, changeFreq: "monthly" as ChangeFrequency },
     { path: "/about", priority: 0.5, changeFreq: "monthly" as ChangeFrequency },
     {
