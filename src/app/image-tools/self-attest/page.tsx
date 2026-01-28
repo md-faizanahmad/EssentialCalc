@@ -1,6 +1,6 @@
 import { PenTool } from "lucide-react";
 import AdSlot from "@/components/layouts/AdSlot";
-// import SelfAttest from "@/components/tools/SelfAttest";
+import SelfAttest from "@/components/tools/SelfAttest";
 
 export const metadata = {
   title:
@@ -25,7 +25,7 @@ export default function SelfAttestPage() {
         </p>
       </header>
 
-      {/* <SelfAttest /> */}
+      <SelfAttest />
 
       <AdSlot id="self-attest-footer" className="mt-12" />
 

@@ -19,9 +19,9 @@ const groupedPosts = blogData.reduce(
 
 export default function BlogIndex() {
   return (
-    <main className="max-w-4xl mx-auto py-12 px-4">
+    <main className="max-w-4xl mx-auto py-6 px-4">
       {/* Header */}
-      <header className="mb-10 border-b border-gray-100 pb-8">
+      <header className="mb-8 border-b border-gray-100 pb-8">
         <h1 className="text-4xl font-black text-gray-900 mb-4 tracking-tight">
           Tax, Loan, Salary & EMI Guides for India
         </h1>
@@ -33,7 +33,7 @@ export default function BlogIndex() {
       </header>
 
       {/* Hub description */}
-      <section className="mb-12 text-gray-700">
+      <section className="mb-8 text-gray-700">
         <p>
           This blog acts as a knowledge hub covering important financial topics
           such as Income Tax Return (ITR) filing, GST returns, home and personal
