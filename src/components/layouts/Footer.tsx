@@ -124,11 +124,11 @@ export default function Footer() {
 
         {/* Bottom Bar: Copyright & Legal Disclaimer */}
         <div className="pt-8 border-t border-gray-50 text-center md:text-left space-y-4 md:space-y-0 md:flex md:justify-between">
-          <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">
+          {/* <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">
             © {currentYear}{" "}
             <a href="mailto:md.faizan.ahmad.web@gmail.com">Md Faizan Ahmad</a>{" "}
             &middot; EssentialCalc India
-          </p>
+          </p> */}
           <p className="text-[10px] text-gray-400 font-medium max-w-md mx-auto md:mx-0">
             Disclaimer: Our tools are for informational purposes. Verify
             financial data with official bank sources before making decisions.
