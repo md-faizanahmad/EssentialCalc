@@ -41,36 +41,43 @@ export async function generateMetadata({
   // Map slugs to SEO titles and descriptions (Keep these synced with your switch logic)
   const seoData: Record<string, { title: string; desc: string }> = {
     "how-to-file-itr-india": {
-      title: "How to File ITR Online (2026) - Step-by-Step Guide",
-      desc: "Complete 2026 guide for filing Income Tax Returns (ITR) in India. Learn about AY 2026-27 forms, documents, and e-verification.",
+      title: "How to File ITR Online in India (AY 2026–27)",
+      desc: "Step-by-step guide to filing Income Tax Return (ITR) online in India for AY 2026–27. Covers forms, documents, and e-verification.",
     },
+
     "how-to-file-gst-return-india": {
-      title: "How to File GST Return in India (2026) | GSTR Filing Guide",
-      desc: "A simplified guide to filing GST returns online. Understand GSTR-1, GSTR-3B, due dates, and 2026 compliance rules.",
+      title: "How to File GST Return in India (2026)",
+      desc: "Simple guide to filing GST returns online in India. Learn about GSTR-1, GSTR-3B, due dates, and 2026 GST compliance rules.",
     },
+
     "tax-regime-2026": {
-      title: "New Tax Regime 2026 Explained: Slabs, Benefits & Comparison",
-      desc: "Compare New vs Old tax regimes for FY 2025-26. Detailed breakdown of income tax slabs and prohibited deductions.",
+      title: "New Tax Regime 2026: Slabs & Old vs New Comparison",
+      desc: "Detailed explanation of the New Tax Regime for FY 2025–26. Compare tax slabs, deductions, and choose between old vs new regime.",
     },
+
     "how-much-emi-is-safe": {
-      title: "How Much EMI is Safe for Your Salary? (2026 Safe Debt Rule)",
-      desc: "Avoid the debt trap. Learn the 40% rule for safe EMI calculation and how to manage your debt-to-income ratio effectively.",
+      title: "How Much EMI Is Safe for Your Salary? (India)",
+      desc: "Learn how much EMI is safe based on your salary using the 40% rule. Understand debt-to-income ratio and smart borrowing limits.",
     },
+
     "emi-vs-lump-sum-payment": {
-      title: "EMI vs. Lump Sum: Which Payment Method is Better in 2026?",
-      desc: "The math of opportunity cost. Find out if you should pay upfront or choose EMIs based on interest rates and inflation.",
+      title: "EMI vs Lump Sum Payment: Which Is Better?",
+      desc: "Compare EMI vs lump sum payment using real examples. Understand interest cost, opportunity cost, and inflation impact.",
     },
+
     "salary-calculation-india": {
-      title: "Salary Calculation India: Calculate Your Net Take-Home Pay",
-      desc: "Decode your CTC. Learn how to calculate monthly take-home salary after PF, HRA, and Professional Tax deductions in India.",
+      title: "Salary Calculation in India: Net Take-Home from CTC",
+      desc: "Learn how to calculate take-home salary from CTC in India. Covers PF, HRA, professional tax, and common deductions.",
     },
+
     "home-loan-emi-tips": {
-      title: "5 Home Loan EMI Tips to Save Lakhs in Interest (2026)",
-      desc: "Master your mortgage. Pro-tips on home loan prepayments, step-up EMIs, and refinancing to reduce your loan tenure.",
+      title: "Home Loan EMI Tips to Reduce Interest (2026)",
+      desc: "Practical home loan EMI tips to reduce interest and loan tenure. Learn about prepayment, refinancing, and step-up EMIs.",
     },
+
     "personal-loan-mistakes": {
-      title: "7 Critical Personal Loan EMI Mistakes to Avoid | Debt Guide",
-      desc: "Stay safe from hidden bank charges. Discover the common personal loan mistakes and the truth about 'flat' vs 'reducing' interest.",
+      title: "Personal Loan Mistakes to Avoid (EMI Guide)",
+      desc: "Common personal loan mistakes explained. Learn about hidden charges, flat vs reducing interest, and EMI planning.",
     },
   };
 

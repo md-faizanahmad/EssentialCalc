@@ -10,7 +10,7 @@ import Link from "next/link";
 import AdSlot from "@/components/layouts/AdSlot";
 
 export const metadata = {
-  title: "Frequently Asked Questions - Privacy & Usage | EssentialCalc",
+  title: "Frequently Asked Questions | EssentialCalc",
   description:
     "Get answers about EssentialCalc's private on-device tools. Learn how we process your data securely without server uploads.",
 };
