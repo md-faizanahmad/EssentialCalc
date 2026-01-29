@@ -4,10 +4,9 @@ import SelfAttest from "@/components/tools/SelfAttest";
 import ImageToolLinks from "@/components/tools/ImageToolLinks";
 
 export const metadata = {
-  title:
-    "Digital Self-Attestation Tool - Sign Documents Online | EssentialCalc",
+  title: "Self-Attestation Tool (Photo & PDF) | EssentialCalc",
   description:
-    "Sign your documents and photos digitally. Overlay your signature on any image securely. 100% private, no server uploads.",
+    "Add self-attestation text and signature to documents or photos in your browser. No uploads or server storage.",
 };
 
 export default function SelfAttestPage() {

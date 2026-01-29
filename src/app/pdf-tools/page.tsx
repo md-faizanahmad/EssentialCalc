@@ -12,9 +12,9 @@ import {
 import AdSlot from "@/components/layouts/AdSlot";
 
 export const metadata = {
-  title: "Secure PDF Utilities - Merge, Compress & OCR Locally | EssentialCalc",
+  title: "PDF Tools: Merge, Compress & OCR | EssentialCalc",
   description:
-    "Professional PDF tools including local compression, merging, and image conversion. 100% private browser-based processing.",
+    "Browser-based PDF tools to merge, compress, convert, and OCR files locally. No uploads or server-side storage.",
 };
 
 const PDF_TOOLS = [
