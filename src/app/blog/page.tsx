@@ -2,9 +2,9 @@ import Link from "next/link";
 import blogData from "@/data/blog.json";
 
 export const metadata = {
-  title: "Tax, Loan, Salary & EMI Guides for India (2026) | EssentialCalc Blog",
+  title: "Tax & Salary Guides for India (2026) | EssentialCalc",
   description:
-    "Step-by-step guides on income tax filing, GST returns, loan EMI calculations, and salary planning for India. Updated for 2026.",
+    "Clear, practical guides on income tax filing, GST returns, and salary planning for Indian users. Updated for 2026.",
 };
 
 // group posts by category (SEO silo)

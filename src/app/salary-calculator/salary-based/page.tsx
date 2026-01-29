@@ -1,11 +1,9 @@
 import EligibilityCalc from "@/components/tools/EligibilityCalc";
 import AdSlot from "@/components/layouts/AdSlot";
-
 export const metadata = {
-  title:
-    "Loan Eligibility Calculator - How Much Loan Can I Get? | EssentialCalc",
+  title: "Loan Eligibility Calculator (India) | EssentialCalc",
   description:
-    "Calculate your loan eligibility based on your monthly salary. Use the FOIR method to see your maximum borrowing capacity instantly.",
+    "Calculate your loan eligibility based on monthly salary using the FOIR method. Estimate the maximum loan amount you can get in India.",
 };
 
 export default function EligibilityPage() {

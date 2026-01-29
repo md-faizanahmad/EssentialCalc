@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   ScanFace,
-  Crop,
   PenTool,
   Layers,
   ShieldCheck,
@@ -13,9 +12,9 @@ import AdSlot from "@/components/layouts/AdSlot";
 
 export const metadata = {
   title:
-    "Secure Image Utilities - AI Background Remover & Cropper | EssentialCalc",
+    "Image Tools: Background Remover & Attestation, Compressor | EssentialCalc",
   description:
-    "Professional image tools including AI Background Removal, Self-Attestation, and Smart Cropping. 100% private processing.",
+    "Fast, private image tools for background removal, cropping, and self-attestation. Works fully in your browser.",
 };
 
 const IMAGE_TOOLS = [
@@ -37,14 +36,14 @@ const IMAGE_TOOLS = [
     color: "bg-indigo-50 text-indigo-600",
     badge: "Popular",
   },
-  {
-    title: "Cropper",
-    fullTitle: "Smart Image Cropper",
-    desc: "Passport & ID size cropping.",
-    href: "/image-tools/crop",
-    icon: <Crop size={24} />,
-    color: "bg-amber-50 text-amber-600",
-  },
+  // {
+  //   title: "Cropper",
+  //   fullTitle: "Smart Image Cropper",
+  //   desc: "Passport & ID size cropping.",
+  //   href: "/image-tools/crop",
+  //   icon: <Crop size={24} />,
+  //   color: "bg-amber-50 text-amber-600",
+  // },
   {
     title: "Optimizer",
     fullTitle: "Image Optimizer",

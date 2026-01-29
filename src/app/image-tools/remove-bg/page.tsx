@@ -6,9 +6,9 @@ import ImageToolLinks from "@/components/tools/ImageToolLinks";
 // Client-side only import for AI engine
 
 export const metadata = {
-  title: "AI Background Remover - 100% Private & Free | EssentialCalc",
+  title: "Free AI Background Remover Online | EssentialCalc",
   description:
-    "Remove image backgrounds instantly in your browser. No uploads, no server storage. Secure AI processing for professional photos.",
+    "Remove backgrounds from images instantly using AI. Works fully in your browser with no file uploads or storage.",
 };
 
 export default function BgRemovePage() {

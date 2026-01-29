@@ -1,9 +1,9 @@
 import { ShieldCheck, Globe, Code2, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "About Md Faizan Ahmad & The Mission Behind EssentialCalc",
+  title: "About EssentialCalc | Privacy-First Tools for India",
   description:
-    "Meet Md Faizan Ahmad, a developer from Bihar building privacy-first utility tools for India. Learn why EssentialCalc was created to protect user data.",
+    "Learn about EssentialCalc, a privacy-first platform built in India to provide secure financial and utility tools without tracking or data storage.",
 };
 
 export default function About() {

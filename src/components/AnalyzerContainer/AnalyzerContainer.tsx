@@ -69,7 +69,7 @@ export default function AnalyzerContainer() {
       <div className="space-y-4">
         <section className="bg-white border-4 border-black p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
           <div className="flex justify-between items-center mb-4 border-b-2 border-black pb-2">
-            <h3 className="font-black uppercase italic text-md">Daily Log</h3>
+            <h1 className="font-black uppercase italic text-md">Daily Log</h1>
             <span
               className={`text-[10px] font-black px-2 py-0.5 border-2 border-black ${totalHours > 24 ? "bg-[#EF4444] text-white" : "bg-green-400"}`}
             >
