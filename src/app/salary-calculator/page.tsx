@@ -1,6 +1,7 @@
-import Link from "next/link";
 import AdSlot from "@/components/layouts/AdSlot";
-import { IndianRupee, Briefcase, TrendingUp, Info } from "lucide-react";
+import { TrendingUp, Info } from "lucide-react";
+import SalaryCalc from "@/components/tools/SalaryCalc";
+import EligibilityCalc from "@/components/tools/EligibilityCalc";
 
 export const metadata = {
   title: "Salary Calculator & Loan Eligibility by Income | EssentialCalc",
@@ -10,23 +11,6 @@ export const metadata = {
     canonical: "https://essentialcalc.com/salary-calculator",
   },
 };
-
-const salaryTools = [
-  {
-    title: "Salary Break-Up",
-    desc: "Calculate your in-hand salary, your CTC, deductions, and others detailed breakup.",
-    href: "/salary-calculator/salary-breakup", // Direct link to the tool
-    icon: <IndianRupee size={28} />,
-    color: "bg-blue-50 text-blue-600",
-  },
-  {
-    title: "Salary-Based Loan",
-    desc: "See how much loan you can afford based on your monthly take-home pay.",
-    href: "/salary-calculator/salary-based", // Direct link to the tool
-    icon: <Briefcase size={28} />,
-    color: "bg-purple-50 text-purple-600",
-  },
-];
 
 export default function SalaryHubPage() {
   return (
@@ -49,40 +33,12 @@ export default function SalaryHubPage() {
       </header>
 
       {/* Tool Cards */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        {salaryTools.map((tool) => (
-          <Link key={tool.title} href={tool.href} className="group">
-            <article className="h-full p-8 bg-white border border-gray-100 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:border-blue-200 transition-all duration-300">
-              <div
-                className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 ${tool.color}`}
-              >
-                {tool.icon}
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600">
-                {tool.title}
-              </h2>
-              <p className="text-gray-500 leading-relaxed mb-8">{tool.desc}</p>
-              <div className="flex items-center text-sm font-black uppercase tracking-widest text-blue-600 group-hover:gap-2 transition-all">
-                Launch Tool
-                <svg
-                  className="w-4 h-4 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={3}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </article>
-          </Link>
-        ))}
-      </section>
 
+      <SalaryCalc />
+
+      <div className="mt-30">
+        <EligibilityCalc />
+      </div>
       <AdSlot id="salary-hub-middle" />
 
       {/* Educational Content Section - For AdSense Approval */}
