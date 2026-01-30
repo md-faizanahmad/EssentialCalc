@@ -31,10 +31,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  alternates: {
-    canonical: "https://essentialcalc.com",
-  },
-
   other: {
     "google-adsense-account": "ca-pub-5188894530340921",
   },

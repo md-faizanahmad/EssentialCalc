@@ -1,7 +1,10 @@
 export const metadata = {
-  title: "Terms of Service | EssentialCalc",
+  title: "Terms of Service – EssentialCalc",
   description:
-    "Terms and conditions for using EssentialCalc. Understand usage rules, calculation disclaimers, and service limitations.",
+    "Read the Terms of Service for EssentialCalc to understand usage rules, calculation disclaimers, limitations of liability, and acceptable use of our tools.",
+  alternates: {
+    canonical: "https://essentialcalc.com/terms",
+  },
 };
 
 export default function TermsOfService() {

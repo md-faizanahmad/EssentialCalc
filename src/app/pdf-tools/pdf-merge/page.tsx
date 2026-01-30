@@ -1,5 +1,13 @@
 import MergePdf from "@/components/pdf/MergePdf";
 import { Zap } from "lucide-react";
+export const metadata = {
+  title: "Merge PDF Files Online – Combine PDFs Securely | EssentialCalc",
+  description:
+    "Free PDF merge tool to combine multiple PDF files into one document online. 100% browser-based, no uploads, private and secure on-device processing.",
+  alternates: {
+    canonical: "https://essentialcalc.com/pdf-tools/pdf-merge",
+  },
+};
 
 export default function PdfMergePage() {
   return (

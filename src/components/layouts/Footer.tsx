@@ -29,10 +29,10 @@ const FOOTER_LINKS: Record<string, FooterSection> = {
     title: "PDF Tools",
     href: "/pdf-tools",
     links: [
-      { name: "QuickMerge PDF", href: "/pdf/pdf-merge" },
+      { name: "QuickMerge PDF", href: "/pdf-tools/pdf-merge" },
       { name: "Compress File", href: "/compress-file" },
-      { name: "PDF to Image", href: "/pdf/to-image" },
-      { name: "OCR Text Extractor", href: "/pdf/ocr" },
+      { name: "PDF to Image", href: "/pdf-tools/image-to-image" },
+      { name: "OCR Text Extractor", href: "/pdf-tools/ocr" },
     ],
   },
   imageTools: {
@@ -41,8 +41,22 @@ const FOOTER_LINKS: Record<string, FooterSection> = {
     links: [
       { name: "BG Remover", href: "/image-tools/remove-bg" },
       { name: "Self-Attestation", href: "/image-tools/self-attest" },
-      { name: "Smart Cropper", href: "/image-tools/crop" },
+      { name: "Smart Cropper", href: "/image-tools/image-optimize" },
       { name: "Image Compress", href: "/compress-file" },
+    ],
+  },
+  otherTool: {
+    title: "Other Tool",
+    links: [
+      {
+        name: "Daily Time Managment",
+        href: "/daily-time-calculator",
+      },
+      { name: "Faq", href: "/faq" },
+      // { name: "Privacy Policy", href: "/privacy-policy" },
+      // { name: "Terms of Service", href: "/terms" },
+      // { name: "Faq", href: "/faq" },
+      // { name: "Contact Us", href: "/contact" },
     ],
   },
   legal: {
@@ -51,7 +65,7 @@ const FOOTER_LINKS: Record<string, FooterSection> = {
       { name: "Financial Blog", href: "/blog", highlight: true },
       { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Terms of Service", href: "/terms" },
-      { name: "Faq", href: "/faq" },
+
       { name: "Contact Us", href: "/contact" },
     ],
   },
@@ -64,7 +78,7 @@ export default function Footer() {
     <footer className="w-full border-t border-gray-100 bg-white mt-auto pt-16 pb-24 md:pb-12">
       <div className="container mx-auto px-4">
         {/* Top Section: Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 ms-8 mb-12">
           {Object.entries(FOOTER_LINKS).map(([key, section]) => (
             <div key={key} className="space-y-5">
               <h3 className="text-xs font-black text-gray-900 uppercase tracking-widest">

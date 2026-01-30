@@ -3,9 +3,12 @@ import AdSlot from "@/components/layouts/AdSlot";
 import { IndianRupee, Briefcase, TrendingUp, Info } from "lucide-react";
 
 export const metadata = {
-  title: "Salary & Income Planning Tools | EssentialCalc",
+  title: "Salary Calculator & Loan Eligibility by Income | EssentialCalc",
   description:
-    "Calculate your in-hand salary, understand CTC breakups, and check your loan eligibility based on your monthly income.",
+    "Calculate in-hand salary, understand CTC and salary breakup, and check loan eligibility based on monthly income. Free, accurate salary and income-based tools.",
+  alternates: {
+    canonical: "https://essentialcalc.com/salary-calculator",
+  },
 };
 
 const salaryTools = [

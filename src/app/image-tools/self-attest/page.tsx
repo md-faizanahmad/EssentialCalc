@@ -4,9 +4,13 @@ import SelfAttest from "@/components/tools/SelfAttest";
 import ImageToolLinks from "@/components/tools/ImageToolLinks";
 
 export const metadata = {
-  title: "Self-Attestation Tool (Photo & PDF) | EssentialCalc",
+  title:
+    "Self Attestation Tool Online – Photo & Document Attestation | EssentialCalc",
   description:
-    "Add self-attestation text and signature to documents or photos in your browser. No uploads or server storage.",
+    "Free self attestation tool to add signature and text on photos or documents online. 100% browser-based, no uploads, no server storage. Ideal for Indian forms.",
+  alternates: {
+    canonical: "https://essentialcalc.com/image-tools/self-attest",
+  },
 };
 
 export default function SelfAttestPage() {

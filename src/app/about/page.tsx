@@ -4,6 +4,9 @@ export const metadata = {
   title: "About EssentialCalc | Privacy-First Tools for India",
   description:
     "Learn about EssentialCalc, a privacy-first platform built in India to provide secure financial and utility tools without tracking or data storage.",
+  alternates: {
+    canonical: "https://essentialcalc.com/about",
+  },
 };
 
 export default function About() {

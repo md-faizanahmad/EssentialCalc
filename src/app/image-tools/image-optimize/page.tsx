@@ -3,9 +3,13 @@ import ImageToolLinks from "@/components/tools/ImageToolLinks";
 import { Cpu } from "lucide-react";
 
 export const metadata = {
-  title: "Image Compressor & Converter - To 20KB, 50KB, 100KB | EssentialCalc",
+  title:
+    "Image Compressor Online – Convert & Reduce to 20KB, 50KB, 100KB | EssentialCalc",
   description:
-    "Convert and compress images locally. PNG to JPG, WebP to JPG. Target specific KB sizes for Indian government portals with 100% privacy.",
+    "Free image compressor and converter to reduce JPG, PNG, and WebP images to 20KB, 50KB, or 100KB. Browser-based, no uploads, ideal for Indian government forms.",
+  alternates: {
+    canonical: "https://essentialcalc.com/image-tools/image-optimize",
+  },
 };
 
 export default function ImageOptimizePage() {

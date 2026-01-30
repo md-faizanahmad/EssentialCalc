@@ -2,9 +2,13 @@ import AdSlot from "@/components/layouts/AdSlot";
 import CarLoanCalc from "@/components/tools/CarLoanCalc";
 
 export const metadata = {
-  title: "Car Loan EMI Calculator (India) | EssentialCalc",
+  title:
+    "Car Loan EMI Calculator (India) – Monthly EMI, Interest & Cost | EssentialCalc",
   description:
-    "Calculate monthly EMI for car or bike loans in India. Adjust loan amount, interest rate, and tenure to plan your vehicle financing.",
+    "Free car loan EMI calculator for India. Calculate monthly EMI, total interest, and repayment amount for car or bike loans by adjusting loan amount, interest rate, and tenure.",
+  alternates: {
+    canonical: "https://essentialcalc.com/emi-calculator/car-loan",
+  },
 };
 
 export default function CarLoanPage() {

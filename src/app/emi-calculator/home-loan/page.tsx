@@ -2,9 +2,13 @@ import AdSlot from "@/components/layouts/AdSlot";
 import HomeLoanCalc from "@/components/tools/HomeLoanCalc";
 
 export const metadata = {
-  title: "Home Loan EMI Calculator (India, 2026) | EssentialCalc",
+  title:
+    "Home Loan EMI Calculator (India, 2026) – Monthly EMI, Interest & Cost | EssentialCalc",
   description:
-    "Calculate home loan EMI in India for 2026. Find monthly EMI, total interest, and repayment amount for all major banks instantly.",
+    "Free home loan EMI calculator for India (2026). Calculate monthly EMI, total interest payable, and overall repayment amount for all major banks based on loan amount, interest rate, and tenure.",
+  alternates: {
+    canonical: "https://essentialcalc.com/emi-calculator/home-loan",
+  },
 };
 
 export default function HomeLoanPage() {

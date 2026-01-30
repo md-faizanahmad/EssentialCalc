@@ -3,9 +3,12 @@ import AdSlot from "@/components/layouts/AdSlot";
 import OCRWork from "@/components/pdf/OCRWork";
 
 export const metadata = {
-  title: "OCR - Extract Text from Images & PDFs Locally | EssentialCalc",
+  title: "OCR Online – Extract Text from Images & PDFs | EssentialCalc",
   description:
-    "Extract text from scanned documents and images instantly using local AI. No cloud uploads, 100% secure processing directly in your browser.",
+    "Free OCR tool to extract text from images and scanned PDFs online. 100% browser-based, no uploads, private and secure on-device text recognition.",
+  alternates: {
+    canonical: "https://essentialcalc.com/pdf-tools/ocr",
+  },
 };
 
 export default function OCRPage() {

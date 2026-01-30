@@ -1,7 +1,10 @@
 export const metadata = {
-  title: "Privacy Policy | EssentialCalc",
+  title: "Privacy Policy – EssentialCalc",
   description:
-    "Privacy Policy for EssentialCalc. Learn how we handle user information, cookies, and third-party advertising such as Google AdSense.",
+    "Read the Privacy Policy of EssentialCalc to understand how we handle user data, cookies, on-device processing, and third-party services such as Google AdSense.",
+  alternates: {
+    canonical: "https://essentialcalc.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicy() {

@@ -10,9 +10,12 @@ import Link from "next/link";
 import AdSlot from "@/components/layouts/AdSlot";
 
 export const metadata = {
-  title: "Frequently Asked Questions | EssentialCalc",
+  title: "FAQs – EssentialCalc Tools, Privacy & Usage",
   description:
-    "Get answers about EssentialCalc's private on-device tools. Learn how we process your data securely without server uploads.",
+    "Frequently asked questions about EssentialCalc tools, privacy, data security, on-device processing, and how our calculators work without server uploads.",
+  alternates: {
+    canonical: "https://essentialcalc.com/faq",
+  },
 };
 
 const FAQS = [

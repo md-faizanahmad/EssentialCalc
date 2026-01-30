@@ -2,9 +2,12 @@ import Link from "next/link";
 import AdSlot from "@/components/layouts/AdSlot";
 
 export const metadata = {
-  title: "How EssentialCalc Works - FAQ & Methodology | EssentialCalc",
+  title: "How EssentialCalc Works – Methodology, Accuracy & FAQs",
   description:
-    "Learn about the math and methodology behind our financial and utility tools. Frequently asked questions about privacy, accuracy, and usage.",
+    "Understand how EssentialCalc calculators work, including formulas, methodology, accuracy, and privacy. Answers to common questions about data safety and usage.",
+  alternates: {
+    canonical: "https://essentialcalc.com/how-it-works",
+  },
 };
 
 const faqs = [

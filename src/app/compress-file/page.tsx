@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 const CompressPdf = dynamic(() => import("@/components/pdf/CompressPdf"), {
   ssr: false,
 });
+
 export default function CompressPdfPage() {
   return (
     // Guaranteed Privacy

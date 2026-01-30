@@ -48,7 +48,7 @@ const tools: Tool[] = [
     name: "Time Management",
     description:
       "Daily Time Allocation Analyzer.Analyze your 24-hour distribution. Balance work, worship, and rest with real-time feedback.",
-    href: "/analyzer-container",
+    href: "/daily-time-calculator",
     category: "Utility",
     icon: <Timer />,
   },

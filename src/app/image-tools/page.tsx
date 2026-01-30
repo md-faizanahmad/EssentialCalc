@@ -12,9 +12,12 @@ import AdSlot from "@/components/layouts/AdSlot";
 
 export const metadata = {
   title:
-    "Image Tools: Background Remover & Attestation, Compressor | EssentialCalc",
+    "Image Tools Online – Background Remover, Attestation & Compression | EssentialCalc",
   description:
-    "Fast, private image tools for background removal, cropping, and self-attestation. Works fully in your browser.",
+    "Free image tools for background removal, self-attestation, and image compression. 100% browser-based, private, and no file uploads required.",
+  alternates: {
+    canonical: "https://essentialcalc.com/image-tools",
+  },
 };
 
 const IMAGE_TOOLS = [

@@ -5,6 +5,9 @@ export const metadata = {
   title: "EMI Calculator for Home, Car & Product Loans | EssentialCalc",
   description:
     "Use EMI calculators for home loans, car loans, and product purchases. Learn how EMI is calculated and plan your monthly repayments responsibly.",
+  alternates: {
+    canonical: "https://essentialcalc.com/emi-calculator",
+  },
 };
 
 const emiTools = [

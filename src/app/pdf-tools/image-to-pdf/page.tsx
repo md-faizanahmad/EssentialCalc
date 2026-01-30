@@ -3,9 +3,12 @@ import AdSlot from "@/components/layouts/AdSlot";
 import ImageToPdf from "@/components/pdf/ImgToPdf";
 
 export const metadata = {
-  title: "Image to PDF Converter - 100% Private & Fast | EssentialCalc",
+  title: "Image to PDF Converter Online – JPG, PNG to PDF | EssentialCalc",
   description:
-    "Convert JPG, PNG, and HEIC images into a single high-quality PDF document instantly. No cloud uploads, 100% secure processing in your browser.",
+    "Free image to PDF converter to combine JPG, PNG, and HEIC images into a single high-quality PDF. 100% browser-based, no uploads, private and secure.",
+  alternates: {
+    canonical: "https://essentialcalc.com/pdf-tools/image-to-pdf",
+  },
 };
 
 export default function ImageToPdfPage() {

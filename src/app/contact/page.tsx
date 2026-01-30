@@ -4,6 +4,9 @@ export const metadata = {
   title: "Contact Us | EssentialCalc",
   description:
     "Contact EssentialCalc for questions, feedback, or support related to our calculators and online tools.",
+  alternates: {
+    canonical: "https://essentialcalc.com/contact",
+  },
 };
 
 export default function Contact() {

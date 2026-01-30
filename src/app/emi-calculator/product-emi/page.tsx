@@ -2,9 +2,13 @@ import ProductCalc from "@/components/tools/ProductCalc";
 import AdSlot from "@/components/layouts/AdSlot";
 
 export const metadata = {
-  title: "Product EMI Calculator - The Truth Behind No-Cost EMI",
+  title:
+    "Product EMI Calculator (No-Cost EMI Truth) – Mobile & Laptop EMI | EssentialCalc",
   description:
-    "Calculate the real cost of buying phones and laptops on EMI. Uncover hidden processing fees and interest costs instantly.",
+    "Free product EMI calculator for mobiles, laptops, and electronics in India. Calculate real EMI cost, hidden processing fees, GST on interest, and compare no-cost EMI vs full payment.",
+  alternates: {
+    canonical: "https://essentialcalc.com/emi-calculator/product-emi",
+  },
 };
 
 export default function ProductEMIPage() {
