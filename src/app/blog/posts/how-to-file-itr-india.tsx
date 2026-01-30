@@ -21,6 +21,21 @@ export default function HowToFileITRIndia() {
             refunds.
           </p>
         </header>
+        <section className="mt-12 max-w-3xl">
+          <p className="text-gray-700 leading-relaxed mb-4">
+            This guide is written for normal Indian taxpayers — salaried
+            employees, students, freelancers, housewives, first-time earners,
+            and even people with <strong>zero income</strong>. You do{" "}
+            <strong>not</strong> need a CA, accounting knowledge, or paid
+            software to file your Income Tax Return.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed">
+            If you can use a smartphone, receive an OTP, and read basic English,
+            you can file your ITR yourself in under 30 minutes using the
+            official income tax e-filing website.
+          </p>
+        </section>
 
         {/* Ad Placement: Top Banner */}
         <div className="my-8 w-full py-4 border-y border-gray-100 flex justify-center bg-gray-50/50">
@@ -55,6 +70,33 @@ export default function HowToFileITRIndia() {
                 </li>
               ))}
             </ul>
+          </section>
+          <section id="no-income" className="mt-16">
+            <h2 className="text-2xl font-bold uppercase border-b-2 border-black inline-block mb-8">
+              Who Can File ITR Without Income
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Many people think Income Tax Return is only for people who earn
+              money. This is incorrect. Even if your income is{" "}
+              <strong>zero</strong> or below the taxable limit, you can and
+              should file ITR in certain situations.
+            </p>
+
+            <ul className="space-y-4 text-gray-700">
+              <li>
+                • College students applying for foreign education or visas
+              </li>
+              <li>• Housewives with bank accounts or FD interest</li>
+              <li>• Job seekers with PAN but no current income</li>
+              <li>• People claiming TDS refund from bank or employer</li>
+              <li>• First-time taxpayers building financial history</li>
+            </ul>
+
+            <p className="mt-6 text-sm text-gray-500">
+              Filing ITR with zero income is completely legal and is called a
+              <strong> Nil Return</strong>.
+            </p>
           </section>
 
           {/* Section 2: Checklist */}
@@ -93,6 +135,42 @@ export default function HowToFileITRIndia() {
               In-Article Ad Unit
             </span>
           </div>
+          <section
+            id="registration"
+            className="mt-20 bg-gray-50 p-8 border border-black"
+          >
+            <h2 className="text-2xl font-bold uppercase mb-6">
+              How to Register on Income Tax e-Filing Portal
+            </h2>
+
+            <ol className="space-y-6 text-gray-700 text-sm leading-relaxed">
+              <li>
+                <strong>Step 1:</strong> Visit
+                <span className="font-mono"> incometax.gov.in </span> and click
+                “Register”.
+              </li>
+              <li>
+                <strong>Step 2:</strong> Select “Taxpayer” and enter your PAN
+                number. Your PAN will act as your user ID.
+              </li>
+              <li>
+                <strong>Step 3:</strong> Enter basic details such as name, date
+                of birth, mobile number, and email ID.
+              </li>
+              <li>
+                <strong>Step 4:</strong> Verify your mobile and email using OTP.
+              </li>
+              <li>
+                <strong>Step 5:</strong> Set a password and complete
+                registration.
+              </li>
+            </ol>
+
+            <p className="mt-6 text-gray-500 text-sm">
+              Registration is required only once. After that, you can log in
+              every year using PAN and password.
+            </p>
+          </section>
 
           {/* Section 3: Filing Process */}
           <section id="process">
@@ -104,7 +182,7 @@ export default function HowToFileITRIndia() {
                 {
                   step: "Portal Access",
                   detail:
-                    "Log in to the Income Tax e-Filing portal using your PAN as the User ID.",
+                    "Open the income tax e-filing website and log in using your PAN number PAN is your permanent tax identity and works as your username for life Make sure your mobile number linked with Aadhaar is active to receive OTP.",
                 },
                 {
                   step: "Form Selection",
@@ -167,6 +245,49 @@ export default function HowToFileITRIndia() {
                 </dd>
               </div>
             </dl>
+          </section>
+          <section id="itr-forms" className="mt-20">
+            <h2 className="text-2xl font-bold uppercase border-b-2 border-black inline-block mb-8">
+              Which ITR Form Should You Select
+            </h2>
+
+            <div className="space-y-4 text-gray-700 text-sm">
+              <p>
+                <strong>ITR-1 (Sahaj):</strong> Salaried individuals with income
+                up to ₹50 lakh.
+              </p>
+              <p>
+                <strong>ITR-2:</strong> Income from capital gains, multiple
+                house properties.
+              </p>
+              <p>
+                <strong>ITR-3:</strong> Business owners and professionals.
+              </p>
+              <p>
+                <strong>ITR-4:</strong> Freelancers under presumptive taxation.
+              </p>
+            </div>
+
+            <p className="mt-6 text-gray-500 text-sm">
+              Selecting the wrong ITR form can lead to rejection or defective
+              return notice.
+            </p>
+          </section>
+          <section id="need-ca" className="mt-20 bg-black text-white p-8">
+            <h2 className="text-2xl font-bold uppercase mb-6">
+              Do You Need a CA to File ITR?
+            </h2>
+
+            <p className="text-sm leading-relaxed text-gray-300">
+              No. Most salaried employees, students, and individuals with simple
+              income can file ITR themselves using the government portal for
+              free.
+            </p>
+
+            <p className="mt-4 text-sm text-gray-400">
+              You may need a CA only if you have complex business income,
+              audits, or international assets.
+            </p>
           </section>
 
           {/* Section 5: Common Mistakes */}
