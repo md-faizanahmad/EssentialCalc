@@ -15,6 +15,9 @@ import { Metadata } from "next";
 import ShareBar from "@/components/ShareBar";
 import MobileShareBubble from "@/components/MobileShareBubble";
 import ComplianceHub from "../posts/itr-gst-compliance-india";
+import ITRForFreelancers from "../posts/itr-for-freelancers";
+import NilITRReturn from "../posts/nil-itr-return";
+import FaqSchema from "../components/FaqSchema";
 
 export const dynamic = "force-static";
 
@@ -23,6 +26,9 @@ export async function generateStaticParams() {
   return [
     { slug: "how-to-file-itr-india" },
     { slug: "how-to-file-gst-return-india" },
+    { slug: "itr-gst-compliance-india" },
+    { slug: "itr-for-freelancers" },
+    { slug: "nil-itr-return" },
     { slug: "tax-regime-2026" },
     { slug: "how-much-emi-is-safe" },
     { slug: "emi-vs-lump-sum-payment" },
@@ -42,43 +48,58 @@ export async function generateMetadata({
   // Map slugs to SEO titles and descriptions (Keep these synced with your switch logic)
   const seoData: Record<string, { title: string; desc: string }> = {
     "how-to-file-itr-india": {
-      title: "How to File ITR Online in India (AY 2026–27)",
-      desc: "Step-by-step guide to filing Income Tax Return (ITR) online in India for AY 2026–27. Covers forms, documents, and e-verification.",
+      title: "How to File ITR Online in India (AY 2026–27) – Step by Step",
+      desc: "Learn how to file Income Tax Return (ITR) online in India for AY 2026–27. Covers forms, documents, Nil return, and e-verification.",
     },
 
     "how-to-file-gst-return-india": {
-      title: "How to File GST Return in India (2026)",
-      desc: "Simple guide to filing GST returns online in India. Learn about GSTR-1, GSTR-3B, due dates, and 2026 GST compliance rules.",
+      title: "How to File GST Return Online in India (GSTR-1 & GSTR-3B)",
+      desc: "Simple guide to filing GST return online in India. Covers GSTR-1, GSTR-3B, Nil GST return, due dates, and penalties.",
+    },
+
+    "itr-gst-compliance-india": {
+      title: "ITR & GST Compliance in India – Complete Filing Guide (2026)",
+      desc: "Understand ITR and GST compliance in India. Learn who should file, how to file, Nil returns, and how to avoid penalties.",
+    },
+
+    "itr-for-freelancers": {
+      title: "ITR for Freelancers in India – How to File & Save Tax (2026)",
+      desc: "Step-by-step ITR filing guide for freelancers in India. Covers ITR-3 vs ITR-4, advance tax, expenses, and deductions.",
+    },
+
+    "nil-itr-return": {
+      title: "Nil ITR Return in India – Who Should File & Benefits Explained",
+      desc: "What is Nil ITR? Learn who should file Nil Income Tax Return, benefits, and step-by-step filing process in India.",
     },
 
     "tax-regime-2026": {
-      title: "New Tax Regime 2026: Slabs & Old vs New Comparison",
-      desc: "Detailed explanation of the New Tax Regime for FY 2025–26. Compare tax slabs, deductions, and choose between old vs new regime.",
+      title: "New Tax Regime 2026 – Tax Slabs & Old vs New Comparison",
+      desc: "Compare old vs new tax regime for FY 2025–26. Understand tax slabs, deductions, and which regime saves more tax.",
     },
 
     "how-much-emi-is-safe": {
-      title: "How Much EMI Is Safe for Your Salary? (India)",
-      desc: "Learn how much EMI is safe based on your salary using the 40% rule. Understand debt-to-income ratio and smart borrowing limits.",
+      title: "How Much EMI Is Safe for Your Salary in India?",
+      desc: "Understand the safe EMI limit based on salary. Learn the 40% rule and debt-to-income ratio for smart borrowing.",
     },
 
     "emi-vs-lump-sum-payment": {
-      title: "EMI vs Lump Sum Payment: Which Is Better?",
-      desc: "Compare EMI vs lump sum payment using real examples. Understand interest cost, opportunity cost, and inflation impact.",
+      title: "EMI vs Lump Sum Payment – Which Option Is Better?",
+      desc: "Compare EMI vs lump sum payment. Learn interest cost, cash flow impact, and smarter payment choice.",
     },
 
     "salary-calculation-india": {
-      title: "Salary Calculation in India: Net Take-Home from CTC",
-      desc: "Learn how to calculate take-home salary from CTC in India. Covers PF, HRA, professional tax, and common deductions.",
+      title: "Salary Calculation in India – Take Home Salary from CTC",
+      desc: "Learn how to calculate take-home salary from CTC in India. Includes PF, HRA, tax deductions, and net salary.",
     },
 
     "home-loan-emi-tips": {
-      title: "Home Loan EMI Tips to Reduce Interest (2026)",
-      desc: "Practical home loan EMI tips to reduce interest and loan tenure. Learn about prepayment, refinancing, and step-up EMIs.",
+      title: "Home Loan EMI Tips – Reduce Interest & Close Loan Faster",
+      desc: "Best home loan EMI tips to reduce interest and loan tenure. Learn about prepayment and refinancing.",
     },
 
     "personal-loan-mistakes": {
-      title: "Personal Loan Mistakes to Avoid (EMI Guide)",
-      desc: "Common personal loan mistakes explained. Learn about hidden charges, flat vs reducing interest, and EMI planning.",
+      title: "Personal Loan Mistakes to Avoid – EMI & Interest Traps",
+      desc: "Common personal loan mistakes explained. Avoid high interest, hidden charges, and EMI planning errors.",
     },
   };
 
@@ -129,6 +150,44 @@ export default async function BlogPost({
     date: "2026-01-15",
     category: "Finance",
     component: <></>,
+  };
+
+  const faqData: Record<string, { question: string; answer: string }[]> = {
+    "how-to-file-itr-india": [
+      {
+        question: "Is filing ITR mandatory if income is below taxable limit?",
+        answer:
+          "ITR filing is not mandatory if income is below the basic exemption limit, but filing a Nil ITR is recommended for loans, visas, and refunds.",
+      },
+      {
+        question: "Which ITR form should salaried employees use?",
+        answer:
+          "Most salaried individuals should use ITR-1 (Sahaj) if income is up to ₹50 lakh and there is no business income.",
+      },
+      {
+        question: "How long does ITR verification take?",
+        answer:
+          "After Aadhaar OTP verification, ITR is usually processed within a few weeks, depending on the case.",
+      },
+    ],
+
+    "how-to-file-gst-return-india": [
+      {
+        question: "Is GST return mandatory even if there are no sales?",
+        answer:
+          "Yes, a Nil GST return must be filed even if there are no sales or purchases during the period.",
+      },
+      {
+        question: "What happens if GST return is not filed on time?",
+        answer:
+          "Late filing attracts late fees, interest, and may lead to GSTIN suspension or cancellation.",
+      },
+      {
+        question: "Which GST returns are filed monthly?",
+        answer:
+          "Most regular taxpayers file GSTR-1 and GSTR-3B on a monthly basis.",
+      },
+    ],
   };
 
   switch (slug) {
@@ -221,12 +280,34 @@ export default async function BlogPost({
       break;
     case "itr-gst-compliance-india":
       postData = {
-        title: "How to File GST and ITR Return in India - Complete GSTR Guide",
+        title: "ITR & GST Compliance in India",
         description:
-          "Avoid high-interest traps and hidden charges in personal loan agreements.",
+          "Complete compliance guide covering ITR and GST filing, Nil returns, and penalty avoidance.",
         date: "2026-01-15",
-        category: "Loans",
+        category: "Compliance",
         component: <ComplianceHub />,
+      };
+      break;
+
+    case "itr-for-freelancers":
+      postData = {
+        title: "ITR for Freelancers in India",
+        description:
+          "Step-by-step guide for freelancers to file ITR, choose correct form, and manage advance tax.",
+        date: "2026-01-15",
+        category: "Income Tax",
+        component: <ITRForFreelancers />,
+      };
+      break;
+
+    case "nil-itr-return":
+      postData = {
+        title: "Nil ITR Return in India",
+        description:
+          "Learn who should file Nil ITR, benefits of filing, and step-by-step filing process.",
+        date: "2026-01-15",
+        category: "Income Tax",
+        component: <NilITRReturn />,
       };
       break;
 
@@ -246,6 +327,7 @@ export default async function BlogPost({
           // You can add unique FAQs here for each case if needed
         }}
       />
+      {faqData[slug] && <FaqSchema faqs={faqData[slug]} />}
       <BlogLayout
         title={postData.title}
         author="EssentialCalc Team"
