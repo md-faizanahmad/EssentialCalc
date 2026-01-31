@@ -20,14 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Homepage – strongest signal
     { path: "", priority: 1.0, changeFreq: "weekly" as ChangeFrequency },
 
-    // ❌ Internal wrapper / container page – NOT an SEO landing page
-    // Causes thin-content + crawl waste
-    // {
-    //   path: "/analyzer-container",
-    //   priority: 0.9,
-    //   changeFreq: "monthly" as ChangeFrequency,
-    // },
-
     // ======================
     // PRIMARY TOOL HUBS
     // ======================
@@ -76,19 +68,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
       changeFreq: "monthly" as ChangeFrequency,
     },
-
-    // ❌ Salary variants – DUPLICATE intent
-    // Keep canonical on /salary-calculator only
-    // {
-    //   path: "/salary-calculator/salary-breakup",
-    //   priority: 0.6,
-    //   changeFreq: "monthly" as ChangeFrequency,
-    // },
-    // {
-    //   path: "/salary-calculator/salary-based",
-    //   priority: 0.6,
-    //   changeFreq: "monthly" as ChangeFrequency,
-    // },
 
     // ======================
     // PDF TOOLS (only index if content exists)
@@ -186,6 +165,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       path: "/blog/personal-loan-mistakes",
+      priority: 0.6,
+      changeFreq: "monthly" as ChangeFrequency,
+    },
+    {
+      path: "/blog/nil-itr-return",
+      priority: 0.6,
+      changeFreq: "monthly" as ChangeFrequency,
+    },
+    {
+      path: "/blog/itr-gst-compliance-india",
+      priority: 0.6,
+      changeFreq: "monthly" as ChangeFrequency,
+    },
+    {
+      path: "/blog/itr-for-freelancers",
       priority: 0.6,
       changeFreq: "monthly" as ChangeFrequency,
     },
