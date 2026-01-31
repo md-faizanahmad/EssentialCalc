@@ -14,6 +14,7 @@ import PersonalLoanEmiMistakes from "../posts/personal-loan-mistakes";
 import { Metadata } from "next";
 import ShareBar from "@/components/ShareBar";
 import MobileShareBubble from "@/components/MobileShareBubble";
+import ComplianceHub from "../posts/itr-gst-compliance-india";
 
 export const dynamic = "force-static";
 
@@ -216,6 +217,16 @@ export default async function BlogPost({
         date: "2026-01-15",
         category: "Loans",
         component: <PersonalLoanEmiMistakes />,
+      };
+      break;
+    case "itr-gst-compliance-india":
+      postData = {
+        title: "How to File GST and ITR Return in India - Complete GSTR Guide",
+        description:
+          "Avoid high-interest traps and hidden charges in personal loan agreements.",
+        date: "2026-01-15",
+        category: "Loans",
+        component: <ComplianceHub />,
       };
       break;
 
