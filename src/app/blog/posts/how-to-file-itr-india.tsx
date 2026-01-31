@@ -1,4 +1,34 @@
 // ITR Filing Guide - Editorial White/Black Layout
+import Image from "next/image";
+
+function PortalScreenshot({
+  src,
+  alt,
+  caption,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+}) {
+  return (
+    <figure className="my-12">
+      <div className="relative w-full aspect-video border border-black bg-gray-100">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 900px"
+          className="object-contain"
+          priority={false}
+        />
+      </div>
+      <figcaption className="mt-3 text-xs text-gray-500 italic">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 export default function HowToFileITRIndia() {
   return (
     <div className="min-h-screen bg-white font-sans text-black antialiased">
@@ -14,6 +44,11 @@ export default function HowToFileITRIndia() {
             How to File ITR in India: <br className="hidden md:block" />
             The 2026 Step-by-Step Guide.
           </h1>
+          <PortalScreenshot
+            src="/itr/e-filling-website.png"
+            alt="Income Tax e-Filing official website homepage"
+            caption="Official Income Tax e-Filing portal homepage (incometax.gov.in)"
+          />
 
           <p className="text-xl text-gray-700 leading-relaxed max-w-2xl italic">
             Filing your Income Tax Return is not just a legal obligation; it is
@@ -35,6 +70,32 @@ export default function HowToFileITRIndia() {
             you can file your ITR yourself in under 30 minutes using the
             official income tax e-filing website.
           </p>
+        </section>
+        <section
+          id="real-mistakes"
+          className="mt-20 border-l-4 border-black pl-6"
+        >
+          <h2 className="text-2xl font-bold uppercase mb-6">
+            Real Filing Mistakes That Cause Notices
+          </h2>
+
+          <p className="text-gray-700 mb-4">
+            These are not theory mistakes. These are issues taxpayers actually
+            face after filing.
+          </p>
+
+          <ul className="space-y-4 text-sm text-gray-700">
+            <li>
+              • Filing ITR but forgetting Aadhaar OTP verification (return
+              becomes invalid)
+            </li>
+            <li>
+              • AIS showing interest income that people ignore (leads to
+              mismatch notice)
+            </li>
+            <li>• Employer Form 16 missing bonus TDS</li>
+            <li>• Refund stuck because bank account was not pre-validated</li>
+          </ul>
         </section>
 
         {/* Ad Placement: Top Banner */}
@@ -98,7 +159,6 @@ export default function HowToFileITRIndia() {
               <strong> Nil Return</strong>.
             </p>
           </section>
-
           {/* Section 2: Checklist */}
           <section
             id="documents"
@@ -128,7 +188,6 @@ export default function HowToFileITRIndia() {
               </div>
             </div>
           </section>
-
           {/* Ad Placement: Mid Content */}
           <div className="my-12 w-full h-62.5 bg-white flex items-center justify-center border-2 border-dashed border-gray-200">
             <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">
@@ -139,6 +198,12 @@ export default function HowToFileITRIndia() {
             id="registration"
             className="mt-20 bg-gray-50 p-8 border border-black"
           >
+            <PortalScreenshot
+              src="/itr/register.png"
+              alt="Income Tax portal registration page for new users"
+              caption="New user registration page on the Income Tax e-Filing portal"
+            />
+
             <h2 className="text-2xl font-bold uppercase mb-6">
               How to Register on Income Tax e-Filing Portal
             </h2>
@@ -172,11 +237,22 @@ export default function HowToFileITRIndia() {
             </p>
           </section>
 
+          <PortalScreenshot
+            src="/itr/login.png"
+            alt="Income Tax dashboard after login"
+            caption="Dashboard view after successful login showing file return options"
+          />
           {/* Section 3: Filing Process */}
           <section id="process">
             <h2 className="text-2xl font-bold uppercase tracking-tight border-b-2 border-black inline-block mb-8">
               03. Online Filing Process
             </h2>
+            <PortalScreenshot
+              src="/itr/e-filling-after-login.png"
+              alt="Income Tax dashboard after login"
+              caption="Dashboard view after successful login showing file return options"
+            />
+
             <div className="space-y-12">
               {[
                 {
@@ -219,7 +295,6 @@ export default function HowToFileITRIndia() {
               ))}
             </div>
           </section>
-
           {/* Section 4: Key Terms (Glossary) */}
           <section id="terms">
             <h2 className="text-2xl font-bold uppercase tracking-tight border-b-2 border-black inline-block mb-8">
@@ -248,7 +323,7 @@ export default function HowToFileITRIndia() {
           </section>
           <section id="itr-forms" className="mt-20">
             <h2 className="text-2xl font-bold uppercase border-b-2 border-black inline-block mb-8">
-              Which ITR Form Should You Select
+              05. Which ITR Form Should You Select
             </h2>
 
             <div className="space-y-4 text-gray-700 text-sm">
@@ -272,6 +347,15 @@ export default function HowToFileITRIndia() {
               Selecting the wrong ITR form can lead to rejection or defective
               return notice.
             </p>
+            <div className="mt-10 border-l-4 border-red-600 bg-red-50 p-4">
+              <p className="text-sm text-red-800 font-semibold">⚠ Important:</p>
+              <p className="text-sm text-red-700 mt-1">
+                After submission, the portal may show{" "}
+                <strong>“Return submitted but not verified”</strong>. This means
+                your ITR is <strong>NOT complete</strong>. You must e-verify
+                within 30 days, otherwise the return is treated as invalid.
+              </p>
+            </div>
           </section>
           <section id="need-ca" className="mt-20 bg-black text-white p-8">
             <h2 className="text-2xl font-bold uppercase mb-6">
@@ -289,7 +373,6 @@ export default function HowToFileITRIndia() {
               audits, or international assets.
             </p>
           </section>
-
           {/* Section 5: Common Mistakes */}
           <section id="mistakes" className="bg-black text-white p-8">
             <h2 className="text-2xl font-bold uppercase mb-6 tracking-tighter">
@@ -314,7 +397,6 @@ export default function HowToFileITRIndia() {
               </li>
             </ul>
           </section>
-
           {/* Section 6: FAQs */}
           <section id="faq" className="border-t border-gray-200 pt-10">
             <h2 className="text-2xl font-bold uppercase mb-8">
