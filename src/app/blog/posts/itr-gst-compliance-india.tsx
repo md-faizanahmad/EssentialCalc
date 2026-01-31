@@ -1,3 +1,5 @@
+import { Link } from "lucide-react";
+
 function ComplianceCard({
   title,
   desc,
@@ -66,13 +68,11 @@ export default function ComplianceHub() {
         {/* ================= ITR SECTION ================= */}
         <section className="border-t-4 border-black pt-12">
           <h2 className="text-3xl font-black mb-4">Income Tax Return (ITR)</h2>
-
           <p className="text-gray-700 max-w-3xl mb-8">
             ITR is required for individuals to report income, claim refunds, and
             maintain financial records for loans, visas, and government
             verification.
           </p>
-
           <div className="grid md:grid-cols-3 gap-6">
             <ComplianceCard
               title="Salaried Individuals"
@@ -91,6 +91,16 @@ export default function ComplianceHub() {
             />
           </div>
 
+          <p className="text-gray-700 mt-4">
+            If you are an individual taxpayer, start with our complete guide on{" "}
+            <Link
+              href="/blog/how-to-file-itr-india"
+              className="font-semibold underline"
+            >
+              how to file ITR in India
+            </Link>
+            .
+          </p>
           <PortalLink
             label="Open Income Tax Portal"
             href="https://www.incometax.gov.in"

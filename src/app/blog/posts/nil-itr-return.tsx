@@ -1,6 +1,8 @@
 // NIL ITR Return Guide
 // Audience: Students, job seekers, homemakers, first-time taxpayers, zero income users
 
+import { Link } from "lucide-react";
+
 export const metadata = {
   title: "Nil ITR Return in India: Who Should File & How (2026 Guide)",
   description:
@@ -45,7 +47,17 @@ export default function NilITRReturn() {
             <li>• Anyone wanting to build financial history</li>
           </ul>
         </section>
-
+        <p className="text-gray-700 mt-6">
+          If you earn occasionally from freelance or contract work, even small
+          amounts, you should read our guide on{" "}
+          <Link
+            href="/blog/itr-for-freelancers"
+            className="font-semibold underline"
+          >
+            ITR filing for freelancers
+          </Link>{" "}
+          to choose the correct form.
+        </p>
         {/* ================= WHY FILE NIL ITR ================= */}
         <section>
           <h2 className="text-2xl font-bold mb-4">

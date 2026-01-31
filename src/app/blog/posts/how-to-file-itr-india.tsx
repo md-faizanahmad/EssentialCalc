@@ -1,4 +1,5 @@
 // ITR Filing Guide - Editorial White/Black Layout
+import { Link } from "lucide-react";
 import Image from "next/image";
 
 function PortalScreenshot({
@@ -157,6 +158,19 @@ export default function HowToFileITRIndia() {
             <p className="mt-6 text-sm text-gray-500">
               Filing ITR with zero income is completely legal and is called a
               <strong> Nil Return</strong>.
+              <div className="mt-8 bg-gray-50 border-l-4 border-black p-4">
+                <p className="text-sm text-gray-700">
+                  If your income is zero or below the taxable limit, you can
+                  file a{" "}
+                  <Link
+                    href="/blog/nil-itr-return"
+                    className="font-semibold underline"
+                  >
+                    Nil ITR Return
+                  </Link>{" "}
+                  instead of a regular return.
+                </p>
+              </div>
             </p>
           </section>
           {/* Section 2: Checklist */}
