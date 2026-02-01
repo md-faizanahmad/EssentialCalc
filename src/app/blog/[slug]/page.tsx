@@ -5,7 +5,7 @@ import BlogSchema from "@/components/BlogSchema"; // Import the Schema component
 // Post Components
 import HowToFileITRIndia from "../posts/how-to-file-itr-india";
 import HowToFileGSTReturnIndia from "../posts/how-to-file-gst-return-india";
-import TaxRegime2026 from "../posts/tax-regime-2026";
+import TaxRegime2026 from "../posts/budget-2026";
 import HowMuchEMIIsSafe from "../posts/how-much-emi-is-safe";
 import EmiVsLumpSum from "../posts/emi-vs-lump-sum-payment";
 import SalaryCalculationIndia from "../posts/salary-calculation-india";
@@ -213,12 +213,12 @@ export default async function BlogPost({
       };
       break;
 
-    case "tax-regime-2026":
+    case "Budget-2026":
       postData = {
-        title: "New Tax Regime 2026 Explained: Slabs & Benefits",
+        title: "New Budget 2026 Explained: Slabs & Benefits",
         description:
           "Compare the new vs old tax regime to find the best savings for your salary.",
-        date: "2026-01-15",
+        date: "2026-02-01",
         category: "Income Tax",
         component: <TaxRegime2026 />,
       };
