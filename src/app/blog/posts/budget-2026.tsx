@@ -3,16 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "New Tax Regime 2026 Explained | Budget 2026 Tax Slabs & Rules",
+  title: "New Budget 2026 Explained | Budget 2026 Tax Slabs & Rules",
   description:
     "New Tax Regime 2026 explained after Budget 2026. Check income tax slabs, deductions not allowed, old vs new comparison, FAQs, and filing tips under Income Tax Act 2025.",
   alternates: {
-    canonical: "https://yourdomain.com/tax-regime-2026",
+    canonical: "https://essentialcalc.com/blog/Budget-2026",
   },
   openGraph: {
-    title: "New Tax Regime 2026 – Budget 2026 Tax Rules Explained",
+    title: "New Budget 2026 – Budget 2026 Tax Rules Explained",
     description:
-      "Understand New Tax Regime 2026 with updated slabs, benefits, comparison with old regime, and Budget 2026 tax changes.",
+      "Understand New Budget Regime 2026 with updated slabs, benefits, comparison with old regime, and Budget 2026 tax changes.",
     type: "article",
     images: [
       {
