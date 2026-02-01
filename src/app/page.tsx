@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EssentialCalc – Financial Calculators & Smart Online Tools",
+  title:
+    "EssentialCalc | Free Financial Calculators, Budget Updates & Smart Tools",
   description:
-    "EssentialCalc offers free financial calculators, PDF tools, and image utilities for India. Calculate EMI, salary, loans, and use private browser-based tools.",
+    "EssentialCalc offers free financial calculators, budget updates, finance guides, and smart PDF & image tools. Calculate EMI, loan, salary, and income tax using fast, privacy-first online tools built for India.",
   alternates: {
     canonical: "https://essentialcalc.com/",
   },
   openGraph: {
-    title: "EssentialCalc – Financial Calculators & Smart Online Tools",
+    title:
+      "EssentialCalc | Financial Calculators, Budget Updates & Free Tools",
     description:
-      "Free EMI, loan, salary calculators plus private PDF and image tools. Built for speed, privacy, and mobile users in India.",
+      "Free EMI, loan, salary, and income tax calculators with budget updates, finance guides, and privacy-first PDF & image tools. Built for speed and clarity.",
     url: "https://essentialcalc.com/",
     siteName: "EssentialCalc",
     type: "website",
