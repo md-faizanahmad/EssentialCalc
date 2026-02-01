@@ -11,7 +11,7 @@ export default function HomeStory() {
               About EssentialCalc
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
-              Simple, Accurate & Transparent Online Calculators
+              Free Financial Calculators, Budget Updates & Finance Blogs
             </h2>
             <div className="h-1.5 w-20 bg-blue-600 mx-auto rounded-full" />
           </header>
@@ -20,37 +20,40 @@ export default function HomeStory() {
           <div className="grid grid-cols-1 font-serif md:grid-cols-2 gap-12 items-center mb-20">
             <div className="prose prose-slate prose-lg">
               <p>
-                <strong>EssentialCalc</strong> is a free online platform
-                designed to help users make informed financial and practical
-                decisions using reliable calculators and utility tools.
+                <strong>EssentialCalc</strong> is a free online platform that
+                helps users calculate, understand, and plan their finances using
+                simple financial calculators, budget updates, and practical
+                finance blogs.
               </p>
 
               <p>
-                Our most-used tools include an <strong>EMI calculator</strong>{" "}
-                for home, car, and personal loans, a{" "}
+                Popular tools on EssentialCalc include an{" "}
+                <strong>EMI calculator</strong> for home loan, car loan, and
+                personal loan calculations, a{" "}
                 <strong>salary calculator</strong> to estimate monthly in-hand
-                pay from CTC, and a growing collection of{" "}
-                <strong>PDF and image tools</strong> for everyday productivity.
+                salary from CTC, and easy-to-use{" "}
+                <strong>PDF and image tools</strong> for everyday tasks.
               </p>
 
               <p>
-                Unlike many platforms that focus on selling financial products,
-                EssentialCalc focuses on clarity. Our tools are built to explain
-                numbers in a simple way so users can understand costs, interest,
-                and outcomes before making decisions.
+                In addition to calculators, EssentialCalc publishes{" "}
+                <strong>finance blogs and budget guides</strong> that explain
+                topics like income tax changes, budget highlights, and salary
+                planning in simple language — without sales pressure or hidden
+                promotions.
               </p>
             </div>
 
             <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
               <h3 className="text-2xl font-semibold text-blue-900 mb-4">
-                How Our Calculations Work
+                How Our Financial Calculators Work
               </h3>
               <p className="text-blue-800 text-sm leading-relaxed">
-                Financial calculators on EssentialCalc use commonly accepted
-                formulas such as the <strong>reducing balance method</strong>,
-                which is widely used by banks and financial institutions.
-                Results are intended to be practical estimates to help with
-                planning and comparison.
+                Financial calculators on EssentialCalc use standard methods such
+                as the <strong>reducing balance method</strong>, which is
+                commonly used by banks and financial institutions. Results are
+                designed to give clear estimates for comparison and planning,
+                not financial advice.
               </p>
             </div>
           </div>
@@ -62,12 +65,12 @@ export default function HomeStory() {
                 <ShieldCheck size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Privacy Focused
+                Privacy-First Tools
               </h3>
               <p className="text-sm text-gray-600">
-                Calculator inputs and file operations are processed directly in
-                your browser. We do not require account creation or store
-                personal financial data.
+                All calculations and file processing happen directly in your
+                browser. No account is required and no personal financial data
+                is stored.
               </p>
             </div>
 
@@ -76,11 +79,11 @@ export default function HomeStory() {
                 <Zap size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Fast & Lightweight
+                Fast & Mobile Friendly
               </h3>
               <p className="text-sm text-gray-600">
-                The website is optimized for performance and mobile usage,
-                allowing tools to load quickly even on slower connections.
+                EssentialCalc is optimized for speed and works smoothly on
+                mobile devices, even with slow internet connections.
               </p>
             </div>
 
@@ -89,12 +92,12 @@ export default function HomeStory() {
                 <HeartHandshake size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Free to Use
+                Free & Independent
               </h3>
               <p className="text-sm text-gray-600">
-                EssentialCalc is free for users. The platform is supported by
-                limited, non-intrusive advertising to help maintain and improve
-                the service.
+                All calculators, blogs, and tools on EssentialCalc are free to
+                use. The platform remains independent and focused on clarity
+                and usefulness.
               </p>
             </div>
           </div>
@@ -102,8 +105,9 @@ export default function HomeStory() {
           {/* Trust Footer */}
           <footer className="mt-20 text-center border-t border-gray-100 pt-12">
             <p className="text-sm text-gray-500">
-              EssentialCalc is an independent online utility platform built for
-              everyday calculation and productivity needs.
+              EssentialCalc is an independent platform offering financial
+              calculators, budget updates, and finance guides for everyday use
+              in India.
             </p>
           </footer>
         </article>
