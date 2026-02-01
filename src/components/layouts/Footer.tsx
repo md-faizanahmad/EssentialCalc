@@ -121,9 +121,10 @@ export default function Footer() {
               Essential<span className="text-blue-600">Calc.</span>
             </Link>
             <p className="text-xs text-gray-400 font-medium max-w-sm">
-              Helping India calculate better. Professional financial and media
-              utilities built for privacy and speed. 100% Client-side.
-            </p>
+  EssentialCalc provides free financial calculators, budget updates,
+  finance blogs, and smart PDF & image tools — built for accuracy,
+  privacy, and everyday use in India.
+</p>
           </div>
 
           <div className="flex gap-4">
