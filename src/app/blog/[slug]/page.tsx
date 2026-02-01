@@ -18,6 +18,7 @@ import ComplianceHub from "../posts/itr-gst-compliance-india";
 import ITRForFreelancers from "../posts/itr-for-freelancers";
 import NilITRReturn from "../posts/nil-itr-return";
 import FaqSchema from "../components/FaqSchema";
+import Budget2026LivePage from "../posts/budget-2026-live";
 
 export const dynamic = "force-static";
 
@@ -47,6 +48,12 @@ export async function generateMetadata({
 
   // Map slugs to SEO titles and descriptions (Keep these synced with your switch logic)
   const seoData: Record<string, { title: string; desc: string }> = {
+    "budget-2026-live": {
+      title:
+        "Budget 2026 Live Updates | Highlights, Income Tax & Key Announcements",
+      desc: "Budget 2026 live updates covering key highlights, income tax changes, new tax slabs, budget timing, and major announcements from the Union Budget 2026.",
+    },
+
     "how-to-file-itr-india": {
       title: "How to File ITR Online in India (AY 2026–27) – Step by Step",
       desc: "Learn how to file Income Tax Return (ITR) online in India for AY 2026–27. Covers forms, documents, Nil return, and e-verification.",
@@ -191,6 +198,15 @@ export default async function BlogPost({
   };
 
   switch (slug) {
+    case "budget-2026-live":
+      postData = {
+        title: "",
+        description: "",
+        date: "2026-02-02",
+        category: "budget",
+        component: <Budget2026LivePage />,
+      };
+      break;
     case "how-to-file-itr-india":
       postData = {
         title: "How to File Income Tax Return (ITR) in India",

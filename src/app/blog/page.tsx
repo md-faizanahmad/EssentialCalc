@@ -2,9 +2,12 @@ import blogData from "@/data/blog.json";
 import BlogIndexClient from "./components/BlogIndexClient";
 
 export const metadata = {
-  title: "Tax & Salary Guides for India (2026) | EssentialCalc",
+  title: "Budget 2026 Updates & Highlights | EssentialCalc",
   description:
-    "Clear, practical guides on income tax filing, GST returns, and salary planning for Indian users. Updated for 2026.",
+    "Latest updates and highlights from Budget 2026, including income tax changes, key announcements, and official budget summaries for India.",
+  alternates: {
+    canonical: "https://essentialcalc.com/blog",
+  },
 };
 
 export default function BlogIndexPage() {
