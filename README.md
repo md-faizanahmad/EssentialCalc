@@ -1,12 +1,12 @@
 <div align="center">
-  <h1>EssentialCalc – High-Performance Online Calculators & Utilities , Financial Blogs</h1>
+  <h1>EssentialCalc – Online Calculators & Utility Tools</h1>
   <p>
     A production-ready, SEO-optimized web application built with Next.js and TypeScript,
-    offering fast, mobile-first financial calculators and document tools for real users.
+    providing fast online calculators and productivity tools for real-world users.
   </p>
 
   <p>
-    <strong>Live:</strong>
+    <strong>Live Website:</strong>
     <a href="https://essentialcalc.com" target="_blank">https://essentialcalc.com</a>
   </p>
 
@@ -14,36 +14,90 @@
     <img src="https://img.shields.io/badge/Framework-Next.js-black" />
     <img src="https://img.shields.io/badge/Language-TypeScript-blue" />
     <img src="https://img.shields.io/badge/SEO-Optimized-success" />
-    <img src="https://img.shields.io/badge/UX-Mobile--First-orange" />
+    <img src="https://img.shields.io/badge/Mobile--First-orange" />
     <img src="https://img.shields.io/badge/Status-Production_Ready-success" />
   </p>
 </div>
 
 <hr />
 
-<h2>🚀 Project Overview</h2>
+<h2>🏠 Homepage – Header & Core Navigation</h2>
 <p>
-  EssentialCalc is a real-world utility platform that provides
-  <strong>online calculators</strong> and <strong>productivity tools</strong>
-  designed for speed, SEO visibility, and usability on low-end mobile devices.
+  SEO-friendly homepage header with clear navigation,
+  fast load performance, and category-based access to calculators and tools.
 </p>
 
-<p>
-  Unlike demo projects, this application was built with
-  <strong>search engine indexing</strong>,
-  <strong>AdSense compatibility</strong>,
-  and <strong>scalable content architecture</strong> in mind.
+<p align="center">
+  <img
+    src="https://res.cloudinary.com/dyefyrszz/image/upload/v1770739491/Essentially-_dl8okt.png"
+    alt="EssentialCalc homepage header showing navigation and calculator categories"
+    width="100%"
+  />
 </p>
 
 <hr />
 
-<h2>🧠 Why This Project Matters (Interview Perspective)</h2>
-<ul>
-  <li>Built to solve <strong>real user problems</strong>, not UI-only demos</li>
-  <li>Handles <strong>SEO, metadata, indexing, and performance trade-offs</strong></li>
-  <li>Designed for <strong>production deployment</strong> and monetization</li>
-  <li>Focused on <strong>clean architecture</strong> and maintainable code</li>
-</ul>
+<h2>💰 Calculator & Tool Pages</h2>
+<p>
+  Core calculator pages such as EMI calculator, salary calculator,
+  and utility tools designed for accuracy, speed, and user clarity.
+</p>
+
+<p align="center">
+  <img
+    src="https://res.cloudinary.com/dyefyrszz/image/upload/v1770739491/Essentially_glmlgi.png"
+    alt="EssentialCalc calculator page with user inputs and instant calculation results"
+    width="100%"
+  />
+</p>
+
+<hr />
+
+<h2>🧰 Utility Tools & Feature Sections</h2>
+<p>
+  Document and image utility tools including PDF merge, PDF compress,
+  and image optimization, built with a clean and distraction-free UI.
+</p>
+
+<p align="center">
+  <img
+    src="https://res.cloudinary.com/dyefyrszz/image/upload/v1770739491/Essentially--_otg2pa.png"
+    alt="EssentialCalc utility tools section showing PDF and image tools"
+    width="100%"
+  />
+</p>
+
+<hr />
+
+<h2>📝 Blog & SEO Content Pages</h2>
+<p>
+  SEO-driven blog and content pages structured for search indexing,
+  internal linking, and long-term organic traffic growth.
+</p>
+
+<p align="center">
+  <img
+    src="https://res.cloudinary.com/dyefyrszz/image/upload/v1770739492/Essentially-Blog_klvycp.png"
+    alt="EssentialCalc blog page optimized for SEO with structured content layout"
+    width="100%"
+  />
+</p>
+
+<hr />
+
+<h2>🔻 Footer & Internal Linking</h2>
+<p>
+  Footer designed with internal navigation, SEO-friendly links,
+  and structured layout to improve crawlability and user retention.
+</p>
+
+<p align="center">
+  <img
+    src="https://res.cloudinary.com/dyefyrszz/image/upload/v1770739491/Essentially-Footer_o8jtiq.png"
+    alt="EssentialCalc website footer with internal links and navigation structure"
+    width="100%"
+  />
+</p>
 
 <hr />
 
@@ -53,78 +107,18 @@
   <li><strong>Language:</strong> TypeScript</li>
   <li><strong>Styling:</strong> Tailwind CSS</li>
   <li><strong>SEO:</strong> Metadata API, canonical URLs, Open Graph</li>
-  <li><strong>Performance:</strong> Server Components, optimized routing</li>
   <li><strong>Deployment:</strong> Vercel</li>
 </ul>
 
 <hr />
 
-<h2>📊 Core Features</h2>
-
-<h3>💰 Financial Calculators</h3>
+<h2>🔍 SEO & Performance Focus</h2>
 <ul>
-  <li>EMI Calculator (Home Loan, Car Loan, Product EMI)</li>
-  <li>Salary Calculator</li>
-  <li>Eligibility & breakdown logic with instant results</li>
-</ul>
-
-<h3>📄 PDF & Image Utilities</h3>
-<ul>
-  <li>PDF Merge & Compress tools</li>
-  <li>Image Compression and Background Removal</li>
-</ul>
-
-<h3>📱 Mobile-First UX</h3>
-<ul>
-  <li>Optimized for low-end Android devices</li>
-  <li>Fast interaction without unnecessary re-renders</li>
-</ul>
-
-<hr />
-
-<h2>🔍 SEO & Performance Optimization</h2>
-<ul>
-  <li>Search-friendly URL structure and page hierarchy</li>
-  <li>Canonical URLs to prevent duplicate content</li>
-  <li>Open Graph and metadata for social sharing</li>
-  <li>Clean indexing setup with Google Search Console</li>
-  <li>Minimal JavaScript for better Lighthouse scores</li>
-</ul>
-
-<p>
-  This project exposed real challenges like
-  <strong>“Discovered – currently not indexed”</strong>,
-  sitemap configuration,
-  and metadata warnings — all addressed through iteration.
-</p>
-
-<hr />
-
-<h2>📈 Monetization-Ready</h2>
-<ul>
-  <li>AdSense-safe layout and script handling</li>
-  <li>Non-intrusive ad placement strategy</li>
-  <li>Built for long-term organic traffic growth</li>
-</ul>
-
-<hr />
-
-<h2>📁 Project Structure (High Level)</h2>
-<ul>
-  <li><strong>app/</strong> – App Router pages and layouts</li>
-  <li><strong>components/</strong> – Reusable UI components</li>
-  <li><strong>utils/</strong> – Calculation and helper logic</li>
-  <li><strong>public/</strong> – Static assets and SEO files</li>
-</ul>
-
-<hr />
-
-<h2>🎯 Key Learnings</h2>
-<ul>
-  <li>SEO is not automatic — it requires deliberate structure</li>
-  <li>Performance decisions affect indexing and monetization</li>
-  <li>Next.js App Router introduces both power and complexity</li>
-  <li>Building for users is different from building for demos</li>
+  <li>Search-friendly URL and page hierarchy</li>
+  <li>Canonical URLs to avoid duplicate indexing</li>
+  <li>Optimized metadata for Google Search Console</li>
+  <li>Fast load times using Server Components</li>
+  <li>Mobile-first optimization for low-end devices</li>
 </ul>
 
 <hr />
@@ -145,10 +139,12 @@
 
 <hr />
 
-<h2>📌 Final Note</h2>
+<h2>📌 Interviewer Note</h2>
 <p>
-  EssentialCalc is a practical example of building a
-  <strong>production-grade frontend application</strong>
-  that balances performance, SEO, and real user needs —
-  exactly the kind of experience required in modern frontend roles.
+  EssentialCalc is not a demo project.
+  It represents hands-on experience with
+  <strong>SEO-driven frontend architecture</strong>,
+  <strong>performance optimization</strong>,
+  and <strong>real production constraints</strong>
+  using modern React and Next.js practices.
 </p>
