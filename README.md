@@ -139,12 +139,4 @@
 
 <hr />
 
-<h2>📌 Interviewer Note</h2>
-<p>
-  EssentialCalc is not a demo project.
-  It represents hands-on experience with
-  <strong>SEO-driven frontend architecture</strong>,
-  <strong>performance optimization</strong>,
-  and <strong>real production constraints</strong>
-  using modern React and Next.js practices.
-</p>
+
