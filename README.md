@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>EssentialCalc – High-Performance Online Calculators & Utilities ,Blogs </h1>
+  <h1>EssentialCalc – High-Performance Online Calculators & Utilities , Financial Blogs</h1>
   <p>
     A production-ready, SEO-optimized web application built with Next.js and TypeScript,
     offering fast, mobile-first financial calculators and document tools for real users.
