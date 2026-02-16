@@ -1,4 +1,5 @@
 import AdSlot from "@/components/layouts/AdSlot";
+import LatestNews from "@/components/layouts/LatestNews";
 import Link from "next/link";
 
 export const metadata = {
@@ -70,6 +71,8 @@ export default function EMICategoryPage() {
           </Link>
         ))}
       </section>
+
+      <LatestNews />
 
       {/* Ad after real content (SAFE) */}
       <AdSlot id="emi-category-mid" />

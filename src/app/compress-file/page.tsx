@@ -2,6 +2,7 @@
 import { Zap, ShieldCheck } from "lucide-react";
 import AdSlot from "@/components/layouts/AdSlot";
 import dynamic from "next/dynamic";
+import LatestNews from "@/components/layouts/LatestNews";
 
 const CompressPdf = dynamic(() => import("@/components/pdf/CompressPdf"), {
   ssr: false,
@@ -51,6 +52,7 @@ export default function CompressPdfPage() {
           </div>
         </div>
       </section>
+      <LatestNews />
     </main>
   );
 }

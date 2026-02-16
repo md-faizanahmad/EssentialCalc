@@ -10,6 +10,7 @@ import {
   ScanText,
 } from "lucide-react";
 import AdSlot from "@/components/layouts/AdSlot";
+import LatestNews from "@/components/layouts/LatestNews";
 
 export const metadata = {
   title: "PDF Tools: Merge, Compress & OCR | EssentialCalc",
@@ -111,7 +112,7 @@ export default function PdfToolsPage() {
           </Link>
         ))}
       </section>
-
+      <LatestNews />
       <AdSlot id="pdf-hub-mid" />
 
       {/* Clean SEO Story Section */}

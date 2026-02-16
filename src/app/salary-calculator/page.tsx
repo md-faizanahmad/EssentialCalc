@@ -2,6 +2,7 @@ import AdSlot from "@/components/layouts/AdSlot";
 import { TrendingUp, Info } from "lucide-react";
 import SalaryCalc from "@/components/tools/SalaryCalc";
 import EligibilityCalc from "@/components/tools/EligibilityCalc";
+import LatestNews from "@/components/layouts/LatestNews";
 
 export const metadata = {
   title: "Salary Calculator & Loan Eligibility by Income | EssentialCalc",
@@ -41,6 +42,7 @@ export default function SalaryHubPage() {
       </div>
       <AdSlot id="salary-hub-middle" />
 
+      <LatestNews />
       {/* Educational Content Section - For AdSense Approval */}
       <article className="mt-20 prose prose-slate max-w-none border-t border-gray-100 pt-16">
         <div className="max-w-3xl mx-auto">

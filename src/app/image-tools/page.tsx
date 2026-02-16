@@ -9,6 +9,7 @@ import {
   Zap,
 } from "lucide-react";
 import AdSlot from "@/components/layouts/AdSlot";
+import LatestNews from "@/components/layouts/LatestNews";
 
 export const metadata = {
   title:
@@ -113,7 +114,7 @@ export default function ImageToolsHub() {
           </Link>
         ))}
       </section>
-
+      <LatestNews />
       <AdSlot id="image-hub-mid" />
 
       {/* Clean SEO Story Section */}

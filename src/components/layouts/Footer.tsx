@@ -22,7 +22,10 @@ const FOOTER_LINKS: Record<string, FooterSection> = {
       { name: "Home Loan EMI Calculator", href: "/emi-calculator/home-loan" },
       { name: "Car Loan EMI Calculator", href: "/emi-calculator/car-loan" },
       { name: "Salary Calculator", href: "/salary-calculator/salary-breakup" },
-      { name: "Loan Eligibility Calculator", href: "/salary-calculator/salary-based" },
+      {
+        name: "Loan Eligibility Calculator",
+        href: "/salary-calculator/salary-based",
+      },
     ],
   },
 
@@ -51,7 +54,11 @@ const FOOTER_LINKS: Record<string, FooterSection> = {
   finance: {
     title: "Finance & Budget",
     links: [
-      { name: "Budget 2026 Live Updates", href: "/budget-2026-live", highlight: true },
+      {
+        name: "Budget 2026 Live Updates",
+        href: "/budget-2026-live",
+        highlight: true,
+      },
       { name: "Income Tax Guides", href: "/blog" },
       { name: "Tax & Salary Articles", href: "/blog" },
       { name: "Finance FAQs", href: "/faq" },
@@ -93,7 +100,7 @@ export default function Footer() {
               </h3>
               <ul className="space-y-3">
                 {section.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.name}>
                     <Link
                       href={link.href}
                       className={`text-sm transition-colors hover:text-blue-600 ${
@@ -121,10 +128,10 @@ export default function Footer() {
               Essential<span className="text-blue-600">Calc.</span>
             </Link>
             <p className="text-xs text-gray-400 font-medium max-w-sm">
-  EssentialCalc provides free financial calculators, budget updates,
-  finance blogs, and smart PDF & image tools — built for accuracy,
-  privacy, and everyday use in India.
-</p>
+              EssentialCalc provides free financial calculators, budget updates,
+              finance blogs, and smart PDF & image tools — built for accuracy,
+              privacy, and everyday use in India.
+            </p>
           </div>
 
           <div className="flex gap-4">
