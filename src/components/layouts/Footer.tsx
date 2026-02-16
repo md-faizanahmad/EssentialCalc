@@ -16,56 +16,54 @@ interface FooterSection {
 // 2. Organized Data for AdSense & SEO
 const FOOTER_LINKS: Record<string, FooterSection> = {
   calculators: {
-    title: "Calculators",
+    title: "Financial Calculators",
     href: "/emi-calculator",
     links: [
-      { name: "Home Loan EMI", href: "/emi-calculator/home-loan" },
-      { name: "Car Loan EMI", href: "/emi-calculator/car-loan" },
-      { name: "Salary Breakup", href: "/salary-calculator/salary-breakup" },
-      { name: "Loan Eligibility", href: "/salary-calculator/salary-based" },
+      { name: "Home Loan EMI Calculator", href: "/emi-calculator/home-loan" },
+      { name: "Car Loan EMI Calculator", href: "/emi-calculator/car-loan" },
+      { name: "Salary Calculator", href: "/salary-calculator/salary-breakup" },
+      { name: "Loan Eligibility Calculator", href: "/salary-calculator/salary-based" },
     ],
   },
+
   pdfTools: {
     title: "PDF Tools",
     href: "/pdf-tools",
     links: [
-      { name: "QuickMerge PDF", href: "/pdf-tools/pdf-merge" },
-      { name: "Compress File", href: "/compress-file" },
+      { name: "Merge PDF", href: "/pdf-tools/pdf-merge" },
+      { name: "Compress PDF", href: "/compress-file" },
       { name: "PDF to Image", href: "/pdf-tools/image-to-image" },
       { name: "OCR Text Extractor", href: "/pdf-tools/ocr" },
     ],
   },
+
   imageTools: {
     title: "Image Tools",
     href: "/image-tools",
     links: [
-      { name: "BG Remover", href: "/image-tools/remove-bg" },
-      { name: "Self-Attestation", href: "/image-tools/self-attest" },
-      { name: "Smart Cropper", href: "/image-tools/image-optimize" },
-      { name: "Image Compress", href: "/compress-file" },
+      { name: "Background Remover", href: "/image-tools/remove-bg" },
+      { name: "Self Attestation Tool", href: "/image-tools/self-attest" },
+      { name: "Image Crop & Optimize", href: "/image-tools/image-optimize" },
+      { name: "Image Compressor", href: "/compress-file" },
     ],
   },
-  otherTool: {
-    title: "Other Tool",
+
+  finance: {
+    title: "Finance & Budget",
     links: [
-      {
-        name: "Daily Time Managment",
-        href: "/daily-time-calculator",
-      },
-      { name: "Faq", href: "/faq" },
-      // { name: "Privacy Policy", href: "/privacy-policy" },
-      // { name: "Terms of Service", href: "/terms" },
-      // { name: "Faq", href: "/faq" },
-      // { name: "Contact Us", href: "/contact" },
+      { name: "Budget 2026 Live Updates", href: "/budget-2026-live", highlight: true },
+      { name: "Income Tax Guides", href: "/blog" },
+      { name: "Tax & Salary Articles", href: "/blog" },
+      { name: "Finance FAQs", href: "/faq" },
     ],
   },
-  legal: {
+
+  resources: {
     title: "Resources",
     links: [
       { name: "Financial Blog", href: "/blog", highlight: true },
       { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Terms of Service", href: "/terms" },
-
       { name: "Contact Us", href: "/contact" },
     ],
   },
@@ -123,9 +121,10 @@ export default function Footer() {
               Essential<span className="text-blue-600">Calc.</span>
             </Link>
             <p className="text-xs text-gray-400 font-medium max-w-sm">
-              Helping India calculate better. Professional financial and media
-              utilities built for privacy and speed. 100% Client-side.
-            </p>
+  EssentialCalc provides free financial calculators, budget updates,
+  finance blogs, and smart PDF & image tools — built for accuracy,
+  privacy, and everyday use in India.
+</p>
           </div>
 
           <div className="flex gap-4">
