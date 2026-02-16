@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "EssentialCalc – Financial Calculators & Smart Online Tools",
   description:
-    "EssentialCalc offers free financial calculators, PDF tools, and image utilities for India. Calculate EMI, salary, loans, and use private browser-based tools.",
+    "EssentialCalc offers free financial calculators, PDF tools, and image utilities for World. Calculate EMI, salary, loans, and use private browser-based tools.",
   alternates: {
     canonical: "https://essentialcalc.com/",
   },
