@@ -74,6 +74,18 @@ const FOOTER_LINKS: Record<string, FooterSection> = {
       { name: "Contact Us", href: "/contact" },
     ],
   },
+  guides: {
+    title: "Guides",
+    links: [
+      {
+        name: "Income Tax Guide",
+        href: "/income-tax-guide",
+        highlight: true,
+      },
+      { name: "GST Guide", href: "/gst-guide" },
+      { name: "Loan Guide", href: "/loan-guide" },
+    ],
+  },
 };
 
 export default function Footer() {

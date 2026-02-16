@@ -29,6 +29,7 @@ import LatestNews from "@/components/layouts/LatestNews";
 import HomeStory from "@/components/layouts/HomeStory";
 import AdSlot from "@/components/layouts/AdSlot";
 import ToolLinks from "@/components/layouts/TookLinks";
+import GuideToolLinks from "@/components/layouts/GuideToolLink";
 
 export default function Home() {
   return (
@@ -41,7 +42,9 @@ export default function Home() {
       <section aria-labelledby="calculator-links">
         <ToolLinks />
       </section>
-
+      <section aria-labelledby="guide-links">
+        <GuideToolLinks />
+      </section>
       <section aria-labelledby="pdf-tools">
         <PdfToolLinks />
       </section>
