@@ -69,7 +69,7 @@ export default function HomeStory() {
           {/* Value Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-sky-400-600">
+              <div className="w-12 h-12  flex items-center justify-center mb-6  text-white bg-green-500 rounded-full">
                 <ShieldCheck size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -83,7 +83,7 @@ export default function HomeStory() {
             </div>
 
             <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-sky-400-600">
+              <div className="w-12 h-12   flex items-center justify-center mb-6 text-white bg-red-500 rounded-full text-sky-400-600">
                 <Zap size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -96,7 +96,7 @@ export default function HomeStory() {
             </div>
 
             <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-sky-400-600">
+              <div className="w-12 h-12   flex items-center justify-center mb-6 text-white bg-blue-900 rounded-full text-sky-400-600">
                 <HeartHandshake size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
