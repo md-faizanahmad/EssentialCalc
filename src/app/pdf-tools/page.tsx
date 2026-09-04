@@ -61,9 +61,6 @@ export default function PdfToolsPage() {
     <div className="max-w-5xl mx-auto px-4 py-1 md:py-1">
       {/* Compact Header */}
       <header className="mb-10 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-sky-400-600 text-[9px] font-black uppercase tracking-widest mb-4">
-          <Cpu size={12} /> Privacy-Engine Enabled
-        </div>
         <h1 className="text-3xl md:text-6xl font-black text-gray-900 mb-3 tracking-tighter uppercase">
           SECURE <span className="text-sky-400-600">PDF</span> TOOLS.
         </h1>
@@ -78,7 +75,7 @@ export default function PdfToolsPage() {
           <Link key={tool.title} href={tool.href} className="group">
             <article className="p-4 md:p-6 bg-white border border-gray-100 rounded-3xl md:rounded-4xl shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
               {tool.badge && (
-                <div className="absolute top-0 right-0 bg-blue-600 text-white text-[7px] md:text-[8px] font-black px-2 md:px-3 py-1 rounded-bl-xl uppercase tracking-widest">
+                <div className="absolute top-0 right-0 bg-green-600 text-white text-[7px] md:text-[8px] font-black px-2 md:px-3 py-1 rounded-bl-xl uppercase tracking-widest">
                   {tool.badge}
                 </div>
               )}
@@ -89,7 +86,7 @@ export default function PdfToolsPage() {
                 {tool.icon}
               </div>
 
-              <h2 className="text-sm md:text-xl font-bold text-gray-900 mb-1 group-hover:text-sky-400-600 transition-colors tracking-tight">
+              <h2 className="text-sm md:text-xl font-bold text-gray-900 mb-1 group-hover:text-sky-600 transition-colors tracking-tight">
                 {tool.title}
               </h2>
               <p className="text-[10px] md:text-sm text-gray-500 leading-snug mb-4 grow line-clamp-2 md:line-clamp-none">
@@ -105,7 +102,7 @@ export default function PdfToolsPage() {
                 </div>
                 <ArrowRight
                   size={14}
-                  className="text-gray-300 group-hover:text-sky-400-600 group-hover:translate-x-1 transition-all"
+                  className="text-gray-300 group-hover:text-sky-800 group-hover:translate-x-1 transition-all"
                 />
               </div>
             </article>
@@ -117,9 +114,9 @@ export default function PdfToolsPage() {
 
       {/* Clean SEO Story Section */}
       <article className="mt-16 max-w-3xl mx-auto">
-        <div className="bg-gray-50 p-6 md:p-10 rounded-4xl border border-gray-100">
+        <div className=" p-6 md:p-10 ">
           <div className="flex items-center gap-2 mb-4">
-            <Zap size={18} className="text-sky-400-600" fill="currentColor" />
+            <Zap size={18} className="text-sky-600" fill="currentColor" />
             <h2 className="text-xl font-bold text-gray-900 uppercase tracking-tight">
               Why Secure PDF Processing?
             </h2>
