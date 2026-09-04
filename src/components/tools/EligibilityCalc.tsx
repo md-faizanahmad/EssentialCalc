@@ -17,7 +17,7 @@ export default function EligibilityCalc() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-      <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm space-y-6">
+      <div className="p-8  space-y-6">
         <div>
           <label className="block text-xs font-bold text-gray-400 uppercase mb-2">
             Monthly In-Hand Salary
@@ -68,16 +68,16 @@ export default function EligibilityCalc() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center bg-purple-600 rounded-3xl p-8 text-white text-center">
-        <h3 className="text-purple-200 text-xs font-bold uppercase tracking-widest mb-2">
+      <div className="flex flex-col justify-center  p-8 text-black text-center">
+        <h3 className="text-black text-xs font-bold uppercase tracking-widest mb-2">
           Maximum Loan Eligibility
         </h3>
         <p className="text-4xl md:text-5xl font-black mb-8">
           {formatCurrency(results.maxLoanAmount)}
         </p>
 
-        <div className="bg-purple-700/50 p-6 rounded-2xl border border-purple-400/30">
-          <p className="text-xs uppercase font-bold text-purple-200 mb-1">
+        <div className=" p-6 ">
+          <p className="text-xs uppercase font-bold text-black mb-1">
             Recommended Max EMI
           </p>
           <p className="text-2xl font-bold">

@@ -17,7 +17,7 @@ export default function SalaryCalc() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
       {/* Input Section */}
-      <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm space-y-6">
+      <div className=" p-8  space-y-6">
         <div>
           <label className="block text-sm font-bold text-gray-700 uppercase mb-4">
             Annual CTC (Gross)
@@ -26,7 +26,7 @@ export default function SalaryCalc() {
             type="number"
             value={ctc}
             onChange={(e) => setCtc(Number(e.target.value))}
-            className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl text-2xl font-bold text-sky-400-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl text-2xl font-bold text-sky-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
           />
           <input
             type="range"
@@ -35,7 +35,7 @@ export default function SalaryCalc() {
             step="50000"
             value={ctc}
             onChange={(e) => setCtc(Number(e.target.value))}
-            className="w-full h-2 mt-6 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+            className="w-full h-2 mt-6 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-sky-600"
           />
         </div>
 
@@ -48,7 +48,7 @@ export default function SalaryCalc() {
       </div>
 
       {/* Result Section */}
-      <div className="bg-gray-900 rounded-3xl p-8 text-white">
+      <div className=" p-8 text-black">
         <div className="text-center mb-8">
           <h3 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">
             Monthly Take-Home
@@ -60,7 +60,7 @@ export default function SalaryCalc() {
 
         <div className="space-y-4">
           <div className="flex justify-between text-sm py-2 border-b border-gray-800">
-            <span className="text-gray-400">Monthly Gross (CTC)</span>
+            <span className="text-gray-500">Monthly Gross (CTC)</span>
             <span>{formatCurrency(data.monthlyCTC)}</span>
           </div>
           <div className="flex justify-between text-sm py-2 border-b border-gray-800 text-red-400">
