@@ -96,7 +96,7 @@ export default function Header() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className={`hover:text-sky-400-700  hover:text-sky-700 transition-colors ${pathname.startsWith(link.href) ? "text-sky-400-600 font-bold" : ""}`}
+                  className={`hover:text-sky-400-700  hover:text-sky-700 transition-colors ${pathname.startsWith(link.href) ? "text-sky-900 font-bold" : ""}`}
                 >
                   {link.name}
                 </Link>

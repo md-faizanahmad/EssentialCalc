@@ -63,11 +63,8 @@ export default function ImageToolsHub() {
     <div className="max-w-5xl mx-auto px-4 py-1 md:py-1">
       {/* Compact Header */}
       <header className="mb-10 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-100 text-rose-600 text-[9px] font-black uppercase tracking-widest mb-4">
-          <Cpu size={12} /> Local AI Processing
-        </div>
         <h1 className="text-3xl md:text-6xl font-black text-gray-900 mb-3 tracking-tighter uppercase">
-          Image <span className="text-rose-600">AI</span> Tools.
+          Image <span className="text-green-600">AI</span> Tools.
         </h1>
         <p className="text-gray-500 text-sm md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
           Secure, browser-based image processing for Indian government portals.
@@ -80,7 +77,7 @@ export default function ImageToolsHub() {
           <Link key={tool.title} href={tool.href} className="group">
             <article className="p-4 md:p-6 bg-white border border-gray-100 rounded-3xl md:rounded-4xl shadow-sm hover:shadow-xl hover:border-rose-200 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
               {tool.badge && (
-                <div className="absolute top-0 right-0 bg-rose-600 text-white text-[7px] md:text-[8px] font-black px-2 md:px-3 py-1 rounded-bl-xl uppercase tracking-widest">
+                <div className="absolute top-0 right-0 bg-green-600 text-white text-[7px] md:text-[8px] font-black px-2 md:px-3 py-1 rounded-bl-xl uppercase tracking-widest">
                   {tool.badge}
                 </div>
               )}
@@ -119,7 +116,7 @@ export default function ImageToolsHub() {
 
       {/* Clean SEO Story Section */}
       <article className="mt-16 max-w-3xl mx-auto">
-        <div className="bg-gray-50 p-6 md:p-10 rounded-4xl border border-gray-100">
+        <div className=" p-6 md:p-10 rounded-4xl ">
           <div className="flex items-center gap-2 mb-4">
             <Zap size={18} className="text-rose-600" fill="currentColor" />
             <h2 className="text-xl font-bold text-gray-900 uppercase tracking-tight">
