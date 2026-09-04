@@ -93,7 +93,7 @@ export default function EMICategoryPage() {
             reducing balance method:
           </p>
 
-          <div className="bg-blue-600 text-white p-8 rounded-3xl font-mono text-center shadow-lg my-8">
+          <div className=" text-black p-8  font-mono text-center  my-8">
             <strong>
               EMI = [P × R × (1+R)<sup>N</sup>] / [(1+R)<sup>N</sup> − 1]
             </strong>
