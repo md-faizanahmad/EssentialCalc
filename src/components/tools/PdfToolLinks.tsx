@@ -51,9 +51,9 @@ export default function PdfToolLinks() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pdfToolCards.map((tool) => (
             <Link key={tool.title} href={tool.href} className="group">
-              <article className="p-6 border border-gray-100 rounded-4xl hover:border-blue-200 hover:shadow-xl hover:shadow-blue-50/50 transition-all bg-white h-full flex flex-col relative overflow-hidden">
+              <article className="p-6 border border-gray-100 rounded-4xl hover:border-sky-200 hover:shadow-xl hover:shadow-sky-50/50 transition-all bg-white h-full flex flex-col relative overflow-hidden">
                 {tool.badge && (
-                  <div className="absolute top-0 right-0 bg-blue-600 text-white text-[8px] font-black px-3 py-1 rounded-bl-xl uppercase tracking-widest">
+                  <div className="absolute top-0 right-0 bg-red-600 text-white text-[8px] font-black px-3 py-1 rounded-bl uppercase tracking-widest">
                     {tool.badge}
                   </div>
                 )}
@@ -64,7 +64,7 @@ export default function PdfToolLinks() {
                   {tool.icon}
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-sky-400-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors">
                   {tool.title}
                 </h3>
 
@@ -72,7 +72,7 @@ export default function PdfToolLinks() {
                   {tool.desc}
                 </p>
 
-                <div className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-sky-400-600">
+                <div className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-green-800">
                   Open Tool
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"

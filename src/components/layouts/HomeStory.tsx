@@ -13,7 +13,16 @@ export default function HomeStory() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
               Free Financial Calculators, Budget Updates & Finance Blogs
             </h2>
-            <div className="h-1.5 w-20 bg-blue-600 mx-auto rounded-full" />
+            <div className="relative mx-auto h-1.5 w-20 overflow-hidden rounded-full bg-neutral-200">
+              <div
+                className="
+      absolute inset-y-0 left-0 w-full
+      rounded-full
+      bg-linear-to-r from-green-500 via-red-500 to-sky-500
+      animate-[waveFill_2s_ease-in-out_infinite]
+    "
+              />
+            </div>
           </header>
 
           {/* Main Content */}
