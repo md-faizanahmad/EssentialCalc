@@ -1,112 +1,182 @@
-import { ShieldCheck, Globe, Code2, Zap } from "lucide-react";
+import { ShieldCheck, Globe, Zap, EyeOff, Database } from "lucide-react";
 
 export const metadata = {
   title: "About EssentialCalc | Privacy-First Financial Calculators for India",
   description:
-    "EssentialCalc is a privacy-first platform built in India that provides free financial calculators and practical guides. No user tracking. No data storage.",
+    "EssentialCalc provides free financial calculators and practical guides with a focus on privacy, minimal data collection, and a cleaner experience without unnecessary tracking or advertising.",
   alternates: {
     canonical: "https://essentialcalc.com/about",
   },
 };
 
+const aboutContent = {
+  intro: [
+    "EssentialCalc was created from a simple concern: everyday tools should not require people to give up their privacy.",
+    "Many websites and online tools collect information about visitors, use tracking technologies, build user profiles, or display targeted advertisements. Even when the calculation itself is simple, the surrounding experience can involve more data collection than users expect.",
+    "EssentialCalc aims to provide a different kind of experience—useful calculators and practical guides with privacy considered from the beginning.",
+  ],
+
+  concerns: [
+    {
+      icon: Database,
+      title: "Unnecessary Data Collection",
+      description:
+        "Simple tasks should not require collecting personal information that is unrelated to the calculation or service being provided.",
+    },
+    {
+      icon: EyeOff,
+      title: "Tracking & Profiling",
+      description:
+        "Users should be able to use basic tools without being unnecessarily tracked or profiled based on their activity.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Privacy by Design",
+      description:
+        "Where possible, calculations are performed directly in the browser so the information entered into a calculator does not need to be sent to a server.",
+    },
+  ],
+
+  pillars: [
+    {
+      icon: ShieldCheck,
+      title: "Privacy Focused",
+      description: "Designed with minimal data collection and privacy in mind.",
+    },
+    {
+      icon: Globe,
+      title: "Open Access",
+      description:
+        "Useful tools available without unnecessary accounts or sign-ups.",
+    },
+    {
+      icon: Zap,
+      title: "Fast & Lightweight",
+      description:
+        "Simple tools built to work quickly without unnecessary complexity.",
+    },
+  ],
+
+  guides: {
+    title: "Calculators with Simple Guides",
+    description:
+      "Alongside calculators, EssentialCalc provides short and practical guides explaining how calculations work and how to understand the results. These resources are intended for general informational purposes and are not professional financial advice.",
+  },
+
+  commitment: {
+    title: "Our Commitment",
+    description:
+      "EssentialCalc aims to remain free, useful, and privacy-conscious. The goal is simple: provide practical tools without making users feel that their personal information is the price of using them.",
+  },
+};
+
 export default function About() {
   return (
-    <article className="max-w-4xl mx-auto py-12 px-4">
+    <article className="mx-auto max-w-4xl px-4 py-12">
       {/* Header */}
-      <header className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
-          About <span className="text-sky-400-600">EssentialCalc</span>
+      <header className="mb-16 text-center">
+        <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 md:text-5xl">
+          About <span className="text-sky-600">EssentialCalc</span>
         </h1>
-        <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mb-8" />
+
+        <div className="relative mx-auto h-1.5 w-20 overflow-hidden rounded-full bg-sky-100">
+          <div
+            className="
+              absolute inset-y-0 left-0 w-full rounded-full
+              bg-linear-to-r from-sky-300 via-green-400 to-green-700
+              animate-[waveFill_2s_ease-in-out_infinite]
+            "
+          />
+        </div>
       </header>
 
-      {/* Intro */}
-      <div className="space-y-6 text-gray-700 leading-relaxed text-lg mb-16">
-        <p>
-          <strong>EssentialCalc</strong> is a privacy-first platform designed to
-          help users perform everyday financial calculations without sharing
-          personal data. All tools run directly in the browser, and user inputs
-          are never stored or tracked.
-        </p>
+      {/* Why EssentialCalc */}
+      <section className="mb-20 space-y-6 text-lg leading-relaxed text-gray-700">
+        {aboutContent.intro.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
+      </section>
 
-        <p>
-          The platform includes calculators for common needs such as loan
-          planning and salary estimation, along with simple reference guides
-          that explain financial concepts in clear language.
-        </p>
-      </div>
+      {/* Privacy Concerns */}
+      <section className="mb-20">
+        <div className="mb-8">
+          <h2 className="mb-3 text-2xl font-bold text-gray-900">
+            Why Privacy Matters
+          </h2>
 
-      {/* Founder (minimal, factual) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-20">
-        <div className="md:col-span-2 space-y-4 text-gray-700 leading-relaxed">
-          <p>
-            EssentialCalc is developed and maintained by{" "}
-            <strong className="text-gray-900">Md Faizan Ahmad</strong>, a web
-            developer based in India, with a focus on building fast, reliable,
-            and privacy-respecting web applications.
+          <p className="leading-relaxed text-gray-600">
+            Privacy can easily be overlooked when using everyday online tools.
+            EssentialCalc was created to reduce some of the common concerns
+            associated with using simple web-based services.
           </p>
         </div>
 
-        <div className="bg-white border border-gray-100 p-6 rounded-3xl shadow-sm text-center">
-          <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-sky-400-600">
-            <Code2 size={36} />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-900">
-            Md Faizan Ahmad
-          </h3>
-          <p className="text-xs text-gray-500">Founder & Developer</p>
-        </div>
-      </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {aboutContent.concerns.map((concern) => {
+            const Icon = concern.icon;
 
-      {/* Mission Pillars */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
-        <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-          <ShieldCheck className="text-sky-400-600 mb-3" size={28} />
-          <h4 className="font-semibold text-gray-900 mb-1">No Data Storage</h4>
-          <p className="text-sm text-gray-500">
-            Calculations stay on your device. Inputs are not saved on servers.
-          </p>
-        </div>
+            return (
+              <div
+                key={concern.title}
+                className="rounded-2xl border border-gray-100 bg-gray-50 p-6"
+              >
+                <Icon className="mb-4 text-sky-600" size={28} />
 
-        <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-          <Globe className="text-sky-400-600 mb-3" size={28} />
-          <h4 className="font-semibold text-gray-900 mb-1">Open Access</h4>
-          <p className="text-sm text-gray-500">
-            Tools are available to anyone, without accounts or sign-ups.
-          </p>
-        </div>
+                <h3 className="mb-2 font-semibold text-gray-900">
+                  {concern.title}
+                </h3>
 
-        <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-          <Zap className="text-sky-400-600 mb-3" size={28} />
-          <h4 className="font-semibold text-gray-900 mb-1">
-            Fast & Lightweight
-          </h4>
-          <p className="text-sm text-gray-500">
-            Built for performance, even on slow or limited connections.
-          </p>
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {concern.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
-      </div>
+      </section>
 
-      {/* Guides clarification (important for SEO/AI) */}
-      <section className="text-gray-700 text-base leading-relaxed mb-20">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">
-          Calculators with Simple Guides
+      {/* Principles */}
+      <section className="mb-20">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {aboutContent.pillars.map((pillar) => {
+            const Icon = pillar.icon;
+
+            return (
+              <div
+                key={pillar.title}
+                className="rounded-2xl border border-gray-100 bg-gray-50 p-6"
+              >
+                <Icon className="mb-3 text-sky-600" size={28} />
+
+                <h3 className="mb-1 font-semibold text-gray-900">
+                  {pillar.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {pillar.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Guides */}
+      <section className="mb-20 text-base leading-relaxed text-gray-700">
+        <h2 className="mb-3 text-xl font-bold text-gray-900">
+          {aboutContent.guides.title}
         </h2>
-        <p>
-          Alongside calculators, EssentialCalc includes short, practical guides
-          that explain how calculations work and how to interpret results. These
-          guides are meant for basic understanding, not professional advice.
-        </p>
+
+        <p>{aboutContent.guides.description}</p>
       </section>
 
       {/* Commitment */}
-      <section className="bg-white p-8 rounded-3xl border border-gray-100 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-3">Commitment</h2>
-        <p className="text-gray-600">
-          EssentialCalc is committed to remaining free, private, and focused on
-          clarity—helping users make sense of numbers without unnecessary
-          complexity.
-        </p>
+      <section className="rounded-3xl border border-gray-100 bg-white p-8 text-center">
+        <h2 className="mb-3 text-2xl font-bold text-gray-900">
+          {aboutContent.commitment.title}
+        </h2>
+
+        <p className="text-gray-600">{aboutContent.commitment.description}</p>
       </section>
     </article>
   );

@@ -63,3 +63,13 @@ a {
     transform: translateX(100%);
   }
 }
+@keyframes waveFill {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
