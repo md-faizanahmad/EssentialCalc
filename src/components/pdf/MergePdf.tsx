@@ -117,7 +117,7 @@ export default function MergePdf() {
           className="absolute inset-0 opacity-0 cursor-pointer z-10"
         />
         <div className="border-2 border-dashed border-blue-200 rounded-[2.5rem] p-12 text-center bg-blue-50/30 group-hover:bg-blue-50 group-hover:border-blue-400 transition-all duration-300">
-          <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-blue-600">
+          <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-sky-400-600">
             <Plus size={32} />
           </div>
           <h3 className="font-black text-gray-900 uppercase tracking-tight text-xl mb-1">
@@ -142,7 +142,7 @@ export default function MergePdf() {
               key={item.id}
               className="flex items-center gap-4 p-4 bg-white border border-gray-100 rounded-2xl hover:border-blue-200 transition-all group"
             >
-              <div className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+              <div className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400 group-hover:bg-blue-50 group-hover:text-sky-400-600 transition-colors">
                 <FileText size={20} />
               </div>
               <div className="flex-1 min-w-0">

@@ -7,7 +7,7 @@ const pdfToolCards = [
     desc: "Combine multiple PDF documents into a single professional file instantly.",
     href: "/pdf-tools/pdf-merge",
     icon: <FileStack size={24} />,
-    color: "bg-blue-50 text-blue-600",
+    color: "bg-blue-50 text-sky-400-600",
     badge: "Most Popular",
   },
   {
@@ -64,7 +64,7 @@ export default function PdfToolLinks() {
                   {tool.icon}
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-sky-400-600 transition-colors">
                   {tool.title}
                 </h3>
 
@@ -72,7 +72,7 @@ export default function PdfToolLinks() {
                   {tool.desc}
                 </p>
 
-                <div className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-blue-600">
+                <div className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-sky-400-600">
                   Open Tool
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"

@@ -144,7 +144,7 @@ export default function GSTGuide() {
           Detailed filing steps:{" "}
           <Link
             href="/blog/how-to-file-gst-return-india"
-            className="text-blue-600 font-semibold"
+            className="text-sky-400-600 font-semibold"
           >
             How to File GST Return in India
           </Link>

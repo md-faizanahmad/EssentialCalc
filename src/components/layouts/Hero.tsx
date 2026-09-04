@@ -13,7 +13,7 @@ export default function Hero() {
         {/* H1 */}
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
           Financial Calculators,{" "}
-          <span className="text-blue-900 fasthand-regular">Budget Updates</span>
+          <span className="text-sky-400 fasthand-regular">Budget Updates</span>
           <br className="hidden md:block" /> & Practical Finance Guides
         </h1>
 
@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/emi-calculator"
-            className="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 active:scale-95"
+            className="w-full sm:w-auto px-8 py-4 bg-sky-600 text-white font-semibold rounded-xl hover:bg-sky-500 transition-all shadow-lg shadow-blue-200 active:scale-95"
           >
             Use EMI Calculator
           </Link>

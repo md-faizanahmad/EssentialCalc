@@ -20,7 +20,7 @@ export default function LatestNews() {
           </div>
           <Link
             href="/blog"
-            className="hidden md:block text-xs font-bold uppercase tracking-widest text-blue-600 hover:text-blue-800 transition-colors"
+            className="hidden md:block text-xs font-bold uppercase tracking-widest text-sky-400-600 hover:text-sky-400-800 transition-colors"
           >
             View All News &rarr;
           </Link>
@@ -39,7 +39,7 @@ export default function LatestNews() {
               >
                 {/* Date/Category Column */}
                 <div className="md:w-32 shrink-0 flex md:flex-col items-center md:items-start justify-between md:justify-start gap-2">
-                  <span className="text-[10px] font-black text-blue-600 uppercase bg-blue-50 px-2 py-1 rounded">
+                  <span className="text-[10px] font-black text-sky-400-600 uppercase bg-blue-50 px-2 py-1 rounded">
                     {post.category}
                   </span>
                   <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
@@ -49,7 +49,7 @@ export default function LatestNews() {
 
                 {/* Content Column */}
                 <div className="grow">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors mb-3 leading-tight decoration-blue-600/30 group-hover:underline decoration-2 underline-offset-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-sky-400-700 transition-colors mb-3 leading-tight decoration-blue-600/30 group-hover:underline decoration-2 underline-offset-4">
                     {post.title}
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed line-clamp-2 md:line-clamp-none max-w-3xl">
@@ -57,7 +57,7 @@ export default function LatestNews() {
                   </p>
 
                   {/* "Read More" link only visible on mobile or as a hint */}
-                  <div className="mt-4 flex items-center text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 group-hover:text-blue-600 transition-colors">
+                  <div className="mt-4 flex items-center text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 group-hover:text-sky-400-600 transition-colors">
                     Full Report
                     <svg
                       className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform"

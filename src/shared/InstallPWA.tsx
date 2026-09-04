@@ -73,7 +73,7 @@ export default function InstallPWA() {
           </div>
           <div>
             <h3 className="text-lg font-black text-gray-900 uppercase tracking-tight">
-              Get <span className="text-blue-600">EssentialCalc</span>
+              Get <span className="text-sky-400-600">EssentialCalc</span>
             </h3>
             <p className="text-[11px] font-bold text-gray-500 leading-relaxed mt-1 uppercase tracking-tight">
               Fast, Private & Works Offline
@@ -86,7 +86,7 @@ export default function InstallPWA() {
             <ShieldCheck size={14} className="text-green-500" /> 100% Private
           </div>
           <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-gray-400">
-            <Zap size={14} className="text-blue-500" /> No Data Use
+            <Zap size={14} className="text-sky-400-500" /> No Data Use
           </div>
         </div>
 

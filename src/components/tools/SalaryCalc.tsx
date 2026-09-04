@@ -26,7 +26,7 @@ export default function SalaryCalc() {
             type="number"
             value={ctc}
             onChange={(e) => setCtc(Number(e.target.value))}
-            className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl text-2xl font-bold text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl text-2xl font-bold text-sky-400-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
             type="range"

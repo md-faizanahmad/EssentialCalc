@@ -430,7 +430,7 @@ export default function TaxRegime2026() {
               href="https://www.indiabudget.gov.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold underline text-blue-700"
+              className="font-bold underline text-sky-400-700"
             >
               https://www.indiabudget.gov.in/
             </Link>

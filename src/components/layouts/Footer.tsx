@@ -102,7 +102,7 @@ export default function Footer() {
                 {section.href ? (
                   <Link
                     href={section.href}
-                    className="hover:text-blue-600 transition-colors"
+                    className="hover:text-sky-400-600 transition-colors"
                   >
                     {section.title}
                   </Link>
@@ -115,9 +115,9 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className={`text-sm transition-colors hover:text-blue-600 ${
+                      className={`text-sm transition-colors hover:text-sky-400-600 ${
                         link.highlight
-                          ? "font-bold text-blue-600 underline underline-offset-4"
+                          ? "font-bold text-sky-400-600 underline underline-offset-4"
                           : "text-gray-500 font-medium"
                       }`}
                     >
@@ -137,7 +137,7 @@ export default function Footer() {
               href="/"
               className="text-xl tracking-tighter text-gray-900 font-black uppercase"
             >
-              Essential<span className="text-blue-600">Calc.</span>
+              Essential<span className="text-sky-400-600">Calc.</span>
             </Link>
             <p className="text-xs text-gray-400 font-medium max-w-sm">
               EssentialCalc provides free financial calculators, budget updates,

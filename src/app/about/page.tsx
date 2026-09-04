@@ -15,7 +15,7 @@ export default function About() {
       {/* Header */}
       <header className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
-          About <span className="text-blue-600">EssentialCalc</span>
+          About <span className="text-sky-400-600">EssentialCalc</span>
         </h1>
         <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mb-8" />
       </header>
@@ -48,7 +48,7 @@ export default function About() {
         </div>
 
         <div className="bg-white border border-gray-100 p-6 rounded-3xl shadow-sm text-center">
-          <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-blue-600">
+          <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-sky-400-600">
             <Code2 size={36} />
           </div>
           <h3 className="text-lg font-semibold text-gray-900">
@@ -61,7 +61,7 @@ export default function About() {
       {/* Mission Pillars */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-          <ShieldCheck className="text-blue-600 mb-3" size={28} />
+          <ShieldCheck className="text-sky-400-600 mb-3" size={28} />
           <h4 className="font-semibold text-gray-900 mb-1">No Data Storage</h4>
           <p className="text-sm text-gray-500">
             Calculations stay on your device. Inputs are not saved on servers.
@@ -69,7 +69,7 @@ export default function About() {
         </div>
 
         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-          <Globe className="text-blue-600 mb-3" size={28} />
+          <Globe className="text-sky-400-600 mb-3" size={28} />
           <h4 className="font-semibold text-gray-900 mb-1">Open Access</h4>
           <p className="text-sm text-gray-500">
             Tools are available to anyone, without accounts or sign-ups.
@@ -77,7 +77,7 @@ export default function About() {
         </div>
 
         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-          <Zap className="text-blue-600 mb-3" size={28} />
+          <Zap className="text-sky-400-600 mb-3" size={28} />
           <h4 className="font-semibold text-gray-900 mb-1">
             Fast & Lightweight
           </h4>

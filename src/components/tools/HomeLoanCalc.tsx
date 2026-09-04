@@ -26,7 +26,7 @@ export default function HomeLoanCalc() {
         <div className="space-y-4">
           <div className="flex justify-between">
             <label className="font-semibold text-gray-700">Loan Amount</label>
-            <span className="text-blue-600 font-bold">
+            <span className="text-sky-400-600 font-bold">
               {formatCurrency(amount)}
             </span>
           </div>
@@ -46,7 +46,7 @@ export default function HomeLoanCalc() {
             <label className="font-semibold text-gray-700">
               Interest Rate (%)
             </label>
-            <span className="text-blue-600 font-bold">{rate}%</span>
+            <span className="text-sky-400-600 font-bold">{rate}%</span>
           </div>
           <input
             type="range"
@@ -64,7 +64,7 @@ export default function HomeLoanCalc() {
             <label className="font-semibold text-gray-700">
               Tenure (Years)
             </label>
-            <span className="text-blue-600 font-bold">{tenure} Yr</span>
+            <span className="text-sky-400-600 font-bold">{tenure} Yr</span>
           </div>
           <input
             type="range"
@@ -114,7 +114,7 @@ export default function HomeLoanCalc() {
           ></div>
         </div>
         <div className="flex justify-between text-[10px] mt-2 font-bold uppercase tracking-tighter">
-          <span className="text-blue-600">Principal</span>
+          <span className="text-sky-400-600">Principal</span>
           <span className="text-orange-400">Interest</span>
         </div>
       </div>

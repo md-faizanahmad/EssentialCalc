@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
                 href="https://www.google.com/settings/ads"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 underline"
+                className="text-sky-400-600 underline"
               >
                 Google Ads Settings
               </a>

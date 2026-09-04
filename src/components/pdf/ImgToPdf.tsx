@@ -80,7 +80,7 @@ export default function ImageToPdf() {
             onChange={handleUpload}
             className="absolute inset-0 opacity-0 cursor-pointer z-10"
           />
-          <div className="w-20 h-20 bg-white rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-sm text-blue-600 group-hover:scale-110 transition-transform">
+          <div className="w-20 h-20 bg-white rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-400-600 group-hover:scale-110 transition-transform">
             <LucideImage size={40} />
           </div>
           <h3 className="font-black uppercase tracking-tight text-2xl text-gray-900">
@@ -123,7 +123,7 @@ export default function ImageToPdf() {
                   onChange={handleUpload}
                   className="hidden"
                 />
-                <Plus size={24} className="text-blue-600" />
+                <Plus size={24} className="text-sky-400-600" />
                 <span className="text-[10px] font-black uppercase mt-2 text-gray-400">
                   Add More
                 </span>

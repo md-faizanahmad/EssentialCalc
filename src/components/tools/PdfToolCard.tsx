@@ -27,7 +27,7 @@ export default function ToolCard({
           <div
             className={`p-4 rounded-2xl transition-colors ${
               isBlue
-                ? "bg-blue-50 text-blue-600"
+                ? "bg-blue-50 text-sky-400-600"
                 : "bg-purple-50 text-purple-600"
             }`}
           >
@@ -40,7 +40,7 @@ export default function ToolCard({
           </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors tracking-tight">
+        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-sky-400-600 transition-colors tracking-tight">
           {title}
         </h3>
 
@@ -52,7 +52,7 @@ export default function ToolCard({
           <div className="flex items-center gap-2">
             <Zap
               size={14}
-              className={isBlue ? "text-blue-500" : "text-purple-500"}
+              className={isBlue ? "text-sky-400-500" : "text-purple-500"}
               fill="currentColor"
             />
             <span className="text-[10px] font-black uppercase text-gray-400 tracking-widest">

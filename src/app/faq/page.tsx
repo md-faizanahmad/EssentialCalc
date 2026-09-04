@@ -35,7 +35,7 @@ const FAQS = [
   },
   {
     category: "Tools & Usage",
-    icon: <Calculator size={20} className="text-blue-600" />,
+    icon: <Calculator size={20} className="text-sky-400-600" />,
     items: [
       {
         q: "Are the EMI calculations accurate?",
@@ -58,7 +58,7 @@ export default function FAQPage() {
           <HelpCircle size={14} /> Knowledge Base
         </div>
         <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-6 tracking-tighter uppercase">
-          Common <span className="text-blue-600">Questions.</span>
+          Common <span className="text-sky-400-600">Questions.</span>
         </h1>
         <p className="text-gray-500 text-sm md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
           Everything you need to know about our privacy-first utility engine.
@@ -86,7 +86,7 @@ export default function FAQPage() {
                   key={i}
                   className="bg-white border border-gray-100 p-6 rounded-4xl hover:border-blue-200 transition-all group"
                 >
-                  <h3 className="text-sm md:text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-sm md:text-lg font-bold text-gray-900 mb-3 group-hover:text-sky-400-600 transition-colors">
                     {item.q}
                   </h3>
                   <p className="text-xs md:text-sm text-gray-500 leading-relaxed font-medium">
@@ -107,7 +107,7 @@ export default function FAQPage() {
 
         <div className="relative z-10 max-w-2xl">
           <h2 className="text-2xl font-black uppercase tracking-tight mb-4 flex items-center gap-2">
-            <Cpu className="text-blue-400" /> Transparent Tech
+            <Cpu className="text-sky-400-400" /> Transparent Tech
           </h2>
           <p className="text-sm text-gray-400 leading-relaxed mb-8 font-medium">
             EssentialCalc is built using <strong>TensorFlow.js</strong> and{" "}

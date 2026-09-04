@@ -43,7 +43,7 @@ export default function CombinedSalaryTool() {
       >
         <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm">
           <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm">
+            <span className="bg-blue-100 text-sky-400-600 w-8 h-8 rounded-full flex items-center justify-center text-sm">
               1
             </span>
             Salary Input
@@ -57,7 +57,7 @@ export default function CombinedSalaryTool() {
                 type="number"
                 value={ctc}
                 onChange={(e) => setCtc(Number(e.target.value))}
-                className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl text-2xl font-bold text-blue-600 focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl text-2xl font-bold text-sky-400-600 focus:ring-2 focus:ring-blue-500 outline-none"
               />
               <input
                 type="range"

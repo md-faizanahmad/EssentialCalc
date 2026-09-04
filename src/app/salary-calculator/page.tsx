@@ -18,13 +18,13 @@ export default function SalaryHubPage() {
     <div className="max-w-6xl mx-auto px-4 py-10">
       {/* Header Section */}
       <header className="mb-12">
-        <div className="flex items-center gap-2 text-blue-600 font-bold text-xs uppercase tracking-widest mb-4">
+        <div className="flex items-center gap-2 text-sky-400-600 font-bold text-xs uppercase tracking-widest mb-4">
           <TrendingUp size={16} />
           <span>Income Planning</span>
         </div>
         <h1 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
           Salary & Affordability{" "}
-          <span className="text-blue-600">Calculators.</span>
+          <span className="text-sky-400-600">Calculators.</span>
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
           Understanding your true take-home pay is the first step in financial
@@ -51,8 +51,8 @@ export default function SalaryHubPage() {
           </h2>
 
           <div className="flex gap-4 p-6 bg-blue-50 rounded-2xl mb-8">
-            <Info className="text-blue-600 shrink-0" />
-            <p className="text-sm text-blue-800 m-0">
+            <Info className="text-sky-400-600 shrink-0" />
+            <p className="text-sm text-sky-400-800 m-0">
               Did you know that most banks in India allow only 40-50% of your
               net monthly income to go towards EMIs? This is called the FOIR
               (Fixed Obligation to Income Ratio).

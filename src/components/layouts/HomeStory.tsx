@@ -7,7 +7,7 @@ export default function HomeStory() {
         <article className="max-w-4xl mx-auto">
           {/* Section Header */}
           <header className="text-center mb-16">
-            <span className="text-blue-600 font-bold uppercase tracking-widest text-xs">
+            <span className="text-sky-400-600 font-bold uppercase tracking-widest text-xs">
               About EssentialCalc
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
@@ -29,9 +29,8 @@ export default function HomeStory() {
               <p>
                 Popular tools on EssentialCalc include an{" "}
                 <strong>EMI calculator</strong> for home loan, car loan, and
-                personal loan calculations, a{" "}
-                <strong>salary calculator</strong> to estimate monthly in-hand
-                salary from CTC, and easy-to-use{" "}
+                personal loan calculations, a <strong>salary calculator</strong>{" "}
+                to estimate monthly in-hand salary from CTC, and easy-to-use{" "}
                 <strong>PDF and image tools</strong> for everyday tasks.
               </p>
 
@@ -45,10 +44,10 @@ export default function HomeStory() {
             </div>
 
             <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
-              <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+              <h3 className="text-2xl font-semibold text-sky-400-900 mb-4">
                 How Our Financial Calculators Work
               </h3>
-              <p className="text-blue-800 text-sm leading-relaxed">
+              <p className="text-sky-400-800 text-sm leading-relaxed">
                 Financial calculators on EssentialCalc use standard methods such
                 as the <strong>reducing balance method</strong>, which is
                 commonly used by banks and financial institutions. Results are
@@ -61,7 +60,7 @@ export default function HomeStory() {
           {/* Value Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-blue-600">
+              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-sky-400-600">
                 <ShieldCheck size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -75,7 +74,7 @@ export default function HomeStory() {
             </div>
 
             <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-blue-600">
+              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-sky-400-600">
                 <Zap size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -88,7 +87,7 @@ export default function HomeStory() {
             </div>
 
             <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-blue-600">
+              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-sky-400-600">
                 <HeartHandshake size={24} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -96,8 +95,8 @@ export default function HomeStory() {
               </h3>
               <p className="text-sm text-gray-600">
                 All calculators, blogs, and tools on EssentialCalc are free to
-                use. The platform remains independent and focused on clarity
-                and usefulness.
+                use. The platform remains independent and focused on clarity and
+                usefulness.
               </p>
             </div>
           </div>

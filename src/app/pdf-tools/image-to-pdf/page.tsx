@@ -16,13 +16,13 @@ export default function ImageToPdfPage() {
     <main className="max-w-6xl mx-auto px-4 py-1 md:py-2 flex flex-col items-center">
       {/* Tool Header Section */}
       <section className="max-w-4xl mx-auto text-center mb-12">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[10px] font-black uppercase tracking-widest mb-6 text-blue-600">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[10px] font-black uppercase tracking-widest mb-6 text-sky-400-600">
           <Zap size={12} fill="currentColor" />
           Zero-Server Conversion
         </div>
 
         <h1 className="text-4xl md:text-7xl font-black text-gray-900 tracking-tighter mb-6 leading-tight uppercase">
-          IMAGE TO <span className="text-blue-600">PDF.</span>
+          IMAGE TO <span className="text-sky-400-600">PDF.</span>
         </h1>
 
         <p className="text-gray-600 max-w-xl mx-auto font-medium text-lg leading-relaxed">
@@ -47,7 +47,7 @@ export default function ImageToPdfPage() {
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <ImageIcon size={14} className="text-blue-600" />
+          <ImageIcon size={14} className="text-sky-400-600" />
           <span className="text-[9px] font-black uppercase tracking-widest text-gray-900">
             No Cloud Upload
           </span>

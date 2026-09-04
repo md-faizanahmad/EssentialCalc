@@ -75,7 +75,7 @@ export default function OCRWork() {
             onChange={handleFileUpload}
             className="absolute inset-0 opacity-0 cursor-pointer z-10"
           />
-          <div className="w-20 h-20 bg-white rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-sm text-blue-600 group-hover:scale-110 transition-transform">
+          <div className="w-20 h-20 bg-white rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-400-600 group-hover:scale-110 transition-transform">
             <Languages size={40} />
           </div>
           <h3 className="font-black uppercase tracking-tight text-2xl text-gray-900">
@@ -111,7 +111,7 @@ export default function OCRWork() {
                 fill="transparent"
                 strokeDasharray={377}
                 strokeDashoffset={377 - (377 * progress) / 100}
-                className="text-blue-600 transition-all duration-300 ease-out"
+                className="text-sky-400-600 transition-all duration-300 ease-out"
                 strokeLinecap="round"
               />
             </svg>
@@ -125,7 +125,7 @@ export default function OCRWork() {
             <h3 className="font-black uppercase tracking-widest text-gray-900 text-sm mb-1">
               Analyzing Document
             </h3>
-            <div className="flex items-center justify-center gap-2 text-blue-600">
+            <div className="flex items-center justify-center gap-2 text-sky-400-600">
               <Zap size={12} fill="currentColor" className="animate-pulse" />
               <span className="text-[9px] font-bold uppercase tracking-[0.2em]">
                 Neural Engine Active
@@ -175,7 +175,7 @@ export default function OCRWork() {
               value={extractedText}
               className="w-full h-[60vh] p-8 sm:p-12 bg-white border border-gray-100 rounded-[2.5rem] shadow-2xl shadow-gray-100/50 resize-none focus:outline-none text-gray-700 text-base leading-relaxed font-medium overflow-y-auto"
             />
-            <div className="absolute bottom-6 right-10 opacity-20 pointer-events-none font-black uppercase text-[10px] tracking-widest text-blue-600">
+            <div className="absolute bottom-6 right-10 opacity-20 pointer-events-none font-black uppercase text-[10px] tracking-widest text-sky-400-600">
               EssentialCalc OCR Neural Engine
             </div>
           </div>

@@ -17,7 +17,7 @@ const emiTools = [
     desc: "Calculate monthly payments for your dream home with interest breakdowns.",
     href: "/emi-calculator/home-loan",
     icon: "🏠",
-    color: "bg-blue-50 text-blue-600",
+    color: "bg-blue-50 text-sky-400-600",
   },
   {
     title: "Car Loan EMI Calculator",
@@ -60,11 +60,11 @@ export default function EMICategoryPage() {
               >
                 {tool.icon}
               </div>
-              <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">
+              <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-400-600">
                 {tool.title}
               </h2>
               <p className="text-sm text-gray-500 mb-6">{tool.desc}</p>
-              <span className="text-sm font-bold text-blue-600">
+              <span className="text-sm font-bold text-sky-400-600">
                 Open Calculator →
               </span>
             </article>

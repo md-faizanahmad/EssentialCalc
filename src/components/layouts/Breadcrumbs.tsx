@@ -21,21 +21,8 @@ export default function Breadcrumbs() {
           <li className="shrink-0">
             <Link
               href="/"
-              className="hover:text-blue-600 transition-colors flex items-center"
+              className="hover:text-sky-400-600 transition-colors flex items-center"
             >
-              <svg
-                className="w-3.5 h-3.5 mr-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
               Home
             </Link>
           </li>
@@ -63,7 +50,7 @@ export default function Breadcrumbs() {
 
                 {isLast ? (
                   <span
-                    className="text-blue-600 font-bold truncate max-w-30 md:max-w-none"
+                    className="text-sky-400-600 font-bold truncate max-w-30 md:max-w-none"
                     aria-current="page"
                   >
                     {label}
@@ -71,7 +58,7 @@ export default function Breadcrumbs() {
                 ) : (
                   <Link
                     href={href}
-                    className="hover:text-blue-600 transition-colors"
+                    className="hover:text-sky-400-600 transition-colors"
                   >
                     {label}
                   </Link>

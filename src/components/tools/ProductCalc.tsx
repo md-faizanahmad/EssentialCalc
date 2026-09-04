@@ -117,7 +117,7 @@ export default function ProductCalc() {
           </div>
           <div className="flex justify-between text-lg font-bold pt-2 border-t border-dashed border-gray-300">
             <span>Real Total Cost</span>
-            <span className="text-blue-600">
+            <span className="text-sky-400-600">
               {formatCurrency(results.totalCost)}
             </span>
           </div>

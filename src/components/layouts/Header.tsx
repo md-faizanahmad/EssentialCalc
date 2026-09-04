@@ -55,7 +55,7 @@ export default function Header() {
     <>
       {/* --- MOBILE TOP BAR --- */}
       <div className="md:hidden sticky top-0 z-50 w-full h-14 bg-white/80 backdrop-blur-md border-b border-gray-100 px-4 flex items-center justify-between">
-        <Link href="/" className="text-lg tracking-tight text-gray-900">
+        <Link href="/" className="text-lg tracking-tight text-sky-500">
           <span className="font-bold">Essential</span>
           <span className="font-light text-gray-500">Calc</span>
         </Link>
@@ -65,7 +65,7 @@ export default function Header() {
           {deferredPrompt && (
             <button
               onClick={handleInstallClick}
-              className="p-2 text-blue-600 animate-pulse active:scale-90 transition-transform"
+              className="p-2 text-sky-400-600 animate-pulse active:scale-90 transition-transform"
               aria-label="Install App"
             >
               <Download size={22} strokeWidth={2.5} />
@@ -74,7 +74,7 @@ export default function Header() {
 
           <Link
             href="/about"
-            className={`p-2 transition-colors ${pathname === "/about" ? "text-blue-600" : "text-gray-400"}`}
+            className={`p-2 transition-colors hover:text-sky-300 ${pathname === "/about" ? "text-sky-400-600" : "text-gray-400"}`}
             aria-label="About"
           >
             <HelpCircle size={22} />
@@ -85,9 +85,9 @@ export default function Header() {
       {/* --- DESKTOP TOP HEADER --- */}
       <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-white/80 backdrop-blur-md hidden md:block">
         <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="text-xl tracking-tight text-gray-900 group">
-            <span className="font-bold">Essential</span>
-            <span className="font-light text-gray-500 group-hover:text-blue-600 transition-colors">
+          <Link href="/" className="text-xl tracking-tight text-sky-600 group">
+            <span className="font-bold ">Essential</span>
+            <span className="font-light text-gray-500 group-hover:text-sky-400-600 transition-colors">
               Calc
             </span>
           </Link>
@@ -96,7 +96,7 @@ export default function Header() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className={`hover:text-blue-700 transition-colors ${pathname.startsWith(link.href) ? "text-blue-600 font-bold" : ""}`}
+                  className={`hover:text-sky-400-700  hover:text-sky-700 transition-colors ${pathname.startsWith(link.href) ? "text-sky-400-600 font-bold" : ""}`}
                 >
                   {link.name}
                 </Link>
@@ -105,7 +105,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className={`transition-colors ${pathname === "/about" ? "text-blue-600" : "hover:text-blue-600"}`}
+                className={`transition-colors  hover:text-sky-700 ${pathname === "/about" ? "text-sky-400-600" : "hover:text-sky-400-600"}`}
               >
                 About
               </Link>
@@ -130,12 +130,12 @@ export default function Header() {
                 className="inline-flex flex-col items-center justify-center group"
               >
                 <div
-                  className={`mb-1 transition-all duration-300 ${isActive ? "text-blue-600 scale-110" : "text-gray-400"}`}
+                  className={`mb-1 transition-all  hover:text-red-700 duration-300 ${isActive ? "text-sky-400-600 scale-110" : "text-gray-400"}`}
                 >
                   {link.icon}
                 </div>
                 <span
-                  className={`text-[9px] font-bold uppercase tracking-tighter ${isActive ? "text-blue-600" : "text-gray-400"}`}
+                  className={`text-[9px] font-bold uppercase tracking-tighter ${isActive ? "text-sky-400-600" : "text-gray-400"}`}
                 >
                   {link.name}
                 </span>

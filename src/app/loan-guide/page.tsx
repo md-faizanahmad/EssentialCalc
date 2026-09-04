@@ -72,7 +72,7 @@ export default function LoanGuide() {
           Calculate precisely using our{" "}
           <Link
             href="/emi-calculator/home-loan"
-            className="text-blue-600 font-semibold"
+            className="text-sky-400-600 font-semibold"
           >
             Home Loan EMI Calculator
           </Link>
@@ -98,7 +98,7 @@ export default function LoanGuide() {
           Read detailed explanation:{" "}
           <Link
             href="/blog/how-much-emi-is-safe"
-            className="text-blue-600 font-semibold"
+            className="text-sky-400-600 font-semibold"
           >
             How Much EMI Is Safe?
           </Link>
@@ -124,7 +124,7 @@ export default function LoanGuide() {
           Detailed comparison:{" "}
           <Link
             href="/blog/emi-vs-lump-sum-payment"
-            className="text-blue-600 font-semibold"
+            className="text-sky-400-600 font-semibold"
           >
             EMI vs Lump Sum Guide
           </Link>
@@ -148,7 +148,7 @@ export default function LoanGuide() {
           Full article:{" "}
           <Link
             href="/blog/personal-loan-mistakes"
-            className="text-blue-600 font-semibold"
+            className="text-sky-400-600 font-semibold"
           >
             Personal Loan Mistakes
           </Link>
@@ -168,7 +168,7 @@ export default function LoanGuide() {
 
         <Link
           href="/salary-calculator/salary-based"
-          className="text-blue-600 font-semibold"
+          className="text-sky-400-600 font-semibold"
         >
           Check Loan Eligibility
         </Link>

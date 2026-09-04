@@ -20,7 +20,7 @@ const guideCards = [
     desc: "Learn EMI calculations, safe loan limits, mistakes to avoid, and smart repayment strategies.",
     href: "/loan-guide",
     icon: "🏦",
-    color: "bg-blue-50 text-blue-600",
+    color: "bg-blue-50 text-sky-400-600",
   },
 ];
 
@@ -40,13 +40,13 @@ export default function GuideToolLinks() {
                 >
                   {tool.icon}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-sky-400-600">
                   {tool.title}
                 </h3>
                 <p className="text-sm text-gray-500 mb-6 grow font-serif">
                   {tool.desc}
                 </p>
-                <div className="inline-flex items-center text-sm font-semibold text-blue-600">
+                <div className="inline-flex items-center text-sm font-semibold text-sky-400-600">
                   Calculate Now
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"

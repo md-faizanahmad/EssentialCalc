@@ -57,7 +57,7 @@ export default function ImageToolLinks() {
           </div>
           <Link
             href="/image-tools"
-            className="hidden md:flex items-center gap-1 text-[10px] font-black text-blue-600 uppercase tracking-[0.2em] hover:underline"
+            className="hidden md:flex items-center gap-1 text-[10px] font-black text-sky-400-600 uppercase tracking-[0.2em] hover:underline"
           >
             View All <ArrowRight size={12} />
           </Link>
@@ -95,7 +95,7 @@ export default function ImageToolLinks() {
                       Private
                     </span>
                   </div>
-                  <div className="text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="text-sky-400-600 opacity-0 group-hover:opacity-100 transition-opacity">
                     <Zap size={14} fill="currentColor" />
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function ImageToolLinks() {
         {/* Mobile View All */}
         <Link
           href="/image-tools"
-          className="md:hidden block text-center mt-6 text-[10px] font-black text-blue-600 uppercase tracking-widest py-3 bg-blue-50 rounded-xl"
+          className="md:hidden block text-center mt-6 text-[10px] font-black text-sky-400-600 uppercase tracking-widest py-3 bg-blue-50 rounded-xl"
         >
           Explore All Image Tools &rarr;
         </Link>

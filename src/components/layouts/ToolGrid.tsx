@@ -62,7 +62,7 @@ export default function ToolGrid() {
           <h2 className="text-2xl font-bold text-gray-900 tracking-tight">
             Popular Tools
           </h2>
-          <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">
+          <span className="text-xs font-semibold text-green-500 bg-blue-50 px-3 py-1 rounded-full uppercase">
             Fast & Secure
           </span>
         </div>
@@ -72,7 +72,7 @@ export default function ToolGrid() {
             <Link key={tool.name} href={tool.href} className="group">
               <article className="h-full p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-100 transition-all flex flex-col">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-gray-50 rounded-xl text-gray-600 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                  <div className="p-3 bg-gray-50 rounded-xl text-gray-600 group-hover:bg-blue-50 group-hover:text-sky-400-600 transition-colors">
                     {tool.icon}
                   </div>
                   {tool.isNew && (
@@ -82,7 +82,7 @@ export default function ToolGrid() {
                   )}
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-sky-600 transition-colors">
                   {tool.name}
                 </h3>
 
@@ -90,7 +90,7 @@ export default function ToolGrid() {
                   {tool.description}
                 </p>
 
-                <div className="text-xs font-semibold text-blue-600 flex items-center group-hover:translate-x-1 transition-transform">
+                <div className="text-xs font-semibold text-sky-800 flex items-center group-hover:translate-x-1 transition-transform">
                   Open Tool
                   <svg
                     className="w-4 h-4 ml-1"

@@ -28,7 +28,7 @@ export default function CarLoanCalc() {
             <label className="text-sm font-bold text-gray-700 uppercase tracking-wider">
               Vehicle Loan Amount
             </label>
-            <span className="text-xl font-black text-blue-600">
+            <span className="text-xl font-black text-sky-400-600">
               {formatCurrency(amount)}
             </span>
           </div>
@@ -48,7 +48,7 @@ export default function CarLoanCalc() {
             <label className="text-sm font-bold text-gray-700 uppercase tracking-wider">
               Interest Rate (p.a)
             </label>
-            <span className="text-xl font-black text-blue-600">{rate}%</span>
+            <span className="text-xl font-black text-sky-400-600">{rate}%</span>
           </div>
           <input
             type="range"
@@ -66,7 +66,7 @@ export default function CarLoanCalc() {
             <label className="text-sm font-bold text-gray-700 uppercase tracking-wider">
               Tenure (Years)
             </label>
-            <span className="text-xl font-black text-blue-600">
+            <span className="text-xl font-black text-sky-400-600">
               {tenure} Yrs
             </span>
           </div>
@@ -100,7 +100,7 @@ export default function CarLoanCalc() {
           </svg>
         </div>
 
-        <h3 className="text-blue-100 text-xs font-bold uppercase tracking-[0.2em] mb-2">
+        <h3 className="text-sky-400-100 text-xs font-bold uppercase tracking-[0.2em] mb-2">
           Monthly Installment (EMI)
         </h3>
         <p className="text-5xl font-black mb-10">
@@ -109,7 +109,7 @@ export default function CarLoanCalc() {
 
         <div className="grid grid-cols-2 gap-6 pt-6 border-t border-blue-500/50">
           <div>
-            <p className="text-blue-200 text-[10px] uppercase font-bold mb-1">
+            <p className="text-sky-400-200 text-[10px] uppercase font-bold mb-1">
               Total Interest
             </p>
             <p className="text-xl font-bold">
@@ -117,7 +117,7 @@ export default function CarLoanCalc() {
             </p>
           </div>
           <div>
-            <p className="text-blue-200 text-[10px] uppercase font-bold mb-1">
+            <p className="text-sky-400-200 text-[10px] uppercase font-bold mb-1">
               Total Payable
             </p>
             <p className="text-xl font-bold">

@@ -50,10 +50,10 @@ export default function SalaryPage() {
         </ul>
 
         <div className="bg-blue-50 p-6 rounded-2xl mt-8">
-          <h4 className="font-bold text-blue-900 mb-2 underline">
+          <h4 className="font-bold text-sky-400-900 mb-2 underline">
             Quick Pro-Tip:
           </h4>
-          <p className="text-blue-800 text-sm italic">
+          <p className="text-sky-400-800 text-sm italic">
             &quot;To maximize your in-hand salary, ensure you utilize all
             available tax-saving instruments like 80C (PPF, ELSS, Insurance) and
             80D (Health Insurance).&quot;

@@ -129,7 +129,7 @@ export default function HowItWorks() {
         </p>
         <Link
           href="/"
-          className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors"
+          className="inline-block bg-white text-sky-400-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors"
         >
           Explore All Tools
         </Link>

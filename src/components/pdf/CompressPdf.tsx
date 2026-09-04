@@ -127,7 +127,7 @@ export default function CompressPdf() {
             </a>
             <button
               onClick={reset}
-              className="flex items-center justify-center gap-2 w-full py-3 text-gray-400 font-bold text-[10px] uppercase tracking-widest hover:text-blue-600 transition-colors"
+              className="flex items-center justify-center gap-2 w-full py-3 text-gray-400 font-bold text-[10px] uppercase tracking-widest hover:text-sky-400-600 transition-colors"
             >
               <RefreshCcw size={14} /> Compress Another
             </button>
@@ -148,7 +148,7 @@ export default function CompressPdf() {
                   onChange={handleFileUpload}
                   className="absolute inset-0 opacity-0 cursor-pointer z-10"
                 />
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-blue-600 shadow-sm">
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-sky-400-600 shadow-sm">
                   <Plus size={32} />
                 </div>
                 <h3 className="font-black text-gray-900 uppercase tracking-tight text-xl mb-1">
@@ -161,7 +161,7 @@ export default function CompressPdf() {
             ) : (
               <div className="bg-white border border-gray-100 p-6 rounded-3xl flex items-center justify-between shadow-sm">
                 <div className="flex items-center gap-4 truncate">
-                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600">
+                  <div className="p-3 bg-blue-50 rounded-xl text-sky-400-600">
                     <FileType size={20} />
                   </div>
                   <div className="truncate">

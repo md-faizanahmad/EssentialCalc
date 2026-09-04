@@ -131,7 +131,7 @@ export default function IncomeTaxGuide() {
             Detailed explanation:{" "}
             <Link
               href="/blog/itr-for-freelancers"
-              className="text-blue-600 font-semibold"
+              className="text-sky-400-600 font-semibold"
             >
               ITR for Freelancers Guide
             </Link>
@@ -152,7 +152,7 @@ export default function IncomeTaxGuide() {
             Learn more:{" "}
             <Link
               href="/blog/nil-itr-return"
-              className="text-blue-600 font-semibold"
+              className="text-sky-400-600 font-semibold"
             >
               Nil ITR Explained
             </Link>
@@ -191,7 +191,7 @@ export default function IncomeTaxGuide() {
             <li>
               <Link
                 href="/salary-calculator/salary-breakup"
-                className="text-blue-600 font-semibold"
+                className="text-sky-400-600 font-semibold"
               >
                 Salary Break-up Calculator
               </Link>
@@ -199,7 +199,7 @@ export default function IncomeTaxGuide() {
             <li>
               <Link
                 href="/salary-calculator/salary-based"
-                className="text-blue-600 font-semibold"
+                className="text-sky-400-600 font-semibold"
               >
                 Salary-Based Loan Calculator
               </Link>
@@ -235,7 +235,7 @@ export default function IncomeTaxGuide() {
             You can estimate your salary structure using our{" "}
             <Link
               href="/salary-calculator/salary-breakup"
-              className="text-blue-600 font-semibold"
+              className="text-sky-400-600 font-semibold"
             >
               Salary Break-up Calculator
             </Link>
